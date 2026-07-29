@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkOWiHu Photographer • Fotógrafo</title>
+    <meta name="description" content="Portfolio of MarkOWiHu - Photographer based in the Provincia de Alicante. Minimalism, urban exploration, and landscape photography.">
+    <link rel="canonical" href="https://markowihu.es">
+    <style>
+        /* Base Engineering Rules */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #111111;
+            --accent-color: #e60000;
+            --muted-color: #777777;
+            --nav-bg: #f9f9f9;
+            --border-color: #eeeeee;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        /* Header Setup */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        header .tagline {
+            font-size: 1.1rem;
+            color: var(--muted-color);
+            font-style: italic;
+        }
+
+        /* Pure CSS Dropdown Navigation */
+        nav {
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        nav ul li a:hover, 
+        nav ul li a.active {
+            color: var(--accent-color);
+        }
+
+        /* The Dropdown Container */
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            min-width: 320px;
+            z-index: 1000;
+            flex-direction: column;
+        }
+
+        /* Hover Mechanics */
+        nav ul li:hover > ul {
+            display: flex;
+        }
+
+        nav ul li ul li a {
+            padding: 0.8rem 1.2rem;
+            text-align: left;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #fafafa;
+        }
+
+        nav ul li ul li:last-child a {
+            border-bottom: none;
+        }
+
+        /* Main Workspace Placeholder */
+        main {
+            text-align: center;
+            min-height: 400px;
+            padding: 2rem 0;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            color: var(--muted-color);
+        }
+
+        /* Responsive Breakpoint for Mobile Layouts */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li ul {
+                position: static;
+                transform: none;
+                width: 100%;
+                min-width: 0;
+                box-shadow: none;
+                border: none;
+                background: var(--nav-bg);
+            }
+            nav ul li:hover > ul {
+                display: flex;
+            }
+        }
+
+        /* Protected Legal Footer Assembly */
+        footer {
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--muted-color);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            text-align: left;
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        .footer-legal-block p {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header role="banner">
+        <h1>MarkOWiHu Photographer • Fotógrafo</h1>
+        <div class="tagline">Provincia de Alicante</div>
+    </header>
+
+    <nav role="navigation">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Biography – Biografía</a></li>
+            <li>
+                <a href="#">Portfolios – Portafolios ▼</a>
+                <ul>
+                    <li><a href="https://adobe.ly/4fk7qLC" target="_blank" rel="noopener">Lightroom Share</a></li>
+                    <li><a href="https://markowihu.myportfolio.com/" target="_blank" rel="noopener">MyPortfolio</a></li>
+                    <li><a href="https://www.flickr.com/photos/markowihu/" target="_blank" rel="noopener">Flickr</a></li>
+                    <li><a href="https://markowihu.wordpress.com/flickr-explore-scout/" target="_blank" rel="noopener">Flickr Explore Scout</a></li>
+                    <li><a href="https://www.instagram.com/markowihu/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.behance.net/markowihu" target="_blank" rel="noopener">Behance</a></li>
+                    <li><a href="https://unsplash.com/@markowihu" target="_blank" rel="noopener">Unsplash</a></li>
+                    <li><a href="https://500px.com/markowihu" target="_blank" rel="noopener">500PX: Archived Selection • Archivado</a></li>
+                    <li><a href="https://the.fotoapp.co/markowihu" target="_blank" rel="noopener">Fotoapp.co Snapshot Feed • Capturas al vuelo</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main role="main">
+        <p class="intro-text">
+            Portfolio highlights — explore full galleries via the main menu<br>
+            <em>Muestra de porfolio — explore las galerías completas en el menú principal</em>
+        </p>
+        
+        <!-- Next step: We will inject your clean grid rows or featured image containers here -->
+        
+    </main>
+
+<footer role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-legal-block">
+                <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos en mark arroba markowihu.es — Si considera que he tratado sus datos de forma incorrecta, por favor comuníquemelo inmediatamente.</p>
+            </div>
+            <div class="footer-legal-block">
+                <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for my personal communication. To exercise your rights, contact me: mark ('at' symbol) markowihu.es — If you believe your data has been handled incorrectly, please let me know immediately.</p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>
