@@ -1,4 +1,4 @@
-<!-- markowihu fotógrafo Galeria Web Portafolio Index Indice ver 2-0 30-07-2026 -->
+<!-- markowihu fotógrafo Galeria Web Portafolio Index Indice ver 2-1 01-08-2026 -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -141,8 +141,7 @@ section {
 /* --- Responsive Photographic Grid --- */
 .photo-grid {
     display: grid;
-    /* Automatically creates columns that are at least 350px wide, filling the row completely */
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
     margin-top: 20px;
 }
@@ -150,8 +149,8 @@ section {
 .photo-container {
     position: relative;
     background-color: #fafafa;
-    /* Locks images into a clean 3:2 landscape photographic aspect ratio to prevent layout shifting */
-    aspect-ratio: 3 / 2; 
+    /* Locks images into a clean 1:1 landscape photographic aspect ratio to prevent layout shifting */
+    aspect-ratio: 1 / 1; 
     overflow: hidden;
 }
 
@@ -172,6 +171,7 @@ section {
     color: #666;
     font-style: italic;
     letter-spacing: 0.5px;
+    text-align: center; /* Center-aligns the titles under the images */
 }
 
         /* The Dropdown Container */
@@ -310,30 +310,78 @@ section {
             <p class="intro-translation"><em>Muestra de porfolio — explore las galerías completas en el menú principal</em></p>
         </div>
 
-        <div class="photo-grid">
+<div class="photo-grid">
             
             <!-- Photo Item 1 -->
             <div class="photo-wrapper">
                 <div class="photo-container">
-                    <img src="https://via.placeholder.com/1200x800" alt="Contemporary street photography composition in Alicante province" loading="lazy">
+                    <img src="images/markowihu-1.webp" alt="Historic street perspective featuring traditional stone architecture and people walking down a narrow urban alley" loading="lazy">
                 </div>
-                <div class="photo-caption">Urban Geometry, Alicante — 2026</div>
+                <div class="photo-caption">The Streets of Santiago de Compostela</div>
             </div>
 
             <!-- Photo Item 2 -->
             <div class="photo-wrapper">
                 <div class="photo-container">
-                    <img src="https://via.placeholder.com/1200x800" alt="Minimalist architectural details showcasing clean lines and shadow play" loading="lazy">
+                    <img src="images/markowihu-2.webp" alt="Vivid Mediterranean blue waters and rugged coastal rock formations in Alicante" loading="lazy">
                 </div>
-                <div class="photo-caption">Minimalist Architectural Abstract</div>
+                <div class="photo-caption">Into the Blue: Murcia seascape</div>
             </div>
 
             <!-- Photo Item 3 -->
             <div class="photo-wrapper">
                 <div class="photo-container">
-                    <img src="https://via.placeholder.com/1200x800" alt="Candid street portrait documenting local life and human interaction" loading="lazy">
+                    <img src="images/markowihu-3.webp" alt="Rowing team training in a long boat within the harbor waters at the Puerto Deportivo Alicante marina" loading="lazy">
                 </div>
-                <div class="photo-caption">People & Places — Contemporary Archive</div>
+                <div class="photo-caption">Puerto Deportivo, Alicante</div>
+            </div>
+
+            <!-- Photo Item 4 -->
+            <div class="photo-wrapper">
+                <div class="photo-container">
+                    <img src="images/markowihu-4.webp" alt="Minimalist urban clothing display window capturing clean lines and a seated mannequin" loading="lazy">
+                </div>
+                <div class="photo-caption">Retail: I Want Your Umbrella</div>
+            </div>
+
+            <!-- Photo Item 5 -->
+            <div class="photo-wrapper">
+                <div class="photo-container">
+                    <img src="images/markowihu-5.webp" alt="Candid indoor portrait of a focused musician playing the cello" loading="lazy">
+                </div>
+                <div class="photo-caption">The Cellist: Private Performance</div>
+            </div>
+
+            <!-- Photo Item 6 -->
+            <div class="photo-wrapper">
+                <div class="photo-container">
+                    <img src="images/markowihu-6.webp" alt="High contrast monochrome street portrait of a man standing with his pet dog on a coastal overlook" loading="lazy">
+                </div>
+                <div class="photo-caption">Man and dog: Street mono</div>
+            </div>
+
+            <!-- Photo Item 7 -->
+            <div class="photo-wrapper">
+                <div class="photo-container">
+                    <img src="images/markowihu-7.webp" alt="Minimalist architectural facade featuring strict white symmetry and dark geometric window squares" loading="lazy">
+                </div>
+                <div class="photo-caption">Symmetry and minimalist architecture</div>
+            </div>
+
+            <!-- Photo Item 8 -->
+            <div class="photo-wrapper">
+                <div class="photo-container">
+                    <img src="images/markowihu-8.webp" alt="Minimalist Mediterranean seascape capturing a sharp, clean horizon line during a golden hour sunset" loading="lazy">
+                </div>
+                <div class="photo-caption">Mediterranean horizon: Sunrise</div>
+            </div>
+
+            <!-- Photo Item 9 -->
+            <div class="photo-wrapper">
+                <div class="photo-container">
+                    <img src="images/markowihu-9.webp" alt="Silhouettes and deep shadow play capturing human presence interacting with a contemporary art gallery installation" loading="lazy">
+                </div>
+                <div class="photo-caption">Activism Meets Art</div>
             </div>
 
         </div>
