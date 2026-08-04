@@ -1,11 +1,11 @@
-<!-- markowihu fotógrafo Galeria Web Portafolio Index Indice ver 2-2 04-08-2026 -->
+<!-- markowihu fotógrafo Galeria Web Portafolio Index Indice ver 2-3 04-08-2026 -->
 <!-- 
-  Changelog / Release Notes (ver 2-2 • 04-08-2026):
+  Changelog / Release Notes (ver 2-3 • 04-08-2026):
   • Mobile Interaction Engine: Added lightweight JS tap-to-toggle script with click-outside-to-close for rigid touch navigation.
   • Navigation Hierarchy: Elevated 'About • Biografía' to master tier; renamed external links to 'Connected Feeds • Redes y colaboraciones'.
-  • Taxonomy & Ordering: Introduced 'Found Urban Minimalism' sub-gallery; updated and reordered 'Fotoapp' & '500px' link labels.
-  • Content & Typography: Implemented 3-tier stepped introduction layout (Headline, Lead, Standard) in English & Castilian.
-  • CSS Adjustments: Styled headline text in dark charcoal (#111111) and refined dropdown sub-item font sizing (0.80rem).
+  • Intro Layout Refinement: Removed section title bar; implemented clean 3-tier intro text with inline dropdown links & dashed gray separator.
+  • Content & Typography: Stepped typography (Headline, Lead, Standard) in English & Castilian; original long-form story reserved for about.html.
+  • CSS Adjustments: Styled headline text in dark charcoal (#111111), refined dropdown font sizing (0.80rem), and added accent inline links.
 -->
 <!DOCTYPE html>
 <html lang="es">
@@ -79,7 +79,7 @@
             font-style: italic;
         }
 
-        /* Pure CSS Dropdown Navigation */
+        /* Pure CSS & JS Dropdown Navigation */
         nav {
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
@@ -115,20 +115,10 @@
         }
 
         section {
-            padding: 60px 20px;
+            padding: 50px 20px;
             max-width: 1200px;
             margin: 0 auto;
             text-align: left;
-        }
-
-        .section-title {
-            font-size: 1.4rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 25px;
-            border-bottom: 1px solid #eaeaea;
-            padding-bottom: 10px;
-            color: #111;
         }
 
         .bio-text {
@@ -141,7 +131,7 @@
         .bio-translation {
             margin-top: 25px;
             padding-top: 25px;
-            border-top: 1px dashed #eaeaea;
+            border-top: 1px dashed #cccccc;
             color: #555;
         }
 
@@ -164,6 +154,18 @@
             font-size: 0.95rem;
             color: #555555;
             line-height: 1.6;
+        }
+
+        .inline-nav-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px dotted var(--accent-color);
+            transition: opacity 0.2s ease;
+        }
+
+        .inline-nav-link:hover {
+            opacity: 0.8;
         }
 
         /* --- Responsive Photographic Grid --- */
@@ -293,11 +295,11 @@
         <div class="tagline">Provincia de Alicante</div>
     </header>
 
-<nav role="navigation">
+<nav role="navigation" id="main-nav">
     <ul>
         <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#biography">About • Biografía</a></li>
-        <li>
+        <li><a href="about.html">About • Biografía</a></li>
+        <li id="menu-galleries">
             <a href="#">Galleries • Galerías ▼</a>
             <ul>
                 <li><a href="#">Found Urban Minimalism</a></li>
@@ -305,7 +307,7 @@
                 <li><a href="#">Natural World</a></li>
             </ul>
         </li>
-        <li>
+        <li id="menu-feeds">
             <a href="#">Connected Feeds • Redes y colaboraciones ▼</a>
             <ul>
                 <li><a href="https://adobe.ly/4fk7qLC" target="_blank" rel="noopener">Lightroom Share</a></li>
@@ -411,9 +413,8 @@
         </div>
     </section>
 
-    <!-- About / Biography Section -->
-    <section id="biography">
-        <h2 class="section-title">About • Biografía</h2>
+    <!-- Homepage Introduction Block (Without Title Bar) -->
+    <section id="intro-block">
         <div class="bio-text">
             
             <!-- English Narrative -->
@@ -421,7 +422,7 @@
             
             <p class="intro-lead-para" style="margin-top: 15px;">My work ranges from capturing people and meaningful moments to exploring urban and industrial minimalism, symmetry, contemporary architecture, macro photography, street scenes, and the natural world — all with a strong emphasis on clean composition, light, and detail.</p>
             
-            <p class="intro-standard-para" style="margin-top: 15px;">Thank you for visiting and I hope you enjoy browsing my other work (under Galleries and Links) here!</p>
+            <p class="intro-standard-para" style="margin-top: 15px;">Thank you for visiting and I hope you enjoy browsing my other work (under <a href="#main-nav" onclick="triggerMenu('galleries')" class="inline-nav-link">Galleries</a> and <a href="#main-nav" onclick="triggerMenu('feeds')" class="inline-nav-link">Feeds</a>) <a href="#main-nav" class="inline-nav-link">here</a>!</p>
             
             <!-- Castilian Translation -->
             <div class="bio-translation">
@@ -429,7 +430,7 @@
                 
                 <p class="intro-lead-para" style="margin-top: 15px;">Mi trabajo abarca desde la captura de personas y momentos significativos hasta la exploración del minimalismo urbano e industrial, la simetría, la arquitectura contemporánea, la macrofotografía, las escenas callejeras y el mundo natural; todo ello con un firme énfasis en la limpieza de la composición, la luz y el detalle.</p>
                 
-                <p class="intro-standard-para" style="margin-top: 15px;">¡Gracias por su visita y espero que disfrute explorando el resto de mi trabajo (en las secciones de Galerías y Enlaces) aquí!</p>
+                <p class="intro-standard-para" style="margin-top: 15px;">¡Gracias por su visita y espero que disfrute explorando el resto de mi trabajo (en las secciones de <a href="#main-nav" onclick="triggerMenu('galleries')" class="inline-nav-link">Galerías</a> y <a href="#main-nav" onclick="triggerMenu('feeds')" class="inline-nav-link">Redes</a>) <a href="#main-nav" class="inline-nav-link">aquí</a>!</p>
             </div>
 
         </div>
@@ -461,12 +462,23 @@
             }
         });
     });
+
     // Closes dropdown when tapping outside
     document.addEventListener('click', function(e) {
         if (!e.target.closest('nav')) {
             document.querySelectorAll('nav ul li').forEach(li => li.classList.remove('is-open'));
         }
     });
+
+    // Inline link helper: scrolls to nav and opens target dropdown
+    function triggerMenu(target) {
+        document.querySelectorAll('nav ul li').forEach(li => li.classList.remove('is-open'));
+        if (target === 'galleries') {
+            document.getElementById('menu-galleries').classList.add('is-open');
+        } else if (target === 'feeds') {
+            document.getElementById('menu-feeds').classList.add('is-open');
+        }
+    }
 </script>
 
 </body>
