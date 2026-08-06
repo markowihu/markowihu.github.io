@@ -1,0 +1,333 @@
+<!-- markowihu fotógrafo Galeria Web Portafolio About Biografia ver 1-0 06-08-2026 -->
+<!-- 
+  Changelog / Release Notes (about.html ver 1-0 • 05-08-2026):
+  • Architecture: Dedicated standalone biography page extending master layout framework.
+  • Navigation: Synced with master menu bar featuring 'About • Quién soy' active state.
+  • Heading & Content: Implemented 'Biography • Biografía' section title; reinstated original analog origin narrative.
+  • Bilingual Layout: English narrative followed by dashed boundary line (#cccccc) and Castilian translation.
+  • Support Integration: Embedded Buy Me a Coffee links styled with site accent color (#e60000).
+  • Interaction: Includes mobile JS tap-to-toggle navigation engine.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biography • Biografía — MarkOWiHu Photographer</title>
+    <meta name="description" content="Biography and creative background of MarkOWiHu - Multidisciplinary photographer based in the Provincia de Alicante, Spain.">
+    <link rel="canonical" href="https://markowihu.es/about.html">
+    <style>
+        /* Base Engineering Rules */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #111111;
+            --accent-color: #e60000;
+            --muted-color: #777777;
+            --nav-bg: #f9f9f9;
+            --border-color: #eeeeee;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        /* Header Setup */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        header .tagline {
+            font-size: 1.1rem;
+            color: var(--muted-color);
+            font-style: italic;
+        }
+
+        /* Pure CSS & JS Dropdown Navigation */
+        nav {
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        nav ul li a:hover, 
+        nav ul li a.active {
+            color: var(--accent-color);
+        }
+
+        section {
+            padding: 30px 20px 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 10px;
+            color: #111;
+        }
+
+        .bio-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            max-width: 850px;
+            color: #333;
+        }
+
+        .bio-translation {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px dashed #cccccc;
+            color: #555;
+        }
+
+        .coffee-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-color);
+            font-weight: 600;
+            transition: opacity 0.2s ease;
+        }
+
+        .coffee-link:hover {
+            opacity: 0.8;
+        }
+
+        /* The Dropdown Container */
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            min-width: 320px;
+            z-index: 1000;
+            flex-direction: column;
+        }
+
+        /* Hover & JS Tap Mechanics */
+        nav ul li:hover > ul,
+        nav ul li.is-open > ul {
+            display: flex;
+        }
+
+        nav ul li ul li a {
+            padding: 0.8rem 1.2rem;
+            text-align: left;
+            font-size: 0.80rem;
+            border-bottom: 1px solid #fafafa;
+        }
+
+        nav ul li ul li:last-child a {
+            border-bottom: none;
+        }
+
+        main {
+            min-height: 400px;
+        }
+
+        /* Responsive Breakpoint for Mobile Layouts */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li ul {
+                position: static;
+                transform: none;
+                width: 100%;
+                min-width: 0;
+                box-shadow: none;
+                border: none;
+                background: var(--nav-bg);
+            }
+        }
+
+        /* Protected Legal Footer Assembly */
+        footer {
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--muted-color);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            text-align: left;
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        .footer-legal-block p {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header role="banner">
+        <h1>MarkOWiHu Photographer • Fotógrafo</h1>
+        <div class="tagline">Provincia de Alicante</div>
+    </header>
+
+<nav role="navigation" id="main-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About • Quién soy</a></li>
+        <li>
+            <a href="#">Galleries • Galerías ▼</a>
+            <ul>
+                <li><a href="#">Found Urban Minimalism</a></li>
+                <li><a href="#">Street & Humanity</a></li>
+                <li><a href="#">Natural World</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Connected Feeds • Redes y colaboraciones ▼</a>
+            <ul>
+                <li><a href="https://adobe.ly/4fk7qLC" target="_blank" rel="noopener">Lightroom Share</a></li>
+                <li><a href="https://markowihu.myportfolio.com/" target="_blank" rel="noopener">MyPortfolio</a></li>
+                <li><a href="https://www.flickr.com/photos/markowihu/" target="_blank" rel="noopener">Flickr</a></li>
+                <li><a href="https://markowihu.wordpress.com/wp-content/uploads/2026/07/260724_explore-scout_big-huge-labs.jpg?w=887" target="_blank" rel="noopener">Flickr Explore Scout</a></li>
+                <li><a href="https://www.instagram.com/markowihu/" target="_blank" rel="noopener">Instagram</a></li>
+                <li><a href="https://www.behance.net/markowihu" target="_blank" rel="noopener">Behance</a></li>
+                <li><a href="https://unsplash.com/@markowihu" target="_blank" rel="noopener">Unsplash</a></li>
+                <li><a href="https://the.fotoapp.co/markowihu" target="_blank" rel="noopener">Fotoapp • Capturas al vuelo</a></li>
+                <li><a href="https://500px.com/p/markowihu?view=photos" target="_blank" rel="noopener">500px • Selección archivada</a></li>
+            </ul>
+        </li>
+        <li><a href="index.html#contact">Contact • Contacto</a></li>
+    </ul>
+</nav>
+
+<main role="main">
+
+    <!-- Biography Section -->
+    <section id="biography">
+        <h2 class="section-title">Biography • Biografía</h2>
+        <div class="bio-text">
+            
+            <!-- English Narrative -->
+            <p>It all started when my grandfather gifted me a film camera at age nine. Today, holding Spanish nationality and living in the beautiful mountainous interior of Alicante, I draw constant inspiration from the contrast of this rugged landscape, its nearby coast, and the northern stretches of the Iberian Peninsula.</p>
+            
+            <p style="margin-top: 15px;">My photography is an exploration of space, form, and human presence within the contemporary landscape. Combining a lifelong appreciation for technical detail with a strong visual interest in urban minimalism and industrial perspectives, I use the lens to isolate an underlying sense of order. From structural architectural forms to candid street interactions, my practice captures the subtle symmetry often overlooked in a fast-paced world.</p>
+            
+            <p style="margin-top: 15px;">Naturally, I am passionate about creative exchange, so please feel free to share your constructive thoughts and ideas. When I am not behind the camera, you will likely find me swimming laps, training at the gym, experimenting in the kitchen, or immersed in occasional linguistic projects.</p>
+            
+            <p style="margin-top: 15px; font-weight: 600;">If you enjoy what you see in the gallery or the linked portfolios, feel free to <a href="https://buymeacoffee.com/markowihu" target="_blank" rel="noopener" class="coffee-link">buy me a coffee</a>! Your support is a welcome gesture that helps me maintain this archive and update my modest gear from time to time.</p>
+            
+            <!-- Castilian Translation -->
+            <div class="bio-translation">
+                <p>Todo comenzó cuando mi abuelo me regaló una cámara de carrete a los nueve años. Hoy en día, con nacionalidad española y residiendo en el hermoso interior montañoso de la provincia de Alicante, encuentro una fuente constante de inspiración en los contrastes de este entorno, su costa cercana y los paisajes del norte de la península ibérica.</p>
+                
+                <p style="margin-top: 15px;">Mi fotografía es una exploración del espacio, la forma y la presencia humana en el paisaje contemporáneo. Combinando el aprecio de toda una vida por el detalle técnico con un profundo interés visual por el minimalismo urbano y las perspectivas industriales, utilizo la lente para aislar el orden subyacente de nuestro entorno. Desde las formas arquitectónicas estructurales hasta las interacciones espontáneas en la calle, mi práctica busca capturar esa simetría sutil que a menudo pasa desapercibida.</p>
+                
+                <p style="margin-top: 15px;">Como me apasiona el intercambio creativo, no dudes en compartir tus ideas y comentarios constructivos. Cuando no estoy detrás de la cámara, lo más probable es que me encuentres nadando largos, entrenando en el gimnasio, experimentando en la cocina o inmerso en proyectos lingüísticos ocasionales.</p>
+                
+                <p style="margin-top: 15px; font-weight: 600;">Si te gusta lo que ves en la galería o en los portafolios enlazados, ¡te invito a que me <a href="https://buymeacoffee.com/markowihu" target="_blank" rel="noopener" class="coffee-link">invites a un café</a>! Tu apoyo es un gran gesto que me ayuda a continuar con este archivo visual y a renovar el modesto equipo técnico cuando es necesario.</p>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer id="contact" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-legal-block">
+                <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos en mark arroba markowihu.es — Si considera que he tratado sus datos de forma incorrecta, por favor comuníquemelo inmediatamente.</p>
+            </div>
+            <div class="footer-legal-block">
+                <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for my personal communication. To exercise your rights, contact me: mark ('at' symbol) markowihu.es — If you believe your data has been handled incorrectly, please let me know immediately.</p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script>
+    // Handles tap-to-toggle dropdown behavior on mobile screens
+    document.querySelectorAll('nav ul li > a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const parent = this.parentElement;
+            if (parent.querySelector('ul')) {
+                e.preventDefault();
+                parent.classList.toggle('is-open');
+            }
+        });
+    });
+
+    // Closes dropdown when tapping outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('nav')) {
+            document.querySelectorAll('nav ul li').forEach(li => li.classList.remove('is-open'));
+        }
+    });
+</script>
+
+</body>
+</html>
