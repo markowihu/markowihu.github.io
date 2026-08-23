@@ -3,286 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalism | MarkOWiHu Photography</title>
-    <style>
-        :root {
-            --bg-color: #0f0f11;
-            --text-color: #e0e0e0;
-            --accent-color: #3b82f6;
-            --card-bg: #18181c;
-            --max-width: 1400px;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-        }
-
-        /* Top Utility Navigation */
-        .utility-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            margin-bottom: 30px;
-            border-bottom: 1px solid #2a2a30;
-            font-size: 0.95rem;
-        }
-
-        .utility-nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .utility-nav a:hover {
-            color: var(--accent-color);
-        }
-
-        /* Gallery Grid Mathematics: Multiples of 12 (1, 2, 3, 4 cols) */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 20px;
-            margin-bottom: 60px;
-        }
-
-        @media (min-width: 600px) {
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 900px) {
-            .gallery-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (min-width: 1200px) {
-            .gallery-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        .gallery-item {
-            background-color: var(--card-bg);
-            overflow: hidden;
-            border-radius: 4px;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.02);
-        }
-
-        /* Section Layouts */
-        .section-block {
-            margin: 80px 0;
-            padding-top: 20px;
-            border-top: 1px solid #2a2a30;
-        }
-
-        .wry-note {
-            font-style: italic;
-            color: #a0a0ab;
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-            text-align: center;
-        }
-
-        .horizon-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .horizon-grid img {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-            display: block;
-        }
-
-        .tribute-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        .tribute-container h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #ffffff;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-        }
-
-        .tribute-container p {
-            margin-bottom: 20px;
-            color: #cccccc;
-            font-size: 1.05rem;
-        }
-
-        .triptych-display {
-            margin-top: 40px;
-            text-align: center;
-        }
-
-        .triptych-display img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-    </style>
+    <title>Minimalism | MarkOWiHu Photographer</title>
+    <meta name="description" content="Urban, industrial, and landscape minimalism photography portfolio by MarkOWiHu.">
+    <link rel="canonical" href="https://markowihu.es/minimalism.html">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="container">
 
-    <!-- Top Utility Bar -->
-    <nav class="utility-nav">
-        <a href="minimalismo.html#main-gallery" class="lang-toggle">Versión española aquí</a>
-        <a href="#conventional-minimalism" class="jump-link">Skip to Sea & Sky Minimalism &darr;</a>
+    <header role="banner">
+        <h1>MarkOWiHu Photographer • Fotógrafo</h1>
+        <div class="tagline">Provincia de Alicante</div>
+    </header>
+
+    <nav role="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About • Quién soy</a></li>
+            <li>
+                <a href="#">Galleries • Galerías ▼</a>
+                <ul>
+                    <li><a href="minimalism.html" class="active">Minimalism</a></li>
+                    <li><a href="#">Street & Humanity</a></li>
+                    <li><a href="#">Natural World</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Connected Feeds • Redes y colaboraciones ▼</a>
+                <ul>
+                    <li><a href="https://adobe.ly/4fk7qLC" target="_blank" rel="noopener">Lightroom Share</a></li>
+                    <li><a href="https://markowihu.myportfolio.com/" target="_blank" rel="noopener">MyPortfolio</a></li>
+                    <li><a href="https://www.flickr.com/photos/markowihu/" target="_blank" rel="noopener">Flickr</a></li>
+                    <li><a href="https://markowihu.wordpress.com/wp-content/uploads/2026/07/260724_explore-scout_big-huge-labs.jpg?w=887" target="_blank" rel="noopener">Flickr Explore Scout</a></li>
+                    <li><a href="https://www.instagram.com/markowihu/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.behance.net/markowihu" target="_blank" rel="noopener">Behance</a></li>
+                    <li><a href="https://unsplash.com/@markowihu" target="_blank" rel="noopener">Unsplash</a></li>
+                    <li><a href="https://the.fotoapp.co/markowihu" target="_blank" rel="noopener">Fotoapp • Capturas al vuelo</a></li>
+                    <li><a href="https://500px.com/p/markowihu?view=photos" target="_blank" rel="noopener">500px • Selección archivada</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact(o)</a></li>
+        </ul>
     </nav>
 
-    <!-- Main Gallery Section -->
-    <section id="main-gallery">
-        <div class="gallery-grid">
-            <!-- Row 1: Stark Monochrome Start -->
-            <div class="gallery-item">
-                <img src="images/minimalism/01_found-minimalism.webp" alt="Minimalist black and white architectural detail of a metal staircase against a concrete industrial building facade" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/02_found-minimalism.webp" alt="Locus Urbis series: Minimalist white building facade with four narrow black windows under a dark wooden roofline" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/03_found-minimalism.webp" alt="Minimalist urban texture showing a vast blank factory wall with two small white doors in Sol LeWitt style" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/04_found-minimalism.webp" alt="Black and white high-contrast urban street perspective with sharp vanishing lines and geometric buildings" loading="lazy" width="1920" height="1280">
-            </div>
-
-            <!-- Row 2: Cool Neutrals & Glass -->
-            <div class="gallery-item">
-                <img src="images/minimalism/05_found-minimalism.webp" alt="Industrial minimalism featuring a stainless steel slatted air vent grid on a grey cinderblock wall" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/06_found-minimalism.webp" alt="Minimalist horizontal black slatted security fence against a clean white urban curb" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/07_found-minimalism.webp" alt="Symmetrical white arched iron gate set against dark urban building entrance" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/08_found-minimalism.webp" alt="Industrial glass block window framed by blue tile border in a concrete wall" loading="lazy" width="1920" height="1280">
-            </div>
-
-            <!-- Row 3: Terracotta & Red Shift -->
-            <div class="gallery-item">
-                <img src="images/minimalism/09_found-minimalism.webp" alt="Terracotta red apartment balconies stacked vertically against a clear blue sky in Mark Rothko style" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/10_found-minimalism.webp" alt="Color field composition of a red slatted industrial wall intersecting textured beige stone at a sharp diagonal" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/11_found-minimalism.webp" alt="Hopper-esque minimalist composition of a red industrial chimney stack casting a sharp shadow on a white roof wall" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/12_found-minimalism.webp" alt="Urban wall texture study of a vibrant red metal door covered in white graffiti tags" loading="lazy" width="1920" height="1280">
-            </div>
-
-            <!-- Row 4: Industrial Warmth & Earth Tones -->
-            <div class="gallery-item">
-                <img src="images/minimalism/13_found-minimalism.webp" alt="Industrial workplace fence with vertical orange slatted bars over grey building geometry" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/14_found-minimalism.webp" alt="Modernist copper dome structure and arched iron security gate on an urban office building" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/15_found-minimalism.webp" alt="Sculptural white curved bench in a modern urban plaza under sunlight" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/16_found-minimalism.webp" alt="Industrial grid geometry featuring square window bars set in concrete masonry" loading="lazy" width="1920" height="1280">
-            </div>
-
-            <!-- Row 5: Vivid Saturated Blooming -->
-            <div class="gallery-item">
-                <img src="images/minimalism/17_found-minimalism.webp" alt="Vibrant green corrugated industrial door with a small ladder leaning against the wall" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/18_found-minimalism.webp" alt="Symmetrical green industrial loading doors with a central white pillar and staircase" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/19_found-minimalism.webp" alt="Rectangular pattern modernist white house with terracotta trim isolated under a deep blue sky" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/20_found-minimalism.webp" alt="Industrial construction geometry showing raw concrete wall, steel framework, and crane against blue sky" loading="lazy" width="1920" height="1280">
-            </div>
-
-            <!-- Row 6: Structural & Textural Finale -->
-            <div class="gallery-item">
-                <img src="images/minimalism/21_found-minimalism.webp" alt="Long grey industrial factory building perspective lined with green cypress trees" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/22_found-minimalism.webp" alt="Soft pink cinderblock wall with autumnal leaf shadows casting organic patterns" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/23_found-minimalism.webp" alt="Line of sight minimalism showing a single white seagull perched on a ledge against a dark slate sky" loading="lazy" width="1920" height="1280">
-            </div>
-            <div class="gallery-item">
-                <img src="images/minimalism/24_found-minimalism.webp" alt="Architectural fixture detail of a carved face emblem on a white drainage pipe against a red wall" loading="lazy" width="1920" height="1280">
-            </div>
-        </div>
-    </section>
-
-<!-- Conventional Minimalism Section -->
-<section id="conventional-minimalism" class="section-block">
-    <p class="wry-note">Before discovering the graphic tension of rusted loading docks and weathered render, I, too, dutifully submitted to the rules of traditional minimalism. A portfolio is apparently required by fine-art law to feature a few serene, empty sea horizons or sky.</p>
-    <div class="horizon-grid">
-        <img src="images/minimalism/cliché-horizon-01.webp" alt="Conventional minimalist sea and sky horizon composition" loading="lazy" width="1920" height="1080">
-        <img src="images/minimalism/cliché-horizon-02.webp" alt="Tranquil beach line minimalist landscape composition" loading="lazy" width="1920" height="1080">
-        <img src="images/minimalism/cliché-horizon-03.webp" alt="Minimalist cloud formation against deep blue sky" loading="lazy" width="1920" height="1280">
+    <!-- Top Utility Link Bar -->
+    <div class="utility-nav">
+        <a href="minimalismo.html#main-gallery" class="lang-toggle">Versión española aquí</a>
+        <a href="#conventional-minimalism" class="jump-link">Skip to Sea & Sky Minimalism &darr;</a>
     </div>
-</section>
 
-    <!-- Inspiration & Tributes Section -->
-    <section id="inspiration-tributes" class="section-block">
-        <div class="tribute-container">
-            <h2>Inspiration: The Built Environment</h2>
-            <p>Minimalist photography has long gravitated toward the wide-open stillness of sky and sea, but I have found <a href="https://www.flickr.com/people/203552529@N06/" target="_blank" rel="noopener noreferrer">Jay Mullineaux</a>'s work particularly inspiring. His superb Flickr portfolio renewed and focused my attention on the overlooked corners of the urban and industrial built environments.</p>
-			<p>Jay's eye for weathered doors, boarded windows and worn brick turns ordinary urban surfaces into compositions as spare and considered as any horizon line. Discovering his photography — and the conversations that followed — helped draw my own minimalist photography away from land and seascapes. A seemingly almost unlimited variety of possibilities opened up. The triptych featured here is based on three of his images, offered here with generous permission — and my gratitude for the inspiration as well as his time and observant input.</p>
-		</div>
-				
-        <div class="triptych-display">
-            <img src="images/minimalism/jay-mullineaux-triptych.webp" alt="Triptych featuring three minimalist urban photography studies by Jay Mullineaux" loading="lazy" width="1200" height="1800">
+    <main role="main">
+        <!-- Main Gallery Section -->
+        <section id="main-gallery" style="padding-top: 0;">
+            <div class="gallery-grid">
+                <!-- Row 1 -->
+                <div class="gallery-item"><img src="images/minimalism/01_found-minimalism.webp" alt="Minimalist black and white architectural detail of a metal staircase against a concrete industrial building facade" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/02_found-minimalism.webp" alt="Locus Urbis series: Minimalist white building facade with four narrow black windows under a dark wooden roofline" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/03_found-minimalism.webp" alt="Minimalist urban texture showing a vast blank factory wall with two small white doors in Sol LeWitt style" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/04_found-minimalism.webp" alt="Black and white high-contrast urban street perspective with sharp vanishing lines and geometric buildings" loading="lazy" width="1920" height="1280"></div>
+
+                <!-- Row 2 -->
+                <div class="gallery-item"><img src="images/minimalism/05_found-minimalism.webp" alt="Industrial minimalism featuring a stainless steel slatted air vent grid on a grey cinderblock wall" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/06_found-minimalism.webp" alt="Minimalist horizontal black slatted security fence against a clean white urban curb" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/07_found-minimalism.webp" alt="Symmetrical white arched iron gate set against dark urban building entrance" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/08_found-minimalism.webp" alt="Industrial glass block window framed by blue tile border in a concrete wall" loading="lazy" width="1920" height="1280"></div>
+
+                <!-- Row 3 -->
+                <div class="gallery-item"><img src="images/minimalism/09_found-minimalism.webp" alt="Terracotta red apartment balconies stacked vertically against a clear blue sky in Mark Rothko style" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/10_found-minimalism.webp" alt="Color field composition of a red slatted industrial wall intersecting textured beige stone at a sharp diagonal" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/11_found-minimalism.webp" alt="Hopper-esque minimalist composition of a red industrial chimney stack casting a sharp shadow on a white roof wall" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/12_found-minimalism.webp" alt="Urban wall texture study of a vibrant red metal door covered in white graffiti tags" loading="lazy" width="1920" height="1280"></div>
+
+                <!-- Row 4 -->
+                <div class="gallery-item"><img src="images/minimalism/13_found-minimalism.webp" alt="Industrial workplace fence with vertical orange slatted bars over grey building geometry" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/14_found-minimalism.webp" alt="Modernist copper dome structure and arched iron security gate on an urban office building" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/15_found-minimalism.webp" alt="Sculptural white curved bench in a modern urban plaza under sunlight" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/16_found-minimalism.webp" alt="Industrial grid geometry featuring square window bars set in concrete masonry" loading="lazy" width="1920" height="1280"></div>
+
+                <!-- Row 5 -->
+                <div class="gallery-item"><img src="images/minimalism/17_found-minimalism.webp" alt="Vibrant green corrugated industrial door with a small ladder leaning against the wall" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/18_found-minimalism.webp" alt="Symmetrical green industrial loading doors with a central white pillar and staircase" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/19_found-minimalism.webp" alt="Rectangular pattern modernist white house with terracotta trim isolated under a deep blue sky" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/20_found-minimalism.webp" alt="Industrial construction geometry showing raw concrete wall, steel framework, and crane against blue sky" loading="lazy" width="1920" height="1280"></div>
+
+                <!-- Row 6 -->
+                <div class="gallery-item"><img src="images/minimalism/21_found-minimalism.webp" alt="Long grey industrial factory building perspective lined with green cypress trees" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/22_found-minimalism.webp" alt="Soft pink cinderblock wall with autumnal leaf shadows casting organic patterns" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/23_found-minimalism.webp" alt="Line of sight minimalism showing a single white seagull perched on a ledge against a dark slate sky" loading="lazy" width="1920" height="1280"></div>
+                <div class="gallery-item"><img src="images/minimalism/24_found-minimalism.webp" alt="Architectural fixture detail of a carved face emblem on a white drainage pipe against a red wall" loading="lazy" width="1920" height="1280"></div>
+            </div>
+        </section>
+
+        <!-- Conventional Minimalism Section -->
+        <section id="conventional-minimalism" class="section-block">
+            <p class="wry-note">Before discovering the graphic tension of rusted loading docks and weathered render, I, too, dutifully submitted to the rules of traditional minimalism. A portfolio is apparently required by fine-art law to feature a few serene, empty sea horizons or sky.</p>
+            <div class="horizon-grid">
+                <img src="images/minimalism/cliché-horizon-01.webp" alt="Conventional minimalist sea and sky horizon composition" loading="lazy" width="1920" height="1080">
+                <img src="images/minimalism/cliché-horizon-02.webp" alt="Tranquil beach line minimalist landscape composition" loading="lazy" width="1920" height="1080">
+                <img src="images/minimalism/cliché-horizon-03.webp" alt="Minimalist cloud formation against deep blue sky" loading="lazy" width="1920" height="1280">
+            </div>
+        </section>
+
+        <!-- Inspiration & Tributes Section -->
+        <section id="inspiration-tributes" class="section-block">
+            <div class="tribute-container">
+                <h2>Inspiration: The Built Environment</h2>
+                <p>Minimalist photography has long gravitated toward the wide-open stillness of sky and sea, but I have found <a href="https://www.flickr.com/people/203552529@N06/" target="_blank" rel="noopener noreferrer">Jay Mullineaux</a>'s work particularly inspiring. His superb Flickr portfolio renewed and focused my attention on the overlooked corners of the urban and industrial built environments.</p>
+                <p>Jay's eye for weathered doors, boarded windows and worn brick turns ordinary urban surfaces into compositions as spare and considered as any horizon line. Discovering his photography — and the conversations that followed — helped draw my own minimalist photography away from land and seascapes. A seemingly almost unlimited variety of possibilities opened up. The triptych featured here is based on three of his images, offered here with generous permission — and my gratitude for the inspiration as well as his time and observant input.</p>
+            </div>
+            <div class="triptych-display">
+                <img src="images/minimalism/jay-mullineaux-triptych.webp" alt="Triptych featuring three minimalist urban photography studies by Jay Mullineaux" loading="lazy" width="1200" height="1800">
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-legal-block">
+                <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos a través de la <a href="contact.html">página de contacto</a> o en fotos arroba markowihu.es — Si considera que he tratado sus datos de forma incorrecta, por favor comuníquemelo inmediatamente.</p>
+            </div>
+            <div class="footer-legal-block">
+                <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for my personal communication. To exercise your rights, please use the <a href="contact.html">contact page</a> or email fotos ('at' symbol) markowihu.es — If you believe your data has been handled incorrectly, please let me know immediately.</p>
+            </div>
         </div>
-    </section>
+    </footer>
 
 </div>
+
+<script>
+    document.querySelectorAll('nav ul li > a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const parent = this.parentElement;
+            if (parent.querySelector('ul')) {
+                e.preventDefault();
+                parent.classList.toggle('is-open');
+            }
+        });
+    });
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('nav')) {
+            document.querySelectorAll('nav ul li').forEach(li => li.classList.remove('is-open'));
+        }
+    });
+</script>
 
 </body>
 </html>
