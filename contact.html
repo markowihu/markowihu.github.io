@@ -1,7 +1,9 @@
-<!-- MarkOWiHu Photographer Contact page • markowihu fotógrafo Página de Contacto • ver 1.2 24-08-2026 -->
+<!-- MarkOWiHu Photographer Contact page • markowihu fotógrafo Página de Contacto • ver 1.3 25-08-2026 -->
 <!-- Webforms included and alignment of link URLs etc -->
 <!-- CHANGE LOG -->
-<!-- 24/08/2026 Ver 1.2 Style sheet introduction -->
+<!-- 24/08/2026 Ver 1.2 - Style sheet introduction -->
+<!-- 25/08/2026 Ver 1.3 - Added utility nav for ES page routing and #business-card anchor -->
+<!--  -->
 <!--  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -50,16 +52,23 @@
         </ul>
     </nav>
 
+<!-- CHANGE LOG: 25/08/2026 Ver 1.3 - Added utility nav for ES page routing and business card anchor -->
+    <div class="utility-nav">
+        <a href="contacto.html" class="lang-toggle" lang="es">Versión española aquí &darr;</a>
+        <a href="#business-card" class="jump-link">Jump to Business Card &darr;</a>
+    </div>
+
     <main role="main">
         <section class="section-block">
             <h2>Contact • Contacto</h2>
             <p><strong>Get in touch / Póngase en contacto</strong></p>
             <p>For inquiries, commercial licensing, or collaboration opportunities, please use the form below or reach out directly.</p>
             
+            <!-- CHANGE LOG: 25/08/2026 Ver 1.3 - Added id="business-card" page anchor -->
             <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
                 
                 <!-- Web3Forms Contact Form -->
-                <div class="form-container">
+                <div class="form-container" id="contact-form-container">
                     <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
                         <input type="hidden" name="access_key" value="6e02a44e-589c-4792-8129-a1de82977026">
                         <input type="hidden" name="subject" value="New Contact Form Submission - MarkOWiHu.es">
@@ -85,10 +94,9 @@
                 </div>
 
                 <!-- Business Card / Direct Details -->
-                <div class="card-container" style="text-align: center;">
+                <div class="card-container" id="business-card" style="text-align: center;">
                     <img src="images/business-card.jpg" alt="MarkOWiHu Photographer Business Card" style="max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                 </div>
-
             </div>
         </section>
     </main>
