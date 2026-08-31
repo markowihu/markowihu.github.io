@@ -1,14 +1,9 @@
-<!-- markowihu fotógrafo Galeria Web Portafolio About & Biography ver. 1-3-2 24-08-2026 -->
-<!-- 
-  Changelog / Release Notes (about.html ver 1-3-2 • 24-08-2026):
+<!-- markowihu fotógrafo Galeria Web Portafolio About & Biography ver. 1-4 30-08-2026 
+  Changelog / Release Notes (about.html ver 1-4 • 30-08-2026):
   • 24/08/26; ver 1.3: Style sheet and other minor changes including page anchors. 
-  • 24/08/26: ver 1.3.1 JavaScript Cloudflare anaytical stats beacon added. 
-  • Ver 1.3.2 with refactored code to reinstate full biography narrative and Buy Me a Coffee links
-  while linking to styles.css and keeping the bilingual jump anchors
-  • Contact Integration: Linked menu bar item directly to 'contact.html'.
-  • Privacy Alignment: Updated footer legal block to reference 'contact.html' and email address at markowihu.es'.
-  • Navigation State: Preserved active state on 'About • Quién soy'.
-  25/08/26: ver 1-3-3 - Menu updates to remove ES equivalents. Line spaciing corrections. 
+  • 24/08/26: ver 1.3.1 JavaScript Cloudflare analytical stats beacon added. 
+  • 25/08/26: ver 1.3.3 - Menu updates to remove ES equivalents. Line spacing corrections.
+  • 30/08/26: ver 1.4 - Separation of bilingual page into EN About and ES Quien Soy pages; header EN|ES switch integration.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -24,17 +19,24 @@
 
 <div class="container">
 
-    <header role="banner">
-        <h1>MarkOWiHu Photographer • Fotógrafo</h1>
-        <div class="tagline">Provincia de Alicante</div>
+    <header role="banner" class="header-banner">
+        <div class="header-titles">
+            <h1>MarkOWiHu Photographer</h1>
+            <div class="tagline">Provincia de Alicante</div>
+        </div>
+        <div class="lang-switch" aria-label="Language selection">
+            <span class="lang-active" lang="en" title="Current English version">EN</span>
+            <span class="divider">|</span>
+            <a href="quien-soy.html" lang="es" title="Versión en español">ES</a>
+        </div>
     </header>
 
     <nav role="navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html#about-en" class="active">About • Quién soy</a></li>
+            <li><a href="about.html" class="active">About</a></li>
             <li>
-                <a href="#">Galleries • Galerías ▼</a>
+                <a href="#">Galleries ▼</a>
                 <ul>
                     <li><a href="minimalism.html">Minimalism</a></li>
                     <li><a href="#">Street & Humanity</a></li>
@@ -52,46 +54,29 @@
                     <li><a href="https://unsplash.com/@markowihu" target="_blank" rel="noopener">Unsplash</a></li>
                 </ul>
             </li>
-            <li><a href="contact.html">Contact(o)</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-
-    <!-- Top Utility Link Bar -->
-    <div class="utility-nav">
-        <a href="#quien-soy" class="lang-toggle" lang="es">Versión española aquí &darr;</a>
-    </div>
 
     <main role="main">
         <!-- English Biography Section -->
         <section id="about-en" class="section-block">
             <h2>About • Biography</h2>
-            <br>
+            
             <p>It all started when my grandfather gifted me a film camera at age nine. Today, holding Spanish nationality and living in the beautiful mountainous interior of Alicante, I draw constant inspiration from the contrast of this rugged landscape, its nearby coast, and the northern stretches of the Iberian Peninsula.</p>
-            <br>
+            
             <p>My photography is an exploration of space, form, and human presence within the contemporary landscape. Combining a lifelong appreciation for technical detail with a strong visual interest in urban minimalism and industrial perspectives, I use the lens to isolate an underlying sense of order. From structural architectural forms to candid street interactions, my practice captures the subtle symmetry often overlooked in a fast-paced world.</p>
-            <br>
+            
             <p>Naturally, I am passionate about creative exchange, so please feel free to share your constructive thoughts and ideas. When I am not behind the camera, you will likely find me swimming laps, training at the gym, experimenting in the kitchen, or immersed in occasional linguistic projects.</p>
-            <br>
+            
             <p><strong>If you enjoy what you see in the gallery or the linked portfolios, feel free to <a href="https://buymeacoffee.com/markowihu" target="_blank" rel="noopener" class="coffee-link">buy me a coffee</a>! Your support is a welcome gesture that helps me maintain this archive and update my modest gear from time to time.</strong></p>
-        </section>
-        <hr>
-        <!-- Castilian Spanish Biography Section -->
-        <section id="quien-soy" class="section-block">
-            <h2>Quién soy • Biografía</h2>
-            <p>Todo comenzó cuando mi abuelo me regaló una cámara de carrete a los nueve años. Hoy en día, con nacionalidad española y residiendo en el hermoso interior montañoso de la provincia de Alicante, encuentro una fuente constante de inspiración en los contrastes de este entorno, su costa cercana y los paisajes del norte de la península ibérica.</p>
-			<br>
-            <p>Mi fotografía es una exploración del espacio, la forma y la presencia humana en el paisaje contemporáneo. Combinando el aprecio de toda una vida por el detalle técnico con un profundo interés visual por el minimalismo urbano y las perspectivas industriales, utilizo la lente para aislar el orden subyacente de nuestro entorno. Desde las formas arquitectónicas estructurales hasta las interacciones espontáneas en la calle, mi práctica busca capturar esa simetría sutil que a menudo pasa desapercibida.</p>
-            <br>
-            <p>Como me apasiona el intercambio creativo, no dudes en compartir tus ideas y comentarios constructivos. Cuando no estoy detrás de la cámara, lo más probable es que me encuentres nadando largos, entrenando en el gimnasio, experimentando en la cocina o inmerso en proyectos lingüísticos ocasionales.</p>
-            <br>
-            <p><strong>Si te gusta lo que ves en la galería o en los portafolios enlazados, ¡te invito a que me <a href="https://buymeacoffee.com/markowihu" target="_blank" rel="noopener" class="coffee-link">invites a un café</a>! Tu apoyo es un gran gesto que me ayuda a continuar con este archivo visual y a renovar el modesto equipo técnico cuando es necesario.</strong></p>
         </section>
     </main>
 
     <footer id="contact" role="contentinfo">
         <div class="footer-grid">
             <div class="footer-legal-block">
-                <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos a través de la <a href="contact.html">página de contacto</a> o en fotos arroba markowihu.es — Si considera que he tratado sus datos de forma incorrecta, por favor comuníquemelo inmediatamente.</p>
+                <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos a través de la <a href="contacto.html">página de contacto</a> o en fotos arroba markowihu.es — Si considera que he tratado sus datos de forma incorrecta, por favor comuníquemelo inmediatamente.</p>
             </div>
             <div class="footer-legal-block">
                 <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for my personal communication. To exercise your rights, please use the <a href="contact.html">contact page</a> or email fotos ('at' symbol) markowihu.es — If you believe your data has been handled incorrectly, please let me know immediately.</p>
@@ -118,6 +103,10 @@
         }
     });
 </script>
+
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e26e7a5dca02475a919bab32ec3809d4"}'></script>
+<!-- End Cloudflare Web Analytics -->
 
 </body>
 </html>

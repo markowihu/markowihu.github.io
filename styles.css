@@ -1,6 +1,10 @@
 /* 
    Gemini - MarkOWiHu Photographer markowihu.es Photography hub page style sheet
    Base Engineering Rules 
+   CHANGE LOG:
+	25/08/2026 - Changes to remove top border and excess whitespace padding from first main section site-wide
+	29/08/2026 - Reduced utility nav margins to tighten top layout
+	30/08/2026 - Header Flex Alignment & Compact EN | ES Language Switcher 
 */
 :root {
     --bg-color: #ffffff;
@@ -57,24 +61,64 @@ a:hover {
     color: #777;
 }
 
-/* Header Setup */
+/* CHANGE LOG: 30/08/2026 - Header Flex Alignment & Compact EN | ES Language Switcher */
 header {
-    text-align: center;
-    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
 }
 
 header .tagline {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--muted-color);
     font-style: italic;
+}
+
+.lang-switch {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.lang-switch a {
+    color: var(--muted-color);
+    text-decoration: none;
+    padding: 2px 4px;
+    transition: color 0.2s ease;
+}
+
+.lang-switch a:hover {
+    color: var(--accent-color);
+}
+
+.lang-switch .lang-active {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding: 2px 4px;
+}
+
+.lang-switch .divider {
+    color: #ccc;
+    margin: 0 2px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
 }
 
 /* Pure CSS Dropdown Navigation */
@@ -146,7 +190,15 @@ nav ul li ul li:last-child a {
 main {
     text-align: center;
     min-height: 400px;
-    padding: 2rem 0;
+    padding: 0 0 2rem 0;
+}
+
+/* CHANGE LOG: 25/08/2026 - Remove top border and excess padding from first main section site-wide */
+main > .section-block:first-of-type,
+main > section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 section {
@@ -272,13 +324,109 @@ section {
 }
 
 /* Gallery Utility Navigation Bar */
+/* CHANGE LOG: 29/08/2026 - Reduced utility nav margins to tighten top layout */
+.utility-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.85rem;
+}
+
+.intro-lead-para {
+    font-size: 1.05rem;
+    color: #333333;
+    line-height: 1.7;
+}
+
+.intro-standard-para {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* Index Photo Grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.photo-container {
+    position: relative;
+    background-color: #fafafa;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.photo-container img:hover {
+    opacity: 0.9;
+}
+
+.photo-caption {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Sub-gallery Grid (Minimalism) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+@media (min-width: 600px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1200px) {
+    .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.gallery-item {
+    background-color: var(--card-bg);
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.02);
+}
+
+/* Gallery Utility Navigation Bar */
+/* CHANGE LOG: 25/08/2026 - Remove utility nav bottom margin and border line */
 .utility-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 0 15px 0;
-    margin-bottom: 30px;
-    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0;
+    border-bottom: none;
     font-size: 0.85rem;
 }
 

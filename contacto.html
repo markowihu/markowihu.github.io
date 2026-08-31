@@ -1,18 +1,13 @@
-<!-- MarkOWiHu Photographer Contact page • markowihu fotógrafo Página de Contacto | Ver 1.3 25-08-2026 
-	CHANGE LOG:
-	--/08/2026 Ver. 1.1 Webforms included and alignment of link URLs etc
-	24/08/2026 Ver. 1.2 Style sheet introduction.
-	25/08/2026 Ver. 1.3 Added utility nav for ES page routing and #business-card anchor. 
-	29/08/2026 1.3a Minor wording refinements
--->
+<!-- MarkOWiHu Fotógrafo Página de Contacto • contacto.html | Ver 1.0 26-08-2026 -->
+<!-- LOG DE CAMBIOS: 26/08/2026 Ver. 1.0 - Creación de versión íntegra en español (contacto.html) -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact • Contacto | MarkOWiHu Photographer</title>
-    <meta name="description" content="Get in touch with MarkOWiHu Photographer in Alicante province for enquiries, projects, events or collaborations.">
-    <link rel="canonical" href="https://markowihu.es/contact.html">
+    <title>Contacto | MarkOWiHu Fotógrafo</title>
+    <meta name="description" content="Póngase en contacto con MarkOWiHu Fotógrafo en Alicante para consultas, licencias o colaboraciones.">
+    <link rel="canonical" href="https://markowihu.es/contacto.html">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,24 +15,24 @@
 <div class="container">
 
     <header role="banner">
-        <h1>MarkOWiHu Photographer • Fotógrafo</h1>
+        <h1>MarkOWiHu Fotógrafo</h1>
         <div class="tagline">Provincia de Alicante</div>
     </header>
 
     <nav role="navigation">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html#about-en">About • Quién soy</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html#quien-soy">Quién soy</a></li>
             <li>
-                <a href="#">Galleries • Galerías ▼</a>
+                <a href="#">Galerías ▼</a>
                 <ul>
-                    <li><a href="minimalism.html">Minimalism</a></li>
-                    <li><a href="#">Street & Humanity</a></li>
-                    <li><a href="#">Natural World</a></li>
+                    <li><a href="minimalismo.html">Minimalismo</a></li>
+                    <li><a href="#">Callejera & Humanidad</a></li>
+                    <li><a href="#">Mundo Natural</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Connected Feeds • Redes y colaboraciones ▼</a>
+                <a href="#">Redes y colaboraciones ▼</a>
                 <ul>
                     <li><a href="https://adobe.ly/4fk7qLC" target="_blank" rel="noopener">Lightroom Share</a></li>
                     <li><a href="https://markowihu.myportfolio.com/" target="_blank" rel="noopener">MyPortfolio</a></li>
@@ -47,55 +42,54 @@
                     <li><a href="https://unsplash.com/@markowihu" target="_blank" rel="noopener">Unsplash</a></li>
                 </ul>
             </li>
-            <li><a href="contact.html" class="active">Contact(o)</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
         </ul>
     </nav>
 
-<!-- CHANGE LOG: 25/08/2026 Ver 1.3 - Added utility nav for ES page routing and business card anchor -->
+    <!-- Top Utility Link Bar -->
     <div class="utility-nav">
-        <a href="contacto.html" class="lang-toggle" lang="es">Versión española aquí &darr;</a>
-        <a href="#business-card" class="jump-link">Jump to Business Card &darr;</a>
+        <a href="contact.html" class="lang-toggle" lang="en">English version here &darr;</a>
+        <a href="#business-card" class="jump-link">Saltar a tarjeta de visita &darr;</a>
     </div>
 
     <main role="main">
         <section class="section-block">
-		<!-- CHANGE LOG: 29/08/2026 1.3a Minor wording refinements -->
-            <h2>Contact</h2>
-            <p><strong>Enquiries, licensing or collaboration</strong></p>
-            <p>Please use the form below, or contact details directly.</p>
+            <!-- LOG DE CAMBIOS: 29/08/2026 Ver 1.3a - Refinamiento de texto principal de contacto -->
+			<h2>Contacto</h2>
+			<p><strong>Consultas, licencias o colaboraciones</strong></p>
+			<p>Por favor, utilice el formulario a continuación o los datos de contacto directo.</p>
             
-            <!-- CHANGE LOG: 25/08/2026 Ver 1.3 - Added id="business-card" page anchor -->
             <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
                 
-                <!-- Web3Forms Contact Form -->
+                <!-- Formulario de contacto Web3Forms -->
                 <div class="form-container" id="contact-form-container">
                     <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
                         <input type="hidden" name="access_key" value="6e02a44e-589c-4792-8129-a1de82977026">
-                        <input type="hidden" name="subject" value="New Contact Form Submission - MarkOWiHu.es">
+                        <input type="hidden" name="subject" value="Nuevo mensaje de contacto - MarkOWiHu.es">
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                         <div style="margin-bottom: 1rem;">
-                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Name / Nombre:</label>
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Nombre:</label>
                             <input type="text" name="name" id="name" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
                         </div>
 
                         <div style="margin-bottom: 1rem;">
-                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email / Correo electrónico:</label>
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Correo electrónico:</label>
                             <input type="email" name="email" id="email" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
                         </div>
 
                         <div style="margin-bottom: 1rem;">
-                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Message / Mensaje:</label>
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Mensaje:</label>
                             <textarea name="message" id="message" rows="5" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;"></textarea>
                         </div>
 
-                        <button type="submit" style="background-color: #e60000; color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; font-weight: bold;">Send Message / Enviar mensaje</button>
+                        <button type="submit" style="background-color: #e60000; color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; font-weight: bold;">Enviar mensaje</button>
                     </form>
                 </div>
 
-                <!-- Business Card / Direct Details -->
+                <!-- Tarjeta de visita / Datos directos -->
                 <div class="card-container" id="business-card" style="text-align: center;">
-                    <img src="images/business-card.jpg" alt="MarkOWiHu Photographer Business Card" style="max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <img src="images/business-card.jpg" alt="Tarjeta de visita de MarkOWiHu Fotógrafo" style="max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                 </div>
             </div>
         </section>
@@ -104,10 +98,10 @@
     <footer id="contact" role="contentinfo">
         <div class="footer-grid">
             <div class="footer-legal-block">
-                <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos a través de la <a href="contact.html">página de contacto</a> o en fotos arroba markowihu.es.</p>
+                <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos a través de la <a href="contacto.html">página de contacto</a> o en fotos arroba markowihu.es — Si considera que he tratado sus datos de forma incorrecta, por favor comuníquemelo inmediatamente.</p>
             </div>
             <div class="footer-legal-block">
-                <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for my personal communication. To exercise your rights, please use the <a href="contact.html">contact page</a> or email fotos ('at' symbol) markowihu.es.</p>
+                <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for my personal communication. To exercise your rights, please use the <a href="contact.html">contact page</a> or email fotos ('at' symbol) markowihu.es — If you believe your data has been handled incorrectly, please let me know immediately.</p>
             </div>
         </div>
     </footer>
@@ -142,14 +136,14 @@
         })
         .then(async (response) => {
             if (response.status === 200) {
-                alert('Thank you! Your message has been sent successfully. / ¡Gracias! Su mensaje ha sido enviado correctamente.');
+                alert('¡Gracias! Su mensaje ha sido enviado correctamente.');
                 window.location.href = "index.html";
             } else {
-                alert('Something went wrong. Please try again. / Se ha producido un error. Inténtelo de nuevo.');
+                alert('Se ha producido un error. Inténtelo de nuevo.');
             }
         })
         .catch(error => {
-            alert('Submission error. Please check your network connection.');
+            alert('Error de envío. Por favor, compruebe su conexión a internet.');
         });
     });
 </script>
