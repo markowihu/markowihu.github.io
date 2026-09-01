@@ -1,9 +1,19 @@
-<!-- MarkOWiHu Photographer Contact page • markowihu fotógrafo Página de Contacto | Ver 1.3 25-08-2026 
+<!-- MarkOWiHu Photographer Contact page | Ver 2 01-09-2026 
 	CHANGE LOG:
 	--/08/2026 Ver. 1.1 Webforms included and alignment of link URLs etc
 	24/08/2026 Ver. 1.2 Style sheet introduction.
 	25/08/2026 Ver. 1.3 Added utility nav for ES page routing and #business-card anchor. 
 	29/08/2026 1.3a Minor wording refinements
+	01/09/26: ver 2: Monolingual Rationalization: Completed the clean separation of bilingual templates
+  into dedicated single-language English and Spanish pages across the site (about.html / quien-soy.html,
+  contact.html / contacto.html, minimalism.html / minimalismo.html). 
+  Navigation & Anchor Alignment: Standardised primary <nav> menu links across all HTML templates 
+  to route directly to specific section anchors (#about-en, #quien-soy, #contact-form-container, #main-gallery).
+  Viewport Scroll Offset: Added global smooth scrolling and section header padding (scroll-margin-top) in styles.css 
+  to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
+  Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
+  above the legal footer across content pages for seamless navigation on long viewports.
+
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -19,17 +29,17 @@
 
 <div class="container">
 
-    <header role="banner">
-        <h1>MarkOWiHu Photographer • Fotógrafo</h1>
-        <div class="tagline">Provincia de Alicante</div>
+    <header role="banner" id="banner-header" class="header-banner">
+        <h1>MarkOWiHu Photographer</h1>
+        <div class="tagline">Alicante province</div>
     </header>
 
     <nav role="navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html#about-en">About • Quién soy</a></li>
+            <li><a href="about.html#about-en">About</a></li>
             <li>
-                <a href="#">Galleries • Galerías ▼</a>
+                <a href="#">Galleries ▼</a>
                 <ul>
                     <li><a href="minimalism.html">Minimalism</a></li>
                     <li><a href="#">Street & Humanity</a></li>
@@ -37,7 +47,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#">Connected Feeds • Redes y colaboraciones ▼</a>
+                <a href="#">Links ▼</a>
                 <ul>
                     <li><a href="https://adobe.ly/4fk7qLC" target="_blank" rel="noopener">Lightroom Share</a></li>
                     <li><a href="https://markowihu.myportfolio.com/" target="_blank" rel="noopener">MyPortfolio</a></li>
@@ -101,6 +111,13 @@
         </section>
     </main>
 
+	<!-- Bottom Navigation Jump Links -->
+	<div class="bottom-nav-jumps">
+		<a href="#contact-form-container" class="jump-content">Top of Content &uarr;</a>
+		<span class="divider">|</span>
+		<a href="#banner-header" class="jump-menu">Main Menu &uarr;</a>
+	</div>
+
     <footer id="contact" role="contentinfo">
         <div class="footer-grid">
             <div class="footer-legal-block">
@@ -153,6 +170,10 @@
         });
     });
 </script>
+
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e26e7a5dca02475a919bab32ec3809d4"}'></script>
+<!-- End Cloudflare Web Analytics -->
 
 </body>
 </html>

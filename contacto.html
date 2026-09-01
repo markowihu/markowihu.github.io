@@ -1,5 +1,17 @@
-<!-- MarkOWiHu Fotógrafo Página de Contacto • contacto.html | Ver 1.0 26-08-2026 -->
-<!-- LOG DE CAMBIOS: 26/08/2026 Ver. 1.0 - Creación de versión íntegra en español (contacto.html) -->
+<!-- MarkOWiHu Fotógrafo Página de Contacto | Ver 2.0 01-09-2026 
+ LOG DE CAMBIOS: 26/08/2026 Ver. 1.0 - Creación de versión íntegra en español (contacto.html) 
+• 01/09/26: Ver 2 – Monolingual Rationalization: Completed the clean separation of bilingual templates
+  into dedicated single-language English and Spanish pages across the site (about.html / quien-soy.html,
+  contact.html / contacto.html, minimalism.html / minimalismo.html). 
+  Navigation & Anchor Alignment: Standardised primary <nav> menu links across all HTML templates 
+  to route directly to specific section anchors (#about-en, #quien-soy, #contact-form-container, #main-gallery).
+  Viewport Scroll Offset: Added global smooth scrolling and section header padding (scroll-margin-top) in styles.css 
+  to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
+  Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
+  above the legal footer across content pages for seamless navigation on long viewports.
+
+
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +26,7 @@
 
 <div class="container">
 
-    <header role="banner">
+    <header role="banner" id="banner-header" class="header-banner">
         <h1>MarkOWiHu Fotógrafo</h1>
         <div class="tagline">Provincia de Alicante</div>
     </header>
@@ -95,6 +107,13 @@
         </section>
     </main>
 
+	<!-- Bottom Navigation Jump Links -->
+		<div class="bottom-nav-jumps">
+		<a href="#contact-form-container" class="jump-content">Top of Content &uarr;</a>
+		<span class="divider">|</span>
+		<a href="#banner-header" class="jump-menu">Main Menu &uarr;</a>
+	</div>
+
     <footer id="contact" role="contentinfo">
         <div class="footer-grid">
             <div class="footer-legal-block">
@@ -147,6 +166,10 @@
         });
     });
 </script>
+
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e26e7a5dca02475a919bab32ec3809d4"}'></script>
+<!-- End Cloudflare Web Analytics -->
 
 </body>
 </html>

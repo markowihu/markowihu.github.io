@@ -5,6 +5,16 @@
 	25/08/2026 - Changes to remove top border and excess whitespace padding from first main section site-wide
 	29/08/2026 - Reduced utility nav margins to tighten top layout
 	30/08/2026 - Header Flex Alignment & Compact EN | ES Language Switcher 
+	01/09/26: ver 2: Monolingual Rationalization: Completed the clean separation of bilingual templates
+  into dedicated single-language English and Spanish pages across the site (about.html / quien-soy.html,
+  contact.html / contacto.html, minimalism.html / minimalismo.html). 
+  Navigation & Anchor Alignment: Standardised primary <nav> menu links across all HTML templates 
+  to route directly to specific section anchors (#about-en, #quien-soy, #contact-form-container, #main-gallery).
+  Viewport Scroll Offset: Added global smooth scrolling and section header padding (scroll-margin-top) in styles.css 
+  to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
+  Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
+  above the legal footer across content pages for seamless navigation on long viewports.
+
 */
 :root {
     --bg-color: #ffffff;
@@ -509,7 +519,7 @@ section {
 }
 
 .triptych-display img {
-    max-width: 75%;
+    max-width: 90%;
     height: auto;
     border-radius: 4px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
@@ -535,6 +545,31 @@ section {
         border: none;
         background: var(--nav-bg);
     }
+}
+
+/* Bottom Navigation Jump Links - Added in version 2 site-wide changes*/
+.bottom-nav-jumps {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    border-top: 1px dashed var(--border-color);
+}
+
+.bottom-nav-jumps a {
+    color: var(--muted-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.bottom-nav-jumps a:hover {
+    color: var(--accent-color);
+}
+
+.bottom-nav-jumps .divider {
+    margin: 0 0.75rem;
+    color: var(--border-color);
 }
 
 /* Protected Legal Footer Assembly */
