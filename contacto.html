@@ -9,7 +9,9 @@
   to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
   Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
   above the legal footer across content pages for seamless navigation on long viewports.
-
+	02/09/26; Aligned contacto.html with site-wide monolingual standards. 
+	Added header, lang-switch targeting contact.html#contact-form-container, updated Minimalismo navigation link to minimalismo.html#main-gallery,
+	removed redundant utility-nav block, localized bottom jump links to Castilian, and updated privacy footer links.
 
 -->
 <!DOCTYPE html>
@@ -27,42 +29,48 @@
 <div class="container">
 
     <header role="banner" id="banner-header" class="header-banner">
-        <h1>MarkOWiHu Fotógrafo</h1>
-        <div class="tagline">Provincia de Alicante</div>
+        <div class="header-titles">
+            <h1>MarkOWiHu Fotógrafo</h1>
+            <div class="tagline">Provincia de Alicante</div>
+        </div>
+        <div class="lang-switch" aria-label="Selección de idioma">
+            <a href="contact.html#contact-form-container" lang="en" title="English version">EN</a>
+            <span class="divider">|</span>
+            <span class="lang-active" lang="es" title="Versión actual en español">ES</span>
+        </div>
     </header>
 
     <nav role="navigation">
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="about.html#quien-soy">Quién soy</a></li>
+            <li><a href="quien-soy.html#quien-soy">Quién soy</a></li>
             <li>
                 <a href="#">Galerías ▼</a>
                 <ul>
-                    <li><a href="minimalismo.html">Minimalismo</a></li>
+                    <li><a href="minimalismo.html#main-gallery">Minimalismo</a></li>
                     <li><a href="#">Callejera & Humanidad</a></li>
                     <li><a href="#">Mundo Natural</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Redes y colaboraciones ▼</a>
-                <ul>
-                    <li><a href="https://adobe.ly/4fk7qLC" target="_blank" rel="noopener">Lightroom Share</a></li>
-                    <li><a href="https://markowihu.myportfolio.com/" target="_blank" rel="noopener">MyPortfolio</a></li>
-                    <li><a href="https://www.flickr.com/photos/markowihu/" target="_blank" rel="noopener">Flickr</a></li>
-                    <li><a href="https://www.instagram.com/markowihu/" target="_blank" rel="noopener">Instagram</a></li>
-                    <li><a href="https://www.behance.net/markowihu" target="_blank" rel="noopener">Behance</a></li>
-                    <li><a href="https://unsplash.com/@markowihu" target="_blank" rel="noopener">Unsplash</a></li>
-                </ul>
-            </li>
-            <li><a href="contacto.html" class="active">Contacto</a></li>
+				<a href="#">Redes y enlaces ▼</a>
+				<ul>
+					<li><a href="https://adobe.ly/4fk7qLC" target="_blank" rel="noopener">Lightroom Share</a></li>
+					<li><a href="https://markowihu.myportfolio.com/" target="_blank" rel="noopener">MyPortfolio</a></li>
+					<li><a href="https://www.flickr.com/photos/markowihu/" target="_blank" rel="noopener">Flickr</a></li>
+					<li><a href="https://markowihu.wordpress.com/wp-content/uploads/2026/07/260724_explore-scout_big-huge-labs.jpg?w=887" target="_blank" rel="noopener">Flickr Explore Scout</a></li>
+					<li><a href="https://the.fotoapp.co/markowihu" target="_blank" rel="noopener">Fotoapp • Capturas al vuelo</a></li>
+					<li><a href="https://www.instagram.com/markowihu/" target="_blank" rel="noopener">Instagram</a></li>
+					<li><a href="https://www.behance.net/markowihu" target="_blank" rel="noopener">Behance</a></li>
+					<li><a href="https://unsplash.com/@markowihu" target="_blank" rel="noopener">Unsplash</a></li>
+					<li><a href="https://www.blipfoto.com/markowihu" target="_blank" rel="noopener">Blipfoto • Blog fotográfico</a></li>
+				</ul>
+			</li>
+            <li>
+				<a href="contacto.html#contact-form-container" class="active">Contacto</a>
+			</li>
         </ul>
     </nav>
-
-    <!-- Top Utility Link Bar -->
-    <div class="utility-nav">
-        <a href="contact.html" class="lang-toggle" lang="en">English version here &darr;</a>
-        <a href="#business-card" class="jump-link">Saltar a tarjeta de visita &darr;</a>
-    </div>
 
     <main role="main">
         <section class="section-block">
@@ -107,20 +115,19 @@
         </section>
     </main>
 
-	<!-- Bottom Navigation Jump Links -->
-		<div class="bottom-nav-jumps">
-		<a href="#contact-form-container" class="jump-content">Top of Content &uarr;</a>
+	<div class="bottom-nav-jumps">
+		<a href="#contact-form-container" class="jump-content">Inicio del contenido &uarr;</a>
 		<span class="divider">|</span>
-		<a href="#banner-header" class="jump-menu">Main Menu &uarr;</a>
+		<a href="#banner-header" class="jump-menu">Menú principal &uarr;</a>
 	</div>
 
     <footer id="contact" role="contentinfo">
         <div class="footer-grid">
             <div class="footer-legal-block">
-                <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos a través de la <a href="contacto.html">página de contacto</a> o en fotos arroba markowihu.es — Si considera que he tratado sus datos de forma incorrecta, por favor comuníquemelo inmediatamente.</p>
+                <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos a través de la <a href="contacto.html#contact-form-container">página de contacto</a> o en fotos arroba markowihu.es — Si considera que he tratado sus datos de forma incorrecta, por favor comuníquemelo inmediatamente.</p>
             </div>
             <div class="footer-legal-block">
-                <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for my personal communication. To exercise your rights, please use the <a href="contact.html">contact page</a> or email fotos ('at' symbol) markowihu.es — If you believe your data has been handled incorrectly, please let me know immediately.</p>
+                <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for my personal communication. To exercise your rights, please use the <a href="contact.html#contact-form-container">contact page</a> or email fotos ('at' symbol) markowihu.es — If you believe your data has been handled incorrectly, please let me know immediately.</p>
             </div>
         </div>
     </footer>
