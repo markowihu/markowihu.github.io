@@ -1,4 +1,4 @@
-<!-- MarkOWiHu Photographer Contact page | Ver 2 01-09-2026 
+<!-- MarkOWiHu Photographer Contact page | Ver 2 02-09-2026 
 	CHANGE LOG:
 	--/08/2026 Ver. 1.1 Webforms included and alignment of link URLs etc
 	24/08/2026 Ver. 1.2 Style sheet introduction.
@@ -13,14 +13,16 @@
   to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
   Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
   above the legal footer across content pages for seamless navigation on long viewports.
-
+	02/08/26: Verified final monolingual contact.html template.
+	Confirmed single-language page title, web form labels, submit button, JavaScript alert popups,
+	post-submission home redirect, header language toggle routing, and footer privacy links.
 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact • Contacto | MarkOWiHu Photographer</title>
+    <title>Contact MarkOWiHu Photographer</title>
     <meta name="description" content="Get in touch with MarkOWiHu Photographer in Alicante province for enquiries, projects, events or collaborations.">
     <link rel="canonical" href="https://markowihu.es/contact.html">
     <link rel="stylesheet" href="styles.css">
@@ -91,21 +93,21 @@
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                         <div style="margin-bottom: 1rem;">
-                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Name / Nombre:</label>
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Name:</label>
                             <input type="text" name="name" id="name" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
                         </div>
 
                         <div style="margin-bottom: 1rem;">
-                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email / Correo electrónico:</label>
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email:</label>
                             <input type="email" name="email" id="email" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
                         </div>
 
                         <div style="margin-bottom: 1rem;">
-                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Message / Mensaje:</label>
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Message:</label>
                             <textarea name="message" id="message" rows="5" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;"></textarea>
                         </div>
 
-                        <button type="submit" style="background-color: #e60000; color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; font-weight: bold;">Send Message / Enviar mensaje</button>
+                        <button type="submit" style="background-color: #e60000; color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; font-weight: bold;">Send Message</button>
                     </form>
                 </div>
 
@@ -165,10 +167,10 @@
         })
         .then(async (response) => {
             if (response.status === 200) {
-                alert('Thank you! Your message has been sent successfully. / ¡Gracias! Su mensaje ha sido enviado correctamente.');
+                alert('Thank you! Your message has been sent successfully.');
                 window.location.href = "index.html";
             } else {
-                alert('Something went wrong. Please try again. / Se ha producido un error. Inténtelo de nuevo.');
+                alert('Something went wrong. Please try again.');
             }
         })
         .catch(error => {
