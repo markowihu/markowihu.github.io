@@ -1,6 +1,6 @@
-<!-- markowihu fotógrafo Galeria Web Portafolio Index Indice ver 2-6 01-09-2026 -->
+<!-- markowihu fotógrafo Galeria Web Portafolio Index Indice ver 2-7 03-09-2026 -->
 <!-- 
-  Changelog / Release Notes (ver 2-5 • 23-08-2026):
+  LOG DE CAMBIOS • Changelog / Release Notes 
   • Architecture: Migrated inline CSS to unified external stylesheet 'styles.css'.
   • Contact Integration: Linked menu bar item directly to 'contact.html'.
   • Privacy Alignment: Updated footer legal block to reference 'contact.html' and email address at markowihu.es'.
@@ -19,7 +19,7 @@
   Creating inicio.html would result in duplicate root content or require unnecessary redirection rules.  
   Established Spanish Navigation: All dedicated Castilian pages (quien-soy.html, contacto.html, minimalismo.html) already point their primary "Inicio" navigation menu item directly to index.html.
   Canonical & SEO Integrity: Maintaining index.html as your sole homepage entry point consolidates search ranking authority and canonical indexing on your root domain without splitting traffic across two root files. 
-
+	03/09/2026 - Conmutador ES -> noticias.html sin salto de ancla
 -->
 <!DOCTYPE html>
 <html lang="es">
@@ -41,10 +41,11 @@
             <h1>MarkOWiHu Photographer • Fotógrafo</h1>
             <div class="tagline">Provincia de Alicante</div>
         </div>
+        <!-- LOG DE CAMBIOS: 03/09/2026 - Conmutador ES -> noticias.html sin salto de ancla -->
         <div class="lang-switch" aria-label="Selección de idioma / Language selection">
             <span class="lang-active" lang="en" title="Current version (English)">EN</span>
             <span class="divider">|</span>
-            <a href="noticias.html#noticias-es" lang="es" title="Ver noticias en español">ES</a>
+            <a href="noticias.html" lang="es" title="Ver noticias en español">ES</a>
         </div>
     </header>
 
