@@ -1,9 +1,10 @@
-<!-- markowihu fotógrafo MarkowiHu Photographer MINIMALISM Gallery EN -->
+<!-- markowihu fotógrafo MarkowiHu Photographer MINIMALISM Gallery EN | Ver 2 03-09-2026 -->
 <!-- 
-  Changelog / Release Notes (ver 1-1 • 23-08-2026):
-23/08/06 Hyperlink to ES version (new page) introduced.
--  
---><!DOCTYPE html>
+  Changelog / Release Notes:
+  • 23/08/26: ver 1.1 - Hyperlink to ES version introduced.
+  • 03/09/26: ver 2 - Monolingual Rationalization & Anchor Alignment: Integrated header .lang-switch targeting minimalismo.html#main-gallery, standardized navigation menu anchors (#about-en, #contact-form-container), updated Links dropdown, removed obsolete utility-nav block, and updated footer privacy routing.
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,15 +18,23 @@
 
 <div class="container">
 
-    <header role="banner" id="banner-header" class="header-banner">
+<header role="banner" id="banner-header" class="header-banner">
+    <div class="header-titles">
         <h1>MarkOWiHu Photographer</h1>
         <div class="tagline">Alicante province</div>
-    </header>
+    </div>
+    <div class="lang-switch" aria-label="Language selection">
+        <span class="lang-active" lang="en" title="Current English version">EN</span>
+        <span class="divider">|</span>
+        <a href="minimalismo.html#main-gallery" lang="es" title="Versión en español">ES</a>
+    </div>
+</header>
 
-    <nav role="navigation">
+
+<nav role="navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="about.html#about-en">About</a></li>
             <li>
                 <a href="#">Galleries ▼</a>
                 <ul>
@@ -41,23 +50,19 @@
                     <li><a href="https://markowihu.myportfolio.com/" target="_blank" rel="noopener">MyPortfolio</a></li>
                     <li><a href="https://www.flickr.com/photos/markowihu/" target="_blank" rel="noopener">Flickr</a></li>
                     <li><a href="https://markowihu.wordpress.com/wp-content/uploads/2026/07/260724_explore-scout_big-huge-labs.jpg?w=887" target="_blank" rel="noopener">Flickr Explore Scout</a></li>
+                    <li><a href="https://the.fotoapp.co/markowihu" target="_blank" rel="noopener">Fotoapp • Capturas al vuelo</a></li>
                     <li><a href="https://www.instagram.com/markowihu/" target="_blank" rel="noopener">Instagram</a></li>
                     <li><a href="https://www.behance.net/markowihu" target="_blank" rel="noopener">Behance</a></li>
                     <li><a href="https://unsplash.com/@markowihu" target="_blank" rel="noopener">Unsplash</a></li>
-                    <li><a href="https://the.fotoapp.co/markowihu" target="_blank" rel="noopener">Fotoapp • Capturas al vuelo</a></li>
-                    <li><a href="https://500px.com/p/markowihu?view=photos" target="_blank" rel="noopener">500px • Selección archivada</a></li>
+                    <li><a href="https://www.blipfoto.com/markowihu" target="_blank" rel="noopener">Blipfoto • Photo Journal</a></li>
                 </ul>
             </li>
-            <li><a href="contact.html">Contact(o)</a></li>
+            <li><a href="contact.html#contact-form-container">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Top Utility Link Bar -->
-    <div class="utility-nav">
-		<a href="minimalismo.html#main-gallery" class="lang-toggle" lang="es">Versión española aquí</a>
-        <a href="#conventional-minimalism" class="jump-link">Skip to Sea & Sky Minimalism &darr;</a>
-    </div>
 
+    
     <main role="main">
         <!-- Main Gallery Section -->
         <section id="main-gallery" style="padding-top: 0;">
@@ -130,16 +135,16 @@
 		<a href="#banner-header" class="jump-menu">Main Menu &uarr;</a>
 	</div>
 
-    <footer id="contact" role="contentinfo">
-        <div class="footer-grid">
-            <div class="footer-legal-block">
-                <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos a través de la <a href="contact.html">página de contacto</a> o en fotos arroba markowihu.es — Si considera que he tratado sus datos de forma incorrecta, por favor comuníquemelo inmediatamente.</p>
-            </div>
-            <div class="footer-legal-block">
-                <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for my personal communication. To exercise your rights, please use the <a href="contact.html">contact page</a> or email fotos ('at' symbol) markowihu.es — If you believe your data has been handled incorrectly, please let me know immediately.</p>
-            </div>
+	<footer id="contact" role="contentinfo">
+    <div class="footer-grid">
+        <div class="footer-legal-block">
+            <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos a través de la <a href="contacto.html#contact-form-container">página de contacto</a> o en fotos arroba markowihu.es — Si considera que he tratado sus datos de forma incorrecta, por favor comuníquemelo inmediatamente.</p>
         </div>
-    </footer>
+        <div class="footer-legal-block">
+            <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for my personal communication. To exercise your rights, please use the <a href="contact.html#contact-form-container">contact page</a> or email fotos ('at' symbol) markowihu.es — If you believe your data has been handled incorrectly, please let me know immediately.</p>
+        </div>
+    </div>
+</footer>
 
 </div>
 
