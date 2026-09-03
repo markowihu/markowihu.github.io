@@ -5,6 +5,7 @@
   • Synchronized header language switch to news.html#news-en.
   • Standardized nav menu to 'Redes y enlaces ▼' and ampersand gallery labeling.
   • Integrated Cloudflare Web Analytics beacon script.
+  • Carga innerHTML para UTF-8 e integración de Noticias en menú 
 -->
 <!DOCTYPE html>
 <html lang="es">
@@ -119,13 +120,14 @@
 </script>
 
 <!-- Dynamic Text Engine & HTTP Last-Modified Date Stamping -->
+<!-- LOG DE CAMBIOS: 03/09/2026 - Carga de noticias con soporte innerHTML para formato UTF-8 y enlaces -->
 <script>
     async function loadNoticiasUpdate() {
         try {
             const response = await fetch('noticias-update.txt', { cache: 'no-cache' });
             if (response.ok) {
                 const textData = await response.text();
-                document.getElementById('news-text-container').textContent = textData;
+                document.getElementById('news-text-container').innerHTML = textData;
 
                 const lastModHeader = response.headers.get('Last-Modified');
                 if (lastModHeader) {
