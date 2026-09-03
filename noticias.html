@@ -1,0 +1,151 @@
+<!-- MarkOWiHu Fotógrafo Noticias markowihu ver 1-0 02-09-2026 -->
+<!-- 
+  Changelog / Release Notes (noticias.html ver 1-0 • 02-09-2026):
+  • Initial creation: Dynamic Spanish news landing page reading noticias-update.txt.
+  • Auto Date Stamp: Dynamic Last-Modified HTTP header parsing for automated date formatting.
+  • Header & Nav: Synchronized Castilian header switch and menu anchors.
+  • Analytics: Integrated Cloudflare Web Analytics beacon script.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias y Novedades | MarkOWiHu Fotógrafo</title>
+    <meta name="description" content="Noticias, eventos y novedades fotográficas de MarkOWiHu Fotógrafo en la provincia de Alicante.">
+    <link rel="canonical" href="https://markowihu.es/noticias.html">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header Block with ID Anchor Target & Language Toggle -->
+    <header role="banner" id="banner-header" class="header-banner">
+        <div class="header-titles">
+            <h1>MarkOWiHu Fotógrafo</h1>
+            <div class="tagline">Provincia de Alicante</div>
+        </div>
+        <div class="lang-switch" aria-label="Selección de idioma">
+            <a href="news.html" lang="en" title="English version">EN</a>
+            <span class="divider">|</span>
+            <span class="lang-active" lang="es" title="Versión actual en español">ES</span>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav role="navigation">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quien-soy.html#quien-soy">Quién soy</a></li>
+            <li>
+                <a href="#">Galerías ▼</a>
+                <ul>
+                    <li><a href="minimalismo.html#main-gallery">Minimalismo</a></li>
+                    <li><a href="callejera-humanidad.html#main-gallery">Callejera y Humanidad</a></li>
+                    <li><a href="mundo-natural.html#main-gallery">Mundo Natural</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Enlaces ▼</a>
+                <ul>
+                    <li><a href="https://adobe.ly/4fk7qLC" target="_blank" rel="noopener">Lightroom Share</a></li>
+                    <li><a href="https://markowihu.myportfolio.com/" target="_blank" rel="noopener">MyPortfolio</a></li>
+                    <li><a href="https://www.flickr.com/photos/markowihu/" target="_blank" rel="noopener">Flickr</a></li>
+                    <li><a href="https://markowihu.wordpress.com/wp-content/uploads/2026/07/260724_explore-scout_big-huge-labs.jpg?w=887" target="_blank" rel="noopener">Flickr Explore Scout</a></li>
+                    <li><a href="https://www.instagram.com/markowihu/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.behance.net/markowihu" target="_blank" rel="noopener">Behance</a></li>
+                    <li><a href="https://unsplash.com/@markowihu" target="_blank" rel="noopener">Unsplash</a></li>
+                    <li><a href="https://the.fotoapp.co/markowihu" target="_blank" rel="noopener">Fotoapp • Capturas al vuelo</a></li>
+                    <li><a href="https://www.blipfoto.com/markowihu" target="_blank" rel="noopener">Blipfoto • Blog fotográfico</a></li>
+                </ul>
+            </li>
+            <li><a href="contacto.html#contact-form-container">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Block -->
+    <main role="main">
+        <section id="noticias-es" class="section-block">
+            <h2>Noticias • Novedades</h2>
+            <div id="news-date-container" class="news-date-stamp"></div>
+            
+            <div class="news-image-container" style="margin-bottom: 1.5rem;">
+                <img src="images/news-featured.jpg" alt="Destacado de noticias | MarkOWiHu Fotógrafo • markowihu.es" style="max-width: 100%; height: auto; border-radius: 4px;">
+            </div>
+
+            <div id="news-text-container" class="news-content-box">Cargando novedades...</div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation Return Links -->
+    <div class="bottom-nav-jumps">
+        <a href="#noticias-es" class="jump-content">Inicio del contenido &uarr;</a>
+        <span class="divider">|</span>
+        <a href="#banner-header" class="jump-menu">Menú principal &uarr;</a>
+    </div>
+
+    <!-- Footer Block -->
+    <footer id="contact" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-legal-block">
+                <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos a través de la <a href="contacto.html#contact-form-container">página de contacto</a> o en fotos arroba markowihu.es — Si considera que he tratado sus datos de forma incorrecta, por favor comuníquemelo inmediatamente.</p>
+            </div>
+            <div class="footer-legal-block">
+                <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for my personal communication. To exercise your rights, please use the <a href="contact.html#contact-form-container">contact page</a> or email fotos ('at' symbol) markowihu.es — If you believe your data has been handled incorrectly, please let me know immediately.</p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<!-- Mobile Navigation Toggle Script -->
+<script>
+    document.querySelectorAll('nav ul li > a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const parent = this.parentElement;
+            if (parent.querySelector('ul')) {
+                e.preventDefault();
+                parent.classList.toggle('is-open');
+            }
+        });
+    });
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('nav')) {
+            document.querySelectorAll('nav ul li').forEach(li => li.classList.remove('is-open'));
+        }
+    });
+</script>
+
+<!-- Dynamic Text Engine & HTTP Last-Modified Date Stamping -->
+<script>
+    async function loadNoticiasUpdate() {
+        try {
+            const response = await fetch('noticias-update.txt', { cache: 'no-cache' });
+            if (response.ok) {
+                const textData = await response.text();
+                document.getElementById('news-text-container').textContent = textData;
+
+                const lastModHeader = response.headers.get('Last-Modified');
+                if (lastModHeader) {
+                    const modDate = new Date(lastModHeader);
+                    const day = String(modDate.getDate()).padStart(2, '0');
+                    const month = modDate.toLocaleString('es-ES', { month: 'short' }).replace('.', '');
+                    
+                    document.getElementById('news-date-container').textContent = `Última actualización: ${day} ${month}`;
+                }
+            }
+        } catch (error) {
+            console.error('Error al cargar noticias:', error);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadNoticiasUpdate);
+</script>
+
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e26e7a5dca02475a919bab32ec3809d4"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
+</body>
+</html>
