@@ -1,10 +1,10 @@
-<!-- MarkOWiHu Fotógrafo Noticias markowihu ver 1-0 02-09-2026 -->
+<!-- MarkOWiHu Fotógrafo Noticias markowihu ES ver 1-1 03-09-2026 -->
 <!-- 
-  Changelog / Release Notes (noticias.html ver 1-0 • 02-09-2026):
-  • Initial creation: Dynamic Spanish news landing page reading noticias-update.txt.
-  • Auto Date Stamp: Dynamic Last-Modified HTTP header parsing for automated date formatting.
-  • Header & Nav: Synchronized Castilian header switch and menu anchors.
-  • Analytics: Integrated Cloudflare Web Analytics beacon script.
+  Changelog / Release Notes (noticias.html ver 1-1 • 03-09-2026):
+  • Dynamic Spanish news landing page reading noticias-update.txt.
+  • Synchronized header language switch to news.html#news-en.
+  • Standardized nav menu to 'Redes y enlaces ▼' and ampersand gallery labeling.
+  • Integrated Cloudflare Web Analytics beacon script.
 -->
 <!DOCTYPE html>
 <html lang="es">
@@ -27,7 +27,7 @@
             <div class="tagline">Provincia de Alicante</div>
         </div>
         <div class="lang-switch" aria-label="Selección de idioma">
-            <a href="news.html" lang="en" title="English version">EN</a>
+            <a href="news.html#news-en" lang="en" title="English version">EN</a>
             <span class="divider">|</span>
             <span class="lang-active" lang="es" title="Versión actual en español">ES</span>
         </div>
@@ -42,21 +42,21 @@
                 <a href="#">Galerías ▼</a>
                 <ul>
                     <li><a href="minimalismo.html#main-gallery">Minimalismo</a></li>
-                    <li><a href="callejera-humanidad.html#main-gallery">Callejera y Humanidad</a></li>
+                    <li><a href="callejera-humanidad.html#main-gallery">Callejera & Humanidad</a></li>
                     <li><a href="mundo-natural.html#main-gallery">Mundo Natural</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Enlaces ▼</a>
+                <a href="#">Redes y enlaces ▼</a>
                 <ul>
                     <li><a href="https://adobe.ly/4fk7qLC" target="_blank" rel="noopener">Lightroom Share</a></li>
                     <li><a href="https://markowihu.myportfolio.com/" target="_blank" rel="noopener">MyPortfolio</a></li>
                     <li><a href="https://www.flickr.com/photos/markowihu/" target="_blank" rel="noopener">Flickr</a></li>
                     <li><a href="https://markowihu.wordpress.com/wp-content/uploads/2026/07/260724_explore-scout_big-huge-labs.jpg?w=887" target="_blank" rel="noopener">Flickr Explore Scout</a></li>
+                    <li><a href="https://the.fotoapp.co/markowihu" target="_blank" rel="noopener">Fotoapp • Capturas al vuelo</a></li>
                     <li><a href="https://www.instagram.com/markowihu/" target="_blank" rel="noopener">Instagram</a></li>
                     <li><a href="https://www.behance.net/markowihu" target="_blank" rel="noopener">Behance</a></li>
                     <li><a href="https://unsplash.com/@markowihu" target="_blank" rel="noopener">Unsplash</a></li>
-                    <li><a href="https://the.fotoapp.co/markowihu" target="_blank" rel="noopener">Fotoapp • Capturas al vuelo</a></li>
                     <li><a href="https://www.blipfoto.com/markowihu" target="_blank" rel="noopener">Blipfoto • Blog fotográfico</a></li>
                 </ul>
             </li>
@@ -67,13 +67,11 @@
     <!-- Main Content Block -->
     <main role="main">
         <section id="noticias-es" class="section-block">
-            <h2>Noticias • Novedades</h2>
+            <h2>Noticias y Novedades</h2>
             <div id="news-date-container" class="news-date-stamp"></div>
-            
             <div class="news-image-container" style="margin-bottom: 1.5rem;">
                 <img src="images/news-featured.jpg" alt="Destacado de noticias | MarkOWiHu Fotógrafo • markowihu.es" style="max-width: 100%; height: auto; border-radius: 4px;">
             </div>
-
             <div id="news-text-container" class="news-content-box">Cargando novedades...</div>
         </section>
     </main>
