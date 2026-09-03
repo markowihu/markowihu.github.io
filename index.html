@@ -13,13 +13,15 @@
   to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
   Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
   above the legal footer across content pages for seamless navigation on long viewports.
+  03/09/2026 - Conmutador ES -> noticias.html sin salto de ancla
+  & Integración de News • Noticias en el menú principal 
   
   Evaluation of a Separate inicio.html - NOT recommended for site architecture.  
   Default Root Serving: GitHub Pages automatically serves index.html whenever a visitor accesses [https://markowihu.es/](https://markowihu.es/).
   Creating inicio.html would result in duplicate root content or require unnecessary redirection rules.  
   Established Spanish Navigation: All dedicated Castilian pages (quien-soy.html, contacto.html, minimalismo.html) already point their primary "Inicio" navigation menu item directly to index.html.
   Canonical & SEO Integrity: Maintaining index.html as your sole homepage entry point consolidates search ranking authority and canonical indexing on your root domain without splitting traffic across two root files. 
-	03/09/2026 - Conmutador ES -> noticias.html sin salto de ancla
+
 -->
 <!DOCTYPE html>
 <html lang="es">
@@ -52,6 +54,7 @@
 <nav role="navigation">
     <ul>
         <li><a href="#home" class="active">Home • Inicio</a></li>
+        <li><a href="news.html">News • Noticias</a></li>
         <li><a href="about.html#about-en">About • Quién soy</a></li>
         <li>
             <a href="#">Galleries • Galerías ▼</a>
