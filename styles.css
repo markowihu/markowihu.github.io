@@ -15,6 +15,7 @@
   Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
   above the legal footer across content pages for seamless navigation on long viewports.
 
+  LOG DE CAMBIOS: 02/09/2026 - Conmutador de idioma superior EN | ES para dispositivos móviles -->
 */
 :root {
     --bg-color: #ffffff;
@@ -71,50 +72,43 @@ a:hover {
     color: #777;
 }
 
-/* CHANGE LOG: 30/08/2026 - Header Flex Alignment & Compact EN | ES Language Switcher */
-header {
+/* LOG DE CAMBIOS: 02/09/2026 - Alineación flexible de cabecera y conmutador de idioma en móvil */
+.header-banner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border-color, #eeeeee);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
 }
 
-header h1 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 0.2rem;
-}
-
-header .tagline {
-    font-size: 1.05rem;
-    color: var(--muted-color);
-    font-style: italic;
+.header-titles {
+    text-align: left;
 }
 
 .lang-switch {
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     white-space: nowrap;
+    padding-top: 0.2rem;
 }
 
 .lang-switch a {
-    color: var(--muted-color);
+    color: var(--muted-color, #777777);
     text-decoration: none;
     padding: 2px 4px;
     transition: color 0.2s ease;
 }
 
 .lang-switch a:hover {
-    color: var(--accent-color);
+    color: var(--accent-color, #e60000);
 }
 
 .lang-switch .lang-active {
-    color: var(--accent-color);
-    border-bottom: 2px solid var(--accent-color);
+    color: var(--accent-color, #e60000);
+    border-bottom: 2px solid var(--accent-color, #e60000);
     padding: 2px 4px;
 }
 
