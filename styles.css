@@ -1,7 +1,7 @@
 /* 
    Gemini - MarkOWiHu Photographer markowihu.es Photography hub page style sheet
    Base Engineering Rules 
-   CHANGE LOG:
+   CHANGE LOG • LOG DE CAMBIOS:
 	25/08/2026 - Changes to remove top border and excess whitespace padding from first main section site-wide
 	29/08/2026 - Reduced utility nav margins to tighten top layout
 	30/08/2026 - Header Flex Alignment & Compact EN | ES Language Switcher 
@@ -14,8 +14,8 @@
   to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
   Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
   above the legal footer across content pages for seamless navigation on long viewports.
-
-  LOG DE CAMBIOS: 02/09/2026 - Conmutador de idioma superior EN | ES para dispositivos móviles -->
+   02/09/2026 - Conmutador de idioma superior EN | ES para dispositivos móviles.
+   04/09/2026 - Estilos para enlaces de títulos y reducción de espacio vertical */
 */
 :root {
     --bg-color: #ffffff;
@@ -591,4 +591,46 @@ footer {
 
 .footer-legal-block p {
     margin-bottom: 0.5rem;
+}
+/* LOG DE CAMBIOS: 04/09/2026 - Estilos para enlaces de títulos y reducción de espacio vertical */
+.section-title a {
+    color: var(--text-color, #111111);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.section-title a:hover {
+    color: var(--accent-color, #e60000);
+    text-decoration: underline;
+}
+
+/* Reducción de márgenes y relleno vertical en secciones y pie de página */
+section {
+    padding: 35px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.bio-translation {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px dashed #eaeaea;
+    color: #555;
+}
+
+.bottom-nav-jumps {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 0.75rem;
+    font-size: 0.85rem;
+    border-top: 1px dashed var(--border-color);
+}
+
+footer {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: var(--muted-color);
 }
