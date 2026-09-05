@@ -15,7 +15,10 @@
   Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
   above the legal footer across content pages for seamless navigation on long viewports.
    02/09/2026 - Conmutador de idioma superior EN | ES para dispositivos móviles.
-   04/09/2026 - Estilos para enlaces de títulos y reducción de espacio vertical */
+   04/09/2026 - Estilos para enlaces de títulos y reducción de espacio vertical 
+   05/09/26 - Update styles.css: enforce solid menu background opacity and boost dropdown contrast.
+     Added explicit solid background-color (#ffffff) to nav container and dropdown sub-menu items across desktop and mobile viewports. 
+	 Elevated box-shadow depth to preserve contrast against dark background imagery.
 */
 :root {
     --bg-color: #ffffff;
@@ -125,8 +128,9 @@ a:hover {
     }
 }
 
-/* Pure CSS Dropdown Navigation */
+/* Pure CSS Dropdown Navigation - opaqueness adjusted 05/09/26 */
 nav {
+    background-color: var(--bg-color, #ffffff);
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 3rem;
@@ -155,11 +159,6 @@ nav ul li a {
     transition: color 0.2s ease;
 }
 
-nav ul li a:hover, 
-nav ul li a.active {
-    color: var(--accent-color);
-}
-
 /* Dropdown Sub-menu */
 nav ul li ul {
     display: none;
@@ -167,9 +166,9 @@ nav ul li ul {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--bg-color);
+    background-color: #ffffff;
     border: 1px solid var(--border-color);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     min-width: 320px;
     z-index: 1000;
     flex-direction: column;
@@ -184,11 +183,17 @@ nav ul li ul li a {
     padding: 0.8rem 1.2rem;
     text-align: left;
     font-size: 0.80rem;
+    background-color: #ffffff;
     border-bottom: 1px solid #fafafa;
 }
 
 nav ul li ul li:last-child a {
     border-bottom: none;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    color: var(--accent-color);
 }
 
 main {
@@ -530,6 +535,7 @@ section {
         align-items: center;
     }
 
+/* 05/09/26 Menu opacity adjustment */
     nav ul li ul {
         position: static;
         transform: none;
@@ -537,7 +543,7 @@ section {
         min-width: 0;
         box-shadow: none;
         border: none;
-        background: var(--nav-bg);
+        background-color: #ffffff;
     }
 }
 
