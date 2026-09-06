@@ -1,10 +1,12 @@
-<!-- MarkOWiHu Photographer Contact page | Ver 2 02-09-2026 
+---
+---
+<!-- MarkOWiHu Photographer Fotógrafo main web contact page | 06-09-2026 
 	CHANGE LOG:
-	--/08/2026 Ver. 1.1 Webforms included and alignment of link URLs etc
-	24/08/2026 Ver. 1.2 Style sheet introduction.
-	25/08/2026 Ver. 1.3 Added utility nav for ES page routing and #business-card anchor. 
-	29/08/2026 1.3a Minor wording refinements
-	01/09/26: ver 2: Monolingual Rationalization: Completed the clean separation of bilingual templates
+	• 08/2026 Ver. 1.1 Webforms included and alignment of link URLs etc
+	• 24/08/2026 Ver. 1.2 Style sheet introduction.
+	• 25/08/2026 Ver. 1.3 Added utility nav for ES page routing and #business-card anchor. 
+	• 29/08/2026 1.3a Minor wording refinements
+	• 01/09/26: ver 2: Monolingual Rationalization: Completed the clean separation of bilingual templates
   into dedicated single-language English and Spanish pages across the site (about.html / quien-soy.html,
   contact.html / contacto.html, minimalism.html / minimalismo.html). 
   Navigation & Anchor Alignment: Standardised primary <nav> menu links across all HTML templates 
@@ -13,9 +15,13 @@
   to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
   Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
   above the legal footer across content pages for seamless navigation on long viewports.
-	02/08/26: Verified final monolingual contact.html template.
+ • 02/09/26: Verified final monolingual contact.html template.
 	Confirmed single-language page title, web form labels, submit button, JavaScript alert popups,
 	post-submission home redirect, header language toggle routing, and footer privacy links.
+ • 06/09/26: Added YAML Front Matter to lines 1-2 across about.html, quien-soy.html, contact.html, and contacto.html. 
+  Replaced static header, nav, and footer HTML containers with Jekyll Liquid include partials
+  while preserving Web3Forms API handlers and section anchors.
+  
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -30,54 +36,11 @@
 <body>
 
 <div class="container">
-
-<header role="banner" id="banner-header" class="header-banner">
-    <div class="header-titles">
-        <h1>MarkOWiHu Photographer</h1>
-        <div class="tagline">Alicante province</div>
-    </div>
-    <div class="lang-switch" aria-label="Language selection">
-        <span class="lang-active" lang="en" title="Current English version">EN</span>
-        <span class="divider">|</span>
-        <a href="contacto.html#contact-form-container" lang="es" title="Versión en español">ES</a>
-    </div>
-</header>
-
-    <!-- Navigation Menu (English Standard) -->
-    <nav role="navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="about.html#about-en">About</a></li>
-            <li>
-                <a href="#">Galleries ▼</a>
-                <ul>
-                    <li><a href="minimalism.html#main-gallery">Minimalism</a></li>
-                    <li><a href="street-humanity.html#main-gallery">Street & Humanity</a></li>
-                    <li><a href="natural-world.html#main-gallery">Natural World</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Links ▼</a>
-                <ul>
-                    <li><a href="https://adobe.ly/4fk7qLC" target="_blank" rel="noopener">Lightroom Share</a></li>
-                    <li><a href="https://markowihu.myportfolio.com/" target="_blank" rel="noopener">MyPortfolio</a></li>
-                    <li><a href="https://www.flickr.com/photos/markowihu/" target="_blank" rel="noopener">Flickr</a></li>
-                    <li><a href="https://markowihu.wordpress.com/wp-content/uploads/2026/07/260724_explore-scout_big-huge-labs.jpg?w=887" target="_blank" rel="noopener">Flickr Explore Scout</a></li>
-                    <li><a href="https://the.fotoapp.co/markowihu" target="_blank" rel="noopener">Fotoapp • Capturas al vuelo</a></li>
-                    <li><a href="https://www.instagram.com/markowihu/" target="_blank" rel="noopener">Instagram</a></li>
-                    <li><a href="https://www.behance.net/markowihu" target="_blank" rel="noopener">Behance</a></li>
-                    <li><a href="https://unsplash.com/@markowihu" target="_blank" rel="noopener">Unsplash</a></li>
-                    <li><a href="https://www.blipfoto.com/markowihu" target="_blank" rel="noopener">Blipfoto • Photo Journal</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html#contact-form-container">Contact</a></li>
-        </ul>
-    </nav>
+	{% include header-en.html %}
+	{% include nav-en.html %}
 
 <!-- CHANGE LOG: 02/09/26 Language switching is now managed in the header via `.lang-switch`, and page anchor jumping is handled by the bottom return links -->
-    
-    <main role="main">
+        <main role="main">
         <section class="section-block">
 		<!-- CHANGE LOG: 29/08/2026 1.3a Minor wording refinements -->
             <h2>Contact</h2>
@@ -127,18 +90,7 @@
 		<span class="divider">|</span>
 		<a href="#banner-header" class="jump-menu">Main Menu &uarr;</a>
 	</div>
-
-    <footer id="contact" role="contentinfo">
-        <div class="footer-grid">
-            <div class="footer-legal-block">
-                <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos a través de la <a href="contacto.html#contact-form-container">página de contacto</a> o en fotos arroba markowihu.es.</p>
-            </div>
-            <div class="footer-legal-block">
-                <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for my personal communication. To exercise your rights, please use the <a href="contact.html#contact-form-container">contact page</a> or email fotos ('at' symbol) markowihu.es.</p>
-            </div>
-        </div>
-    </footer>
-
+    {% include footer-en.html %}
 </div>
 
 <script>
