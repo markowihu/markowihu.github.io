@@ -1,4 +1,6 @@
-<!-- MarkowiHu Fotógrafo MINIMALISMO Galería ES ver 2 01-09-2026 
+---
+---
+<!-- MarkowiHu Fotógrafo MINIMALISMO Galería ES  06-09-2026 
   Changelog / Release Notes 
   Ver 1-0  23-08-2026): Localized Spanish Edition (minimalismo.html)
   24/08/2026: Changed Jay Mullineax triptych to quadriptych or tetraptych.
@@ -11,8 +13,10 @@
   to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
   Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
   above the legal footer across content pages for seamless navigation on long viewports.
-
+    • 06-09-2026 Added YAML Front Matter to minimalism.html and minimalismo.html, 
+replacing static header, nav, and footer containers with Jekyll Liquid include partials.
 -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -27,48 +31,8 @@
 
 <div class="container">
 
-    <header role="banner" id="banner-header" class="header-banner">
-        <h1>MarkOWiHu Fotógrafo</h1>
-        <div class="tagline">Provincia de Alicante</div>
-    </header>
-
-    <!-- Navigation Menu (Spanish Standard) -->
-    <nav role="navigation">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="noticias.html">Noticias</a></li>
-            <li><a href="quien-soy.html#quien-soy">Quién soy</a></li>
-            <li>
-                <a href="#">Galerías ▼</a>
-                <ul>
-                    <li><a href="minimalismo.html#main-gallery">Minimalismo</a></li>
-                    <li><a href="callejera-humanidad.html#main-gallery">Callejera & Humanidad</a></li>
-                    <li><a href="mundo-natural.html#main-gallery">Mundo Natural</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Redes y enlaces ▼</a>
-                <ul>
-                    <li><a href="https://adobe.ly/4fk7qLC" target="_blank" rel="noopener">Lightroom Share</a></li>
-                    <li><a href="https://markowihu.myportfolio.com/" target="_blank" rel="noopener">MyPortfolio</a></li>
-                    <li><a href="https://www.flickr.com/photos/markowihu/" target="_blank" rel="noopener">Flickr</a></li>
-                    <li><a href="https://markowihu.wordpress.com/wp-content/uploads/2026/07/260724_explore-scout_big-huge-labs.jpg?w=887" target="_blank" rel="noopener">Flickr Explore Scout</a></li>
-                    <li><a href="https://the.fotoapp.co/markowihu" target="_blank" rel="noopener">Fotoapp • Capturas al vuelo</a></li>
-                    <li><a href="https://www.instagram.com/markowihu/" target="_blank" rel="noopener">Instagram</a></li>
-                    <li><a href="https://www.behance.net/markowihu" target="_blank" rel="noopener">Behance</a></li>
-                    <li><a href="https://unsplash.com/@markowihu" target="_blank" rel="noopener">Unsplash</a></li>
-                    <li><a href="https://www.blipfoto.com/markowihu" target="_blank" rel="noopener">Blipfoto • Blog fotográfico</a></li>
-                </ul>
-            </li>
-            <li><a href="contacto.html#contact-form-container">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <!-- Top Utility Link Bar -->
-    <div class="utility-nav">
-        <a href="minimalism.html#main-gallery" class="lang-toggle">English version here</a>
-        <a href="#conventional-minimalism" class="jump-link">Saltar a minimalismo de mar y cielo &darr;</a>
-    </div>
+{% include header-es.html %}
+{% include nav-es.html %}
 
     <main role="main">
         <!-- Main Gallery Section -->
@@ -137,21 +101,12 @@
 
 	<!-- Bottom Navigation Jump Links -->
 	<div class="bottom-nav-jumps">
-		<a href="#main-gallery" class="jump-content">Top of Content &uarr;</a>
+		<a href="#main-gallery" class="jump-content">Inicio del contenido &uarr;</a>
 		<span class="divider">|</span>
-		<a href="#banner-header" class="jump-menu">Main Menu &uarr;</a>
+		<a href="#banner-header" class="jump-menu">Menú principal &uarr;</a>
 	</div>
 
-    <footer id="contact" role="contentinfo">
-        <div class="footer-grid">
-            <div class="footer-legal-block">
-                <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos a través de la <a href="contact.html">página de contacto</a> o en fotos arroba markowihu.es — Si considera que he tratado sus datos de forma incorrecta, por favor comuníquemelo inmediatamente.</p>
-            </div>
-            <div class="footer-legal-block">
-                <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for my personal communication. To exercise your rights, please use the <a href="contact.html">contact page</a> or email fotos ('at' symbol) markowihu.es — If you believe your data has been handled incorrectly, please let me know immediately.</p>
-            </div>
-        </div>
-    </footer>
+    {% include footer-es.html %}
 
 </div>
 
@@ -171,8 +126,10 @@
         }
     });
 </script>
+
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e26e7a5dca02475a919bab32ec3809d4"}'></script>
 <!-- End Cloudflare Web Analytics -->
+
 </body>
 </html>

@@ -1,9 +1,13 @@
-<!-- markowihu fotógrafo MarkowiHu Photographer MINIMALISM Gallery EN | Ver 2 03-09-2026 -->
-<!-- 
+---
+---
+<!-- MarkoWiHu Photographer MINIMALISM Gallery EN - MarkOWiHu Fotógrafo paginas web • main pages and galleries - minimalism English 
   Changelog / Release Notes:
   • 23/08/26: ver 1.1 - Hyperlink to ES version introduced.
   • 03/09/26: ver 2 - Monolingual Rationalization & Anchor Alignment: Integrated header .lang-switch targeting minimalismo.html#main-gallery, standardized navigation menu anchors (#about-en, #contact-form-container), updated Links dropdown, removed obsolete utility-nav block, and updated footer privacy routing.
+  • 06-09-2026 Added YAML Front Matter to minimalism.html and minimalismo.html, 
+replacing static header, nav, and footer containers with Jekyll Liquid include partials.
 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,49 +22,8 @@
 
 <div class="container">
 
-<header role="banner" id="banner-header" class="header-banner">
-    <div class="header-titles">
-        <h1>MarkOWiHu Photographer</h1>
-        <div class="tagline">Alicante province</div>
-    </div>
-    <div class="lang-switch" aria-label="Language selection">
-        <span class="lang-active" lang="en" title="Current English version">EN</span>
-        <span class="divider">|</span>
-        <a href="minimalismo.html#main-gallery" lang="es" title="Versión en español">ES</a>
-    </div>
-</header>
-
-<!-- Navigation Menu (English Standard) -->
-    <nav role="navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="about.html#about-en">About</a></li>
-            <li>
-                <a href="#">Galleries ▼</a>
-                <ul>
-                    <li><a href="minimalism.html#main-gallery">Minimalism</a></li>
-                    <li><a href="street-humanity.html#main-gallery">Street & Humanity</a></li>
-                    <li><a href="natural-world.html#main-gallery">Natural World</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Links ▼</a>
-                <ul>
-                    <li><a href="https://adobe.ly/4fk7qLC" target="_blank" rel="noopener">Lightroom Share</a></li>
-                    <li><a href="https://markowihu.myportfolio.com/" target="_blank" rel="noopener">MyPortfolio</a></li>
-                    <li><a href="https://www.flickr.com/photos/markowihu/" target="_blank" rel="noopener">Flickr</a></li>
-                    <li><a href="https://markowihu.wordpress.com/wp-content/uploads/2026/07/260724_explore-scout_big-huge-labs.jpg?w=887" target="_blank" rel="noopener">Flickr Explore Scout</a></li>
-                    <li><a href="https://the.fotoapp.co/markowihu" target="_blank" rel="noopener">Fotoapp • Capturas al vuelo</a></li>
-                    <li><a href="https://www.instagram.com/markowihu/" target="_blank" rel="noopener">Instagram</a></li>
-                    <li><a href="https://www.behance.net/markowihu" target="_blank" rel="noopener">Behance</a></li>
-                    <li><a href="https://unsplash.com/@markowihu" target="_blank" rel="noopener">Unsplash</a></li>
-                    <li><a href="https://www.blipfoto.com/markowihu" target="_blank" rel="noopener">Blipfoto • Photo Journal</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html#contact-form-container">Contact</a></li>
-        </ul>
-    </nav>
+{% include header-en.html %}
+{% include nav-en.html %}
     
     <main role="main">
         <!-- Main Gallery Section -->
@@ -134,16 +97,7 @@
 		<a href="#banner-header" class="jump-menu">Main Menu &uarr;</a>
 	</div>
 
-	<footer id="contact" role="contentinfo">
-    <div class="footer-grid">
-        <div class="footer-legal-block">
-            <p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos a través de la <a href="contacto.html#contact-form-container">página de contacto</a> o en fotos arroba markowihu.es — Si considera que he tratado sus datos de forma incorrecta, por favor comuníquemelo inmediatamente.</p>
-        </div>
-        <div class="footer-legal-block">
-            <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for my personal communication. To exercise your rights, please use the <a href="contact.html#contact-form-container">contact page</a> or email fotos ('at' symbol) markowihu.es — If you believe your data has been handled incorrectly, please let me know immediately.</p>
-        </div>
-    </div>
-</footer>
+{% include footer-en.html %}
 
 </div>
 
