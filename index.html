@@ -1,11 +1,14 @@
-<!-- markowihu fotógrafo Galeria Web Portafolio Index Home • Inicio (indice) 04-09-2026 -->
-<!-- 
+---
+---
+<!-- MarkOWiHu Photographer main site - website Home index page with ssmple portfolio gallery 
+     Portafolio Inicio (indice) 
+	 Version: 06-09-2026
   LOG DE CAMBIOS • Changelog / Release Notes 
-  • Architecture: Migrated inline CSS to unified external stylesheet 'styles.css'.
-  • Contact Integration: Linked menu bar item directly to 'contact.html'.
-  • Privacy Alignment: Updated footer legal block to reference 'contact.html' and email address at markowihu.es'.
-  • Mobile Engine: Verified tap-to-toggle dropdown behavior.
-  01/09/26: ver 2.6: Monolingual Rationalization: Completed the clean separation of bilingual templates  into dedicated single-language English and Spanish pages across the site 
+  • 08/2026: Architecture: Migrated inline CSS to unified external stylesheet 'styles.css'.
+  Contact Integration: Linked menu bar item directly to 'contact.html'.
+  Privacy Alignment: Updated footer legal block to reference 'contact.html' and email address at markowihu.es'.
+  Mobile Engine: Verified tap-to-toggle dropdown behavior.
+  • 01/09/26: ver 2.6: Monolingual Rationalization: Completed the clean separation of bilingual templates  into dedicated single-language English and Spanish pages across the site 
   (about.html / quien-soy.html, contact.html / contacto.html, minimalism.html / minimalismo.html). 
   Navigation & Anchor Alignment: Standardised primary <nav> menu links across all HTML templates to route directly to specific section anchors 
   (#about-en, #quien-soy, #contact-form-container, #main-gallery).
@@ -13,15 +16,18 @@
   to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
   Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
   above the legal footer across content pages for seamless navigation on long viewports.
-  03/09/26: Conmutador ES -> noticias.html sin salto de ancla
-  04/09/26: Integración de News • Noticias en el menú principal 
+  • 03/09/26: Conmutador ES -> noticias.html sin salto de ancla
+  • 04/09/26: Integración de News • Noticias en el menú principal 
   & Enlaces de navegación e hipervínculos en sección de biografía.
   Expanded index.html showcase grid from 9 to 12 WebP images (home-01.webp through home-12.webp) to achieve a balanced multi-breakpoint layout
   across mobile (12x1), tablet (6x2), desktop (4x3), and wide screens (3x4). 
   Removed displaced street-focused photos for upcoming street-humanity.html sub-gallery
   and integrated descriptive, SEO-optimized alt text across all frames. 
-  
-  Evaluation of a Separate inicio.html - NOT recommended for site architecture.  
+  • 06/09/26 Added YAML Front Matter to lines 1-2 of index.html and replaced static header, navigation menu, and footer HTML containers
+  with Liquid include tags (header-en.html, nav-en.html, footer-en.html). 
+  Preserved 12-image showcase photo grid, biography block, bottom return jump links, and Cloudflare analytics script.
+    
+  NOTE: Evaluation of a Separate inicio.html - NOT recommended for site architecture.  
   Default Root Serving: GitHub Pages automatically serves index.html whenever a visitor accesses [https://markowihu.es/](https://markowihu.es/).
   Creating inicio.html would result in duplicate root content or require unnecessary redirection rules.  
   Established Spanish Navigation: All dedicated Castilian pages (quien-soy.html, contacto.html, minimalismo.html) already point their primary "Inicio" navigation menu item directly to index.html.
@@ -41,57 +47,13 @@
 <body>
 
 <div class="container">
-
-    <!-- LOG DE CAMBIOS: 03/09/2026 - Reinstalación de la cabecera flex y conmutador de idioma ES -> noticias.html -->
-    <header role="banner" id="banner-header" class="header-banner">
-        <div class="header-titles">
-            <h1>MarkOWiHu Photographer • Fotógrafo</h1>
-            <div class="tagline">Provincia de Alicante</div>
-        </div>
-        <!-- LOG DE CAMBIOS: 03/09/2026 - Conmutador ES -> noticias.html sin salto de ancla -->
-        <div class="lang-switch" aria-label="Selección de idioma / Language selection">
-            <span class="lang-active" lang="en" title="Current version (English)">EN</span>
-            <span class="divider">|</span>
-            <a href="noticias.html" lang="es" title="Ver noticias en español">ES</a>
-        </div>
-    </header>
-
-<nav role="navigation">
-    <ul>
-        <li><a href="#home" class="active">Home • Inicio</a></li>
-        <li><a href="news.html">News • Noticias</a></li>
-        <li><a href="about.html#about-en">About • Quién soy</a></li>
-        <li>
-            <a href="#">Galleries • Galerías ▼</a>
-            <ul>
-                <li><a href="minimalism.html#main-gallery">Minimalism</a></li>
-                <li><a href="#">Street & Humanity</a></li>
-                <li><a href="#">Natural World</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">Links • Redes y Enlaces ▼</a>
-            <ul>
-                <li><a href="https://adobe.ly/4fk7qLC" target="_blank" rel="noopener">Lightroom Share</a></li>
-                <li><a href="https://markowihu.myportfolio.com/" target="_blank" rel="noopener">MyPortfolio</a></li>
-                <li><a href="https://www.flickr.com/photos/markowihu/" target="_blank" rel="noopener">Flickr</a></li>
-                <li><a href="https://markowihu.wordpress.com/wp-content/uploads/2026/07/260724_explore-scout_big-huge-labs.jpg?w=887" target="_blank" rel="noopener">Flickr Explore Scout</a></li>
-                <li><a href="https://www.instagram.com/markowihu/" target="_blank" rel="noopener">Instagram</a></li>
-                <li><a href="https://www.behance.net/markowihu" target="_blank" rel="noopener">Behance</a></li>
-                <li><a href="https://unsplash.com/@markowihu" target="_blank" rel="noopener">Unsplash</a></li>
-                <li><a href="https://the.fotoapp.co/markowihu" target="_blank" rel="noopener">Fotoapp • Capturas al vuelo</a></li>
-                <li><a href="https://500px.com/p/markowihu?view=photos" target="_blank" rel="noopener">500px • Selección archivada</a></li>
-            </ul>
-        </li>
-        <li><a href="contact.html#contact-form-container">Contact(o)</a></li>
-    </ul>
-</nav>
-
-<main role="main">
+    {% include header-en.html %}
+	{% include nav-en.html %}
+	
+	<main role="main">
 
     <!-- Gallery / Highlights Section -->
     <section id="home">
-        
         <!-- Bilingual Grid Introduction -->
         <div class="grid-intro">
             <p>Portfolio highlights — explore full galleries via the main menu</p>
@@ -173,18 +135,7 @@
     <span class="divider">|</span>
     <a href="#banner-header" class="jump-menu">Main Menu &uarr;</a>
 </div>
-
-<footer id="contact" role="contentinfo">
-    <div class="footer-grid">
-        <div class="footer-legal-block">
-			<p><strong>Privacidad:</strong> Este sitio web es de carácter personal y artístico. Trato sus datos únicamente para gestionar mi comunicación personal. Puede ejercer sus derechos a través de la <a href="contacto.html#contact-form-container">página de contacto</a> o en fotos arroba markowihu.es — Si considera que he tratado sus datos de forma incorrecta, por favor comuníquemelo inmediatamente.</p>
-        </div>
-        <div class="footer-legal-block">
-            <p><strong>Privacy:</strong> This website is personal and artistic. I process your data solely for personal communication. To exercise your rights, please use the <a href="contact.html#contact-form-container">contact page</a> or email fotos ('at' symbol) markowihu.es — If you believe your data has been handled incorrectly, please let me know immediately.</p>
-        </div>
-    </div>
-</footer>
-
+{% include footer-en.html %}
 </div>
 
 <script>
