@@ -1,27 +1,85 @@
-<!-- 04/09/26 Temporary placeholder template for pending sub-galleries -->
+---
+---
+<!-- MarkoWiHu Fotógrafo paginas principales Callejera & Humanidad Galería ES • MarkOWiHu main web pages 
+Versión española • Spanish Street & Humanity sub-gallery
+LOG DE CAMBIOS • Version Control Log: 
+ • 07/09/26 Published Spanish Street & Humanity gallery page featuring 24 WebP assets with localized Castilian Spanish alt attributes, Jekyll Liquid includes
+ (header-es.html, nav-es.html, footer-es.html), eager/lazy performance loading strategy, bottom jump links, and Cloudflare analytics beacon.
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Callejera & Humanidad | MarkOWiHu Fotógrafo</title>
+    <meta name="description" content="Fotografía callejera, momentos humanos espontáneos e interacción urbana en España y Europa por MarkOWiHu.">
+    <link rel="canonical" href="https://markowihu.es/callejera-humanidad.html">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <div class="container">
-    <header role="banner" id="banner-header" class="header-banner">
-        <div class="header-titles">
-            <h1>MarkOWiHu Fotógrafo</h1>
-            <div class="tagline">Provincia de Alicante</div>
-        </div>
-    </header>
+
+{% include header-es.html %}
+{% include nav-es.html %}
+
     <main role="main">
-        <section class="section-block" style="text-align: center; padding: 60px 20px;">
-            <h2>Callejera & Humanidad</h2>
-            <p style="margin: 20px 0;">Esta galería se encuentra actualmente en proceso de selección y digitalización.</p>
-            <p><a href="index.html">&larr; Volver a la página principal</a></p>
+        <section id="main-gallery" style="padding-top: 0;">
+            <div class="gallery-grid">
+				<!-- Fila 1: Inicio monocromo y arquitectónico -->
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_01.webp" alt="Retrato callejero en blanco y negro de un hombre con gafas de sol y bolso sobre un extenso panorama urbano | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="eager" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_02.webp" alt="Fotografía espontánea monocroma en la costa de un hombre con su perro en un acantilado marino | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="eager" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_03.webp" alt="Perspectiva de las columnas de travertino en la colonnata del Vaticano con peatones | Callejera & Humanidad | Roma | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="eager" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_04.webp" alt="Retrato callejero espontáneo de un hombre mayor leyendo junto a su bicicleta frente a una pared azul | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="eager" width="1920" height="1280"></div>
+
+				<!-- Fila 2: Azules saturados y horizontes marinos -->
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_05.webp" alt="Pareja sentada en un banco de ferry con su perro contemplando el azul del mar Mediterráneo | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_06.webp" alt="Cielo azul saturado y reflejo en un charco de transeúntes en un paseo marítimo moderno | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_07.webp" alt="Equipo de remo sincronizado cortando las aguas azules del puerto | Callejera & Humanidad | Puerto de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_08.webp" alt="Perspectiva aérea cenital de un tren turístico y paso de peatones sobre carril bici azul | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+
+				<!-- Fila 3: Verdes azulejo, entradas y transiciones urbanas -->
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_09.webp" alt="Puertas de entrada verdes azulejo abiertas mostrando un pasaje interior | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_10.webp" alt="Encuadre urbano soleado entre árboles verdes y cielo azul | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_11.webp" alt="Ciclomotores estacionados frente a un gran anuncio publicitario de perfume masculino | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_12.webp" alt="Transeúnte urbano con abrigo amarillo brillante caminando junto a una barandilla de cristal con montañas al fondo | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+
+				<!-- Fila 4: Tonos amarillos y piedra dorada -->
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_13.webp" alt="Corredor urbano en movimiento trotando por una calle alineada con palmeras | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_14.webp" alt="Callejón histórico mediterráneo con visitantes caminando hacia una torre de iglesia lejana | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_15.webp" alt="Dos comerciantes sonrientes con delantales rojos a juego en la entrada de su tienda | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_16.webp" alt="Maceteros rojos vivos en primer plano hacia un quiosco de prensa y recuerdos turísticos | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+
+				<!-- Fila 5: Rojos vibrantes, rosas y vida en terracota -->
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_17.webp" alt="Terraza de cafetería al aire libre bajo un dosel de buganvillas de color magenta vibrante | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_18.webp" alt="Músico con camiseta roja tocando el chelo en un espacio interior | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_19.webp" alt="Terraza de cafetería urbana con clientes conversando alrededor de las mesas | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_20.webp" alt="Multitud reunida en la histórica plaza de la Plaza de España en Roma | Callejera & Humanidad | Roma | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+
+				<!-- Fila 6: Luz del atardecer, siluetas gráficas y final nocturno -->
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_21.webp" alt="Mujer caminando por el sendero con barandilla costera al atardecer | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_22.webp" alt="Visitante en una galería de arte ante una escultura con su silueta proyectada en la pared | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_23.webp" alt="Contraste gráfico de un panel rojo con grafiti y siluetas en la pared urbana | Callejera & Humanidad | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_24.webp" alt="Espectáculo nocturno con aro de fuego y siluetas del público contemplando la actuación | Callejera & Humanidad | Roma | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+			</div>
         </section>
     </main>
+
+
+    <!-- Enlaces de salto de navegación inferior -->
+    <div class="bottom-nav-jumps">
+        <a href="#main-gallery" class="jump-content">Inicio de la galería &uarr;</a>
+        <span class="divider">|</span>
+        <a href="#banner-header" class="jump-menu">Menú principal &uarr;</a>
+    </div>
+
+{% include footer-es.html %}
+
 </div>
+
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e26e7a5dca02475a919bab32ec3809d4"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
 </body>
 </html>
