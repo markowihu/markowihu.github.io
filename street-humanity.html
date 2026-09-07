@@ -1,28 +1,86 @@
-<!-- 04/09/26 Temporary placeholder template for pending sub-galleries -->
+---
+---
+<!-- MarkOWiHu Photographer main pages - Street & Humanity Gallery EN 
+CHANGE LOG:
+ • 07/09/26 Created street-humanity.html using YAML Front Matter and Liquid partials.
+   Populated the 24-photo grid in chromatic arc order (street-humanity_01.webp to street-humanity_24.webp)
+   with SEO/accessibility-optimized alt text, bottom jump links, and Cloudflare analytics beacon.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Street & Humanity | MarkOWiHu Photographer</title>
+    <meta name="description" content="Street photography, candid human moments, and urban interaction in Spain and Europe by MarkOWiHu.">
+    <link rel="canonical" href="https://markowihu.es/street-humanity.html">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <div class="container">
-    <header role="banner" id="banner-header" class="header-banner">
-        <div class="header-titles">
-            <h1>MarkOWiHu Photographer</h1>
-            <div class="tagline">Alicante province</div>
-        </div>
-    </header>
+
+{% include header-en.html %}
+{% include nav-en.html %}
+
     <main role="main">
-        <section class="section-block" style="text-align: center; padding: 60px 20px;">
-            <h2>Street & Humanity</h2>
-            <p style="margin: 20px 0;">This portfolio gallery is currently under selection and curation.</p>
-            <p><a href="index.html">&larr; Return to Main Hub</a></p>
+        <!-- Main Gallery Section -->
+        <section id="main-gallery" style="padding-top: 0;">
+            <div class="gallery-grid">
+				<!-- Row 1: Monochrome & Architectural Start -->
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_01.webp" alt="Black and white street portrait of a man with sunglasses and bag against sprawling city backdrop | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="eager" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_02.webp" alt="Monochrome coastal candid shot of a man with pet dog on sea cliff | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="eager" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_03.webp" alt="Sweeping perspective of classical Vatican colonnade travertine columns with pedestrians | Street & Humanity | Rome | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="eager" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_04.webp" alt="Candid street portrait of an elderly man reading beside his bicycle against a vibrant blue wall | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="eager" width="1920" height="1280"></div>
+
+				<!-- Row 2: Saturated Blues & Water Horizons -->
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_05.webp" alt="Pair sitting on ferry bench with dog overlooking deep blue Mediterranean sea | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_06.webp" alt="Saturated blue sky and puddle reflection of figures walking along modern seaside promenade | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_07.webp" alt="Synchronized rowing team boat slicing through blue harbor water | Street & Humanity | Alicante harbor | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_08.webp" alt="Top-down aerial street perspective showing road train and blue bike lane zebra crossing | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+
+				<!-- Row 3: Teals, Entryways & Urban Transitions -->
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_09.webp" alt="Open teal shutter entrance doors revealing inner passage | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_10.webp" alt="Sunlit street view framed by green trees and blue sky | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_11.webp" alt="Parked scooters set against massive male perfume billboard advertisement | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_12.webp" alt="Urban commuter in bright yellow coat walking past glass railing with distant mountains | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+
+				<!-- Row 4: Yellow Accents & Golden Stone -->
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_13.webp" alt="Urban runner in motion jogging along palm-lined street | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_14.webp" alt="Historic narrow Mediterranean alleyway with visitors walking toward distant church tower | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_15.webp" alt="Two friendly shopkeepers in matching red aprons at store entrance | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_16.webp" alt="Vivid red planter pots in foreground leading to resort souvenir press kiosk and street scene | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+
+				<!-- Row 5: Vibrant Reds, Pinks & Terracotta Life -->
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_17.webp" alt="Outdoor cafe seating terrace under vibrant magenta bougainvillea canopy | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_18.webp" alt="Musician in red shirt playing cello indoors | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_19.webp" alt="Outdoor street cafe terrace with patrons conversing around tables | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_20.webp" alt="Crowd gathered on historic Spanish Steps plaza in Rome | Street & Humanity | Rome | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+
+				<!-- Row 6: Dusk Glow, Graphic Silhouettes & Night Finale -->
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_21.webp" alt="Woman walking along coastal railing path at dusk horizon | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_22.webp" alt="Art gallery visitor standing before statue with shadow silhouette on wall | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_23.webp" alt="Graphic contrast of red panel with urban wall silhouettes | Street & Humanity | Alicante province | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+				<div class="gallery-item"><img src="images/street-humanity/street-humanity_24.webp" alt="Dramatic night street performance featuring fire performer ring and spectator crowd silhouettes | Street & Humanity | Rome | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280"></div>
+			</div>
         </section>
     </main>
-</div>
-</body>
 
+    <!-- Bottom Navigation Jump Links -->
+    <div class="bottom-nav-jumps">
+        <a href="#main-gallery" class="jump-content">Top of Gallery &uarr;</a>
+        <span class="divider">|</span>
+        <a href="#banner-header" class="jump-menu">Main Menu &uarr;</a>
+    </div>
+
+{% include footer-en.html %}
+
+</div>
+
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e26e7a5dca02475a919bab32ec3809d4"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
+</body>
 </html>
