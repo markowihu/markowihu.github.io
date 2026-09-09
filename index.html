@@ -26,7 +26,7 @@
   • 06/09/26 Added YAML Front Matter to lines 1-2 of index.html and replaced static header, navigation menu, and footer HTML containers
   with Liquid include tags (header-en.html, nav-en.html, footer-en.html). 
   Preserved 12-image showcase photo grid, biography block, bottom return jump links, and Cloudflare analytics script.
-  • 09/09/26 Added explicit JSON-LD schema code (official entity markup) to header section. 
+  • 09/09/26 Added explicit JSON-LD schema code (official entity markup) to header section & Google search console metatag. 
     
   NOTE: Evaluation of a Separate inicio.html - NOT recommended for site architecture.  
   Default Root Serving: GitHub Pages automatically serves index.html whenever a visitor accesses [https://markowihu.es/](https://markowihu.es/).
@@ -61,9 +61,10 @@
 	  ]
 	}
 	</script>
+	<meta name="google-site-verification" content="y0EJ_vkM4HJaDIH4GYX4PQirc2BKLXsWMaVffYnRTJY" />
 </head>
-<body>
 
+<body>
 <div class="container">
     {% include header-en.html %}
 	{% include nav-en.html %}
