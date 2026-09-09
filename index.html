@@ -26,6 +26,7 @@
   • 06/09/26 Added YAML Front Matter to lines 1-2 of index.html and replaced static header, navigation menu, and footer HTML containers
   with Liquid include tags (header-en.html, nav-en.html, footer-en.html). 
   Preserved 12-image showcase photo grid, biography block, bottom return jump links, and Cloudflare analytics script.
+  • 09/09/26 Added explicit JSON-LD schema code (official entity markup) to header section. 
     
   NOTE: Evaluation of a Separate inicio.html - NOT recommended for site architecture.  
   Default Root Serving: GitHub Pages automatically serves index.html whenever a visitor accesses [https://markowihu.es/](https://markowihu.es/).
@@ -43,6 +44,23 @@
     <meta name="description" content="Portfolio of MarkOWiHu - Photographer based in the Provincia de Alicante. Minimalism, urban exploration, and landscape photography.">
     <link rel="canonical" href="https://markowihu.es">
     <link rel="stylesheet" href="styles.css">
+	<!-- Schema.org Official Entity Markup -->
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "Person",
+	  "name": "MarkOWiHu",
+	  "jobTitle": "Photographer",
+	  "url": "https://markowihu.es",
+	  "sameAs": [
+		"https://www.flickr.com/photos/markowihu/",
+		"https://www.instagram.com/markowihu/",
+		"https://www.behance.net/markowihu",
+		"https://unsplash.com/@markowihu",
+		"https://markowihu.myportfolio.com/"
+	  ]
+	}
+	</script>
 </head>
 <body>
 
