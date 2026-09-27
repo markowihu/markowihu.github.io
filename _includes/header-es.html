@@ -1,5 +1,8 @@
 <!--
-MarkOWiHu Fotógrafo main site menu system, 06-09-2026 Ver 1.0
+MarkOWiHu Fotógrafo main site menu system
+LOG DE CAMBIOS:
+06-09-2026 Ver 1.0
+27-09-26 Updated for dynamic language switching following new Foto Walk 2026 menu item
 Header ES
 -->
 <header role="banner" id="banner-header" class="header-banner">
@@ -8,7 +11,7 @@ Header ES
         <div class="tagline">Provincia de Alicante</div>
     </div>
     <div class="lang-switch" aria-label="Selección de idioma">
-        <a href="about.html#about-en" lang="en" title="English version">EN</a>
+        <a href="{{ page.lang_en_url | default: 'about.html#about-en' }}" lang="en" title="English version">EN</a>
         <span class="divider">|</span>
         <span class="lang-active" lang="es" title="Versión actual en español">ES</span>
     </div>

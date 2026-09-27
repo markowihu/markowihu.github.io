@@ -1,6 +1,8 @@
 <!--
-MarkOWiHu Fotógrafo main site menu system, 06-09-2026 Ver 1.0
-Header EN
+MarkOWiHu Fotógrafo main site menu system Header EN
+CHANGE LOG:
+06-09-2026 Ver 1.0
+27-09-2026 Updated for dynamic language switching following new Foto Walk 2026 menu item
 -->
 <header role="banner" id="banner-header" class="header-banner">
     <div class="header-titles">
@@ -10,6 +12,6 @@ Header EN
     <div class="lang-switch" aria-label="Language selection">
         <span class="lang-active" lang="en" title="Current English version">EN</span>
         <span class="divider">|</span>
-        <a href="noticias.html" lang="es" title="Español (castellano): Noticias">ES</a>
+        <a href="{{ page.lang_es_url | default: 'quien-soy.html#quien-soy' }}" lang="es" title="Versión en español">ES</a>
     </div>
 </header>
