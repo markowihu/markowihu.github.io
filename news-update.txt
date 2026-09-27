@@ -22,7 +22,6 @@
 		<ul>
 		  <li>Using the details you see in the card (image) on this <a href="https://markowihu.es/contacto.html#contact-form-container" target="_blank">contact page</a>.</li>
 		  <li>Or on that same page, sending a message from the <a href="https://markowihu.es/contacto.html#contact-form-container" target="_blank">contact form</a>. Include a link (URL) to your photos (e.g. via <a href="https://photos.app.goo.gl/neVCcEdYY6k4pErbA" target="_blank">Google Photos</a>, WeTransfer, Dropbox, or the storage service you usually use).</li>
-		  <li>Or, if you have a Google account, adding your pictures directly to this <a href="https://photos.app.goo.gl/neVCcEdYY6k4pErbA" target="_blank">shared Google Photos album</a>.</li></li>
 		  <li>Or, if you have a Google account, adding your pictures directly to our <a href="https://photos.app.goo.gl/neVCcEdYY6k4pErbA" target="_blank">shared Google Photos album</a>.</li>
 		</ul>
 		<br>
