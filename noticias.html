@@ -10,6 +10,7 @@ lang_en_url: news.html#news-en
   • Carga innerHTML para UTF-8 e integración de Noticias en menú 
   • 06/09/26: Added YAML Front Matter to news.html and noticias.html. Replaced hardcoded header, nav, and footer containers with Jekyll Liquid include partials while preserving the dynamic fetch engine, Last-Modified HTTP date stamp script, and WebP image tags.
   • 28/09/2026: Configured lang_es_url and lang_en_url YAML front matter variables across contact.html, contacto.html, news.html, and noticias.html to enable smooth header language switching without defaulting to fallback targets.
+  y 28/09/2026 - Soporte para etiqueta de fecha explícita DATE: DD Mon con respaldo HTTP 
 
 -->
 <!DOCTYPE html>
@@ -75,6 +76,7 @@ lang_en_url: news.html#news-en
 
 <!-- Dynamic Text Engine & HTTP Last-Modified Date Stamping -->
 <!-- LOG DE CAMBIOS: 03/09/2026 - Carga de noticias con soporte innerHTML para formato UTF-8 y enlaces -->
+<!-- LOG DE CAMBIOS: 28/09/2026 - Soporte para etiqueta de fecha explícita <!-- DATE: DD Mon con respaldo HTTP Last-Modified -->
 <script>
     async function loadNoticiasUpdate() {
         try {
@@ -83,13 +85,20 @@ lang_en_url: news.html#news-en
                 const textData = await response.text();
                 document.getElementById('news-text-container').innerHTML = textData;
 
-                const lastModHeader = response.headers.get('Last-Modified');
-                if (lastModHeader) {
-                    const modDate = new Date(lastModHeader);
-                    const day = String(modDate.getDate()).padStart(2, '0');
-                    const month = modDate.toLocaleString('es-ES', { month: 'short' }).replace('.', '');
-                    
-                    document.getElementById('news-date-container').textContent = `Última actualización: ${day} ${month}`;
+                // 1. Buscar etiqueta explícita de fecha en el texto (ejemplo: <!-- DATE: 25 Sep -->)
+                const explicitDateMatch = textData.match(/<!--\s*DATE:\s*(.*?)\s*-->/i);
+
+                if (explicitDateMatch && explicitDateMatch[1]) {
+                    document.getElementById('news-date-container').textContent = `Última actualización: ${explicitDateMatch[1].trim()}`;
+                } else {
+                    // 2. Respaldo por encabezado HTTP Last-Modified
+                    const lastModHeader = response.headers.get('Last-Modified');
+                    if (lastModHeader) {
+                        const modDate = new Date(lastModHeader);
+                        const day = String(modDate.getDate()).padStart(2, '0');
+                        const month = modDate.toLocaleString('es-ES', { month: 'short' }).replace('.', '');
+                        document.getElementById('news-date-container').textContent = `Última actualización: ${day} ${month}`;
+                    }
                 }
             }
         } catch (error) {

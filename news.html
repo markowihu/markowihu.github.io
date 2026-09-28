@@ -11,6 +11,7 @@ lang_es_url: noticias.html#noticias-es
   • InnerHTML text engine for UTF-8 and News nav menu integration. 
   • 06/09/2026: Added YAML Front Matter to news.html and noticias.html.   Replaced hardcoded header, nav, and footer containers with Jekyll Liquid include partials while preserving the dynamic fetch engine, Last-Modified HTTP date stamp script, and WebP image tags.
   • 28/09/2026: Configured lang_es_url and lang_en_url YAML front matter variables across contact.html, contacto.html, news.html, and noticias.html to enable smooth header language switching without defaulting to fallback targets.
+  &  Support for explicit date tag DATE: DD Mon with HTTP Last-Modified fallback 
   
 -->
 <!DOCTYPE html>
@@ -75,8 +76,11 @@ lang_es_url: noticias.html#noticias-es
     });
 </script>
 
-<!-- Dynamic Text Engine & HTTP Last-Modified Date Stamping (English) -->
-<!-- LOG DE CAMBIOS: 03/09/2026 - Updated news load engine to innerHTML for UTF-8 HTML formatting -->
+<!-- Dynamic Text Engine & HTTP Last-Modified Date Stamping (English)
+ • LOG DE CAMBIOS:
+ • 03/09/2026 - Updated news load engine to innerHTML for UTF-8 HTML formatting
+ • 28/09/2026 - Support for explicit date tag DATE: DD Mon with HTTP Last-Modified fallback 
+-->
 <script>
     async function loadNewsUpdate() {
         try {
@@ -85,13 +89,20 @@ lang_es_url: noticias.html#noticias-es
                 const textData = await response.text();
                 document.getElementById('news-text-container').innerHTML = textData;
 
-                const lastModHeader = response.headers.get('Last-Modified');
-                if (lastModHeader) {
-                    const modDate = new Date(lastModHeader);
-                    const day = String(modDate.getDate()).padStart(2, '0');
-                    const month = modDate.toLocaleString('en-GB', { month: 'short' }).replace('.', '');
-                    
-                    document.getElementById('news-date-container').textContent = `Last update: ${day} ${month}`;
+                // 1. Check for explicit date tag in text data (e.g., <!-- DATE: 25 Sep -->)
+                const explicitDateMatch = textData.match(/<!--\s*DATE:\s*(.*?)\s*-->/i);
+
+                if (explicitDateMatch && explicitDateMatch[1]) {
+                    document.getElementById('news-date-container').textContent = `Last update: ${explicitDateMatch[1].trim()}`;
+                } else {
+                    // 2. Fallback to HTTP Last-Modified header
+                    const lastModHeader = response.headers.get('Last-Modified');
+                    if (lastModHeader) {
+                        const modDate = new Date(lastModHeader);
+                        const day = String(modDate.getDate()).padStart(2, '0');
+                        const month = modDate.toLocaleString('en-GB', { month: 'short' }).replace('.', '');
+                        document.getElementById('news-date-container').textContent = `Last update: ${day} ${month}`;
+                    }
                 }
             }
         } catch (error) {
