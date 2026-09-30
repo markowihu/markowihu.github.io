@@ -2,23 +2,23 @@
    Gemini - MarkOWiHu Photographer markowihu.es Photography hub page style sheet
    Base Engineering Rules 
    CHANGE LOG • LOG DE CAMBIOS:
-	25/08/2026 - Changes to remove top border and excess whitespace padding from first main section site-wide
-	29/08/2026 - Reduced utility nav margins to tighten top layout
-	30/08/2026 - Header Flex Alignment & Compact EN | ES Language Switcher 
-	01/09/26: ver 2: Monolingual Rationalization: Completed the clean separation of bilingual templates
+	• 25/08/2026 - Changes to remove top border and excess whitespace padding from first main section site-wide
+	• 29/08/2026 - Reduced utility nav margins to tighten top layout
+	• 30/08/2026 - Header Flex Alignment & Compact EN | ES Language Switcher 
+	• 01/09/26: ver 2: Monolingual Rationalization: Completed the clean separation of bilingual templates
   into dedicated single-language English and Spanish pages across the site (about.html / quien-soy.html,
   contact.html / contacto.html, minimalism.html / minimalismo.html). 
   Navigation & Anchor Alignment: Standardised primary <nav> menu links across all HTML templates 
   to route directly to specific section anchors (#about-en, #quien-soy, #contact-form-container, #main-gallery).
-  Viewport Scroll Offset: Added global smooth scrolling and section header padding (scroll-margin-top) in styles.css 
-  to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
+  Viewport Scroll Offset: Added global smooth scrolling and section header padding (scroll-margin-top) in styles.css to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
   Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
   above the legal footer across content pages for seamless navigation on long viewports.
-   02/09/2026 - Conmutador de idioma superior EN | ES para dispositivos móviles.
-   04/09/2026 - Estilos para enlaces de títulos y reducción de espacio vertical 
-   05/09/26 - Update styles.css: enforce solid menu background opacity and boost dropdown contrast.
-     Added explicit solid background-color (#ffffff) to nav container and dropdown sub-menu items across desktop and mobile viewports. 
-	 Elevated box-shadow depth to preserve contrast against dark background imagery.
+   • 02/09/2026 - Conmutador de idioma superior EN | ES para dispositivos móviles.
+   • 04/09/2026 - Estilos para enlaces de títulos y reducción de espacio vertical 
+   • 05/09/26 - Update styles.css: enforce solid menu background opacity and boost dropdown contrast.
+     Added explicit solid background-color (#ffffff) to nav container and dropdown sub-menu items across desktop and mobile viewports. 	 Elevated box-shadow depth to preserve contrast against dark background imagery.
+   • 30/09/2026 Site-wide main paragraph (line) and heading spacing active at line 644. Confirmed addition of main p, main h3, and main h4 margin rules at lines 644–659 in styles.css. This global selector handles paragraph spacing site-wide (including news updates).
+   
 */
 :root {
     --bg-color: #ffffff;
@@ -639,4 +639,21 @@ footer {
     border-top: 1px solid var(--border-color);
     font-size: 0.85rem;
     color: var(--muted-color);
+}
+
+/* LOG DE CAMBIOS: 30/09/2026 - Automatic vertical paragraph and heading spacing for main content sections */
+main p {
+    margin-bottom: 1.25rem;
+}
+
+main h3,
+main h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Resets for trailing elements and photo grid captions */
+main p:last-child,
+.photo-caption {
+    margin-bottom: 0;
 }
