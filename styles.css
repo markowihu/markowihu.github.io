@@ -18,7 +18,8 @@
    • 05/09/26 - Update styles.css: enforce solid menu background opacity and boost dropdown contrast.
      Added explicit solid background-color (#ffffff) to nav container and dropdown sub-menu items across desktop and mobile viewports. 	 Elevated box-shadow depth to preserve contrast against dark background imagery.
    • 30/09/2026 Site-wide main paragraph (line) and heading spacing active at line 644. Confirmed addition of main p, main h3, and main h4 margin rules at lines 644–659 in styles.css. This global selector handles paragraph spacing site-wide (including news updates).
-   • 07/10/2026 - Deduplicación completa de cuadrículas de fotos y elementos de galería */
+   • 07/10/2026 - Deduplicación completa de cuadrículas de fotos y elementos de galería and extension of Automatic vertical paragraph and heading spacing (to include H2) for main content sections.
+      */
 ```
    
 */
@@ -555,15 +556,15 @@ footer {
     color: var(--muted-color);
 }
 
-/* LOG DE CAMBIOS: 30/09/2026 - Automatic vertical paragraph and heading spacing for main content sections */
 main p {
     margin-bottom: 1.25rem;
 }
 
+main h2,
 main h3,
 main h4 {
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
+    margin-top: 2rem;
+    margin-bottom: 0.85rem;
 }
 
 /* Resets for trailing elements and photo grid captions */
