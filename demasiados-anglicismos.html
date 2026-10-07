@@ -1,11 +1,17 @@
+```yaml
 ---
 layout: default
 title: "La buena comunicación • Demasiados anglicismos | MarkOWiHu Fotógrafo"
 description: "Reflexión sobre el uso de anglicismos, la precisión lingüística y la claridad expresiva en entornos creativos y fotográficos en España."
-lang_en_url: "news.html#news-en"
 ---
 <!DOCTYPE html>
 <html lang="es">
+<!-- Control de Versiones
+ • 07/10/26 Restored missing text from shortened essay to full version. díaisabled EN toggle state for monolingual Spanish articles.
+   Updated header-es.html to conditionally render a disabled .lang-disabled span with tooltip when page.lang_en_url is undefined, 
+   and added corresponding CSS styles for monolingual pages.
+ -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,49 +25,137 @@ lang_en_url: "news.html#news-en"
 {% include header-es.html %}
 {% include nav-es.html %}
 
-<div class="utility-nav">
-    <a href="news.html#news-en" class="lang-toggle" lang="en">English News &amp; Views &rarr;</a>
-    <a href="#demasiados-anglicismos" class="jump-link">Ir al artículo &darr;</a>
-</div>
-
-<main class="container" id="demasiados-anglicismos" style="scroll-margin-top: 1.5rem; max-width: 800px; margin: 0 auto; padding: 1rem;">
+<main role="main" class="container" id="demasiados-anglicismos" style="scroll-margin-top: 1.5rem; max-width: 800px; margin: 0 auto; padding: 1rem; text-align: left;">
     
-	<header class="article-header" style="text-align: center; margin-bottom: 2rem;">
+    <header class="article-header" style="text-align: center; margin-bottom: 2rem;">
         <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Las paradojas de demasiados anglicismos</h1>
         <p class="tagline" style="font-style: italic; color: var(--muted-color);">Cuando una lengua deja de ser una herramienta de comunicación y empieza a convertirse en una insignia de pertenencia.</p>
     </header>
 
-    <div class="featured-image-container" style="text-align: center; margin: 2rem 0;">
-        <img src="images/demasiados-anglicismos/la-paradoja-del-esnobismo-lingüístico-y-demasiados-anglicismos.webp" alt="Ilustración sobre las paradojas de demasiados anglicismos | MarkOWiHu Fotógrafo • markowihu.es" loading="eager" width="1920" height="1280" style="max-width: 100%; height: auto; border-radius: 4px;">
-    </div>
-
-    <article class="editorial-body" style="line-height: 1.8;">
-	
-        <p>Tanto en el mundo del comercio como en las asociaciones y grupos creativos en España, la importación habitual de términos en inglés suele tratarse como una muestra de modernidad y sofisticación global. Sin embargo, esta tendencia genera a menudo una mezcla peculiar e incoherente que crea una fricción real, tanto para los hispanohablantes autóctonos como para los ciudadanos nacionalizados que nacieron en otros países.</p>
+    <article class="editorial-body" style="line-height: 1.8; text-align: left;">
+        <p>Tanto en el mundo del comercio como en las asociaciones y grupos creativos en España, la importación habitual de términos en inglés suele tratarse como una muestra de modernidad y sofisticación global. Sin embargo, esta tendencia genera a menudo una mezcla peculiar e incoherente que crea una fricción real, tanto para los hispanohablantes autóctonos (los españoles nativos) como para los ciudadanos nacionalizados que nacieron en otros países (es decir, los españoles naturalizados).</p>
 
         <p>Para los hispanohablantes que se sienten orgullosos de su idioma, la sustitución indiscriminada de términos visuales tan ricos —<em>fotografía callejera</em>, <em>recorrido fotográfico</em>, <em>paseo fotográfico</em>— por anglicismos importados puede percibirse como una erosión innecesaria de la riqueza expresiva del español.</p>
 
-        <p>Pero existe otra perspectiva menos evidente. Para los españoles naturalizados que llevan décadas viviendo en España, participan plenamente en su sociedad, hablan español a diario y, además, tienen el inglés como lengua materna, la experiencia puede resultar doblemente chocante. No porque el inglés sea un problema —todo lo contrario—, sino porque escuchar determinadas palabras inglesas deformadas dentro de una conversación en castellano produce el efecto exactamente contrario al que se pretende.</p>
-		
-		<p>El caso resulta ilustrativo: al hacer referencia en un acta a la obra del fotógrafo estadounidense Stephen Shore, se introduce únicamente el apellido suelto («<em>Shore</em>»), sin nombre de pila ni inicial que lo contextualice. En un grupo de trabajo cuyo oído colectivo ha sido previamente expuesto a un goteo incesante de anglicismos forzados (<em>workshop</em>, <em>briefing</em>, <em>street</em>), el resultado es inevitable: varios participantes no identifican al autor neoyorquino, sino que asumen de inmediato que, probablemente, se trata de otro anglicismo importado para referirse a la «fotografía de playa u orillas del mar» (<em>shore</em>).</p>
+        <p>Pero existe otra perspectiva menos evidente. Para los españoles naturalizados que llevan décadas viviendo en España, participan plenamente en su sociedad, hablan español a diario y, además, tienen el inglés como lengua materna, la experiencia puede resultar doblemente chocante. No porque el inglés sea un problema —todo lo contrario—, sino porque escuchar determinadas palabras inglesas deformadas dentro de una conversación en castellano <em>produce el efecto exactamente contrario al que se pretende</em>.</p>
 
-		<div class="featured-image-container" style="text-align: center; margin: 2rem 0;">
-			<img src="images/demasiados-anglicismos/playa-orillas-costa-shore-beach-seaside-webp.webp" alt="Fotografía de playa u orilla del mar (shore) | MarkOWiHu Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280" style="max-width: 100%; height: auto; border-radius: 4px;">
-		</div>
-
-		<blockquote style="border-left: 3px solid var(--border-color); margin: 2rem 0; padding-left: 1rem; font-style: italic;">
-            «El resultado es paradójico: el hablante posee el contexto completo en su mente y deja de percibir qué parte necesita transmitir. El receptor, intentando atar cabos con la información disponible, puede construir una interpretación coherente... pero completamente ajena a la que el emisor tenía en cabeza.»
-        </blockquote>
-
-        <div class="featured-image-container" style="text-align: center; margin: 2rem 0;">
-            <img src="images/demasiados-anglicismos/claridad.svg" alt="Ilustración sobre la claridad e integridad del lenguaje en la comunicación creativa | MarkOWiHu Fotógrafo • markowihu.es" loading="lazy" width="800" height="400" style="max-width: 100%; height: auto; border-radius: 4px;">
+        <!-- Imagen 1: Infografía principal centrada -->
+        <div class="featured-image-container" style="text-align: center; margin: 2.5rem 0;">
+            <img src="images/demasiados-anglicismos/la-paradoja-del-esnobismo-lingüístico-y-demasiados-anglicismos.webp" alt="Infografía sobre las paradojas de demasiados anglicismos y diccionario de hipercorrección | MarkOWiHu Fotógrafo • markowihu.es" loading="eager" width="1920" height="1280" style="max-width: 100%; height: auto; border-radius: 4px;">
         </div>
 
-        <p>La solución es tan sencilla como elegante: aportar el contexto necesario. Especificar el nombre completo o añadir una breve referencia elimina cualquier ambigüedad de un plumazo. Esto no significa complicar el discurso ni hacer alarde de conocimientos. Refleja una regla fundamental de la buena comunicación: el orador o escritor no debería obligar al lector a adivinar aquello que el propio hablante ya sabe.</p>
+        <h2>La prueba del algodón oral: cuando el texto escrito choca con la realidad fonética</h2>
 
-        <p>La solución es tan sencilla como elegante: aportar el contexto necesario. Especificar el nombre completo o añadir una breve referencia elimina cualquier ambigüedad de un plumazo. Esto no significa complicar el discurso ni hacer alarde de conocimientos. Refleja una regla fundamental de la buena comunicación: el orador o escritor no debería obligar al lector a adivinar aquello que el propio hablante ya sabe.</p>
+        <p>En el plano escrito y en las actas de los chats, la jerga viste mucho y parece aportar un barniz técnico e internacional. Sin embargo, la verdadera prueba de fuego ocurre en las conversaciones cara a cara, donde el modelo se desmorona rápidamente.</p>
 
-        <p>La verdadera competencia lingüística no consiste en conseguir que los demás admiren cuánto sabemos o qué palabras internacionales utilizamos. Consiste en lograr que entiendan con absoluta claridad lo que queremos decir. Al final, la forma en que cuidamos el lenguaje en nuestros espacios creativos dice mucho más de nuestro criterio que cualquier etiqueta importada.</p>
+        <h3>«Estri», «App» vs. Up etc.</h3>
+
+        <p>Un ejemplo cotidiano es «estri», adaptación fonética de <em>street</em>. Al añadir una «e» protética inicial, adaptar la palabra a la fonética del español y acortarla sin su consonante final, se crea una especie de <strong>inglés híbrido o versionado que no añade nada para un hispanohablante y que, para un angloparlante nativo, resulta completamente antinatural</strong>.</p>
+
+        <p>El fenómeno se vuelve casi cómico cuando se intenta teorizar en persona sobre subgéneros especializados. Es relativamente frecuente escuchar a perfiles referentes en estos entornos referirse al <em>street portrait</em> (retrato callejero) pronunciándolo de forma tan deformada que suena exactamente como <em>street porter</em>. Para cualquier persona con oído lingüístico o con el inglés como lengua materna, la mente vuela de inmediato a un mozo de equipajes en un hotel (<em>hotel porter</em>) o a un celador de hospital (<em>hospital porter</em>), destruyendo por completo la supuesta precisión conceptual que se pretendía proyectar.</p>
+
+        <p>Ocurre algo similar con herramientas tecnológicas internacionales como <em>GitHub</em>. Al haber aprendido el término de forma puramente visual dentro de un entorno local, se adopta una pronunciación plenamente adaptada a los valores vocálicos del español —«GitHAb»—. ¿Y qué ocurre entonces? La comprensión auditiva está estrechamente vinculada a los patrones de pronunciación que uno ha aprendido y utilizado y, en cierta medida, también ocurre lo contrario: <strong>la forma en que pronunciamos una palabra condiciona nuestra capacidad para reconocerla cuando la escuchamos</strong>. Cuando un angloparlante nativo pronuncia la palabra con su pronunciación y acentuación habituales, el oyente local puede incluso ser incapaz de reconocerla inmediatamente.</p>
+
+        <p>Aunque esto no demuestra que el oyente no esté utilizando el inglés, sí revela una variedad local de términos ingleses cuya pronunciación se ha alejado considerablemente de la referencia internacional.</p>
+
+        <p>A lo largo de mi vida profesional en España he oído a españoles nativos comentar, con cierta frecuencia: «Yo entiendo perfectamente el inglés cuando me lo habla un español; pero cuando me hablan los ingleses, no me entero de nada».</p>
+
+        <p>Y ya sabes por qué.</p>
+
+        <p>Desde luego, ese «los ingleses» suele utilizarse coloquialmente para referirse, en realidad, a prácticamente cualquier angloparlante nativo: escoceses, galeses, irlandeses, estadounidenses, australianos, neozelandeses también, etc.</p>
+
+        <p><strong>La paradoja es evidente.</strong> Si la comprensión depende de que el interlocutor pronuncie una lengua extranjera siguiendo los patrones fonéticos a los que el oyente local está acostumbrado, quizá no esté demostrando que «entiende inglés perfectamente», sino que entiende <strong>una determinada versión</strong>. Como consecuencia del fenómeno, se oye el término «espanglish» bastante comúnmente.</p>
+
+        <h2>La falacia de la globalización</h2>
+
+        <p>Quienes defienden este uso intensivo de términos extranjeros suelen recurrir al argumento de la globalización, sosteniendo que usar palabras en inglés facilita el entendimiento con otros profesionales europeos. Se afirmó, por ejemplo, que decir <em>marketing</em> a un contacto francés resultaría más comprensible que utilizar la palabra española <em>mercadotecnia</em>.</p>
+
+        <p>Sin embargo, este razonamiento incurre en dos errores fundamentales:</p>
+
+        <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+            <li style="margin-bottom: 0.5rem;"><strong>Ignora la realidad cultural de otros países:</strong> Naciones como Francia pueden ser profundamente celosas de su patrimonio lingüístico. Muchas veces, priorizan de forma oficial su propio vocabulario (<em>mercatique</em>) frente a los préstamos del inglés.</li>
+            <li><strong>Confunde la palabra con su pronunciación:</strong> Transmitir un anglicismo con fonética castellana rígida no construye un puente internacional. Lo que se genera no es una <em>lingua franca</em> europea, sino un espanglish de consumo interno que, frecuentemente, resulta incomprensible a ambos lados de la frontera.</li>
+        </ol>
+
+        <h2>De la herramienta a la insignia</h2>
+
+        <p>Tal vez no todos los anglicismos son innecesarios ni constituye postureo todo uso del inglés. Hoy día, está claro que hay términos que forman parte del vocabulario internacional de determinadas profesiones o tecnologías y que resultan perfectamente funcionales. No obstante, el problema aparece cuando existe una expresión castellana clara, precisa y asentada —y, aun así, se sustituye sistemáticamente por su equivalente inglés sólo porque parece más moderno o sofisticado.</p>
+
+        <p>Es entonces cuando el idioma deja de funcionar como una herramienta de comunicación y empieza a funcionar como una insignia de pertenencia.</p>
+
+        <p>En el mundo cotidiano encontramos ejemplos por todas partes: «workshop» por taller, «meeting» por reunión, «feedback» por comentarios o valoración, «networking» por hacer contactos, «briefing» por reunión informativa, «team building» por actividades de cohesión de equipo. Cuando se convierten en sustitutos automáticos de palabras españolas válidas, la cuestión deja de ser lingüística y pasa a ser social: <strong>¿qué se pretende comunicar realmente con el cambio?</strong></p>
+
+        <p>La paradoja es que cuanto más se intenta aparentar internacionalidad, más artificial resulta el lenguaje.</p>
+
+        <h2>De los «guardianes del idioma» al lapsus del apellido suelto</h2>
+
+        <p>Existe en estos círculos una segunda paradoja aún más reveladora: el comportamiento de quienes asumen el papel de fiscalizadores o celadores de la pureza lingüística.</p>
+
+        <p>En ocasiones, son esos mismos perfiles que reclaman públicamente la presencia del castellano ante cualquier iniciativa ajena —recurriendo incluso a una marcada insistencia paternalista («¿pero hay versión en español, en español?»)— los que terminan cayendo en la trampa del condicionamiento.</p>
+
+        <p>El caso resulta ilustrativo: al hacer referencia en un acta a la obra del fotógrafo estadounidense Stephen Shore, se introduce únicamente el apellido suelto («<em>Shore</em>»), sin nombre de pila ni inicial que lo contextualice. En un grupo de trabajo cuyo oído colectivo ha sido previamente expuesto a un goteo incesante de anglicismos forzados (<em>workshop</em>, <em>briefing</em>, <em>street</em>), el resultado es inevitable: varios participantes no identifican al autor neoyorquino, sino que asumen de inmediato que, probablemente, se trata de otro anglicismo importado para referirse a la «fotografía de playa u orillas del mar» (<em>shore</em>).</p>
+
+        <p>Quien pretendía fiscalizar la presencia del español acaba generando un malentendido conceptual por pura falta de precisión contextual.</p>
+
+        <!-- Imagen 2: Fotografía de la playa centrada -->
+        <div class="featured-image-container" style="text-align: center; margin: 2.5rem 0;">
+            <img src="images/demasiados-anglicismos/playa-orillas-costa-shore-beach-seaside-webp.webp" alt="Fotografía de playa u orilla del mar (shore) | MarkOWiHu Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1280" style="max-width: 100%; height: auto; border-radius: 4px;">
+        </div>
+
+        <h2>Cuando la corrección se convierte en hipercorrección</h2>
+
+        <p>Existe un fenómeno todavía más curioso: no limitarse a utilizar el inglés, <em>sino "corregir" el castellano o el nombre original de una marca para hacerlo parecer más inglés</em>.</p>
+
+        <p>Un caso reciente lo ilustra a la perfección. Por ejemplo, un evento convocado por la comunidad de la empresa internacional fotoapp.co se denomina oficialmente <strong>«Foto Walk»</strong>. Sin embargo, en documentos y resúmenes locales en un club de fotografía en castellano, hay quien lo transforma instintivamente, por lo visto, en «Photowalk».</p>
+
+        <p>Aquí no hay ningún problema lingüístico que resolver. <em>Foto Walk</em> es el nombre propio del evento. Cambiarlo por «Photowalk» no lo hace más correcto; simplemente lo hace parecer más inglés.</p>
+
+        <p>Cuando se ha interiorizado que <em>English = modern = professional = better</em>, la modificación se convierte en un reflejo automático. Ya no se traduce para facilitar la comprensión de un angloparlante; se «mejora» el nombre porque la forma inglesa parece, por alguna razón, más legítima.</p>
+
+        <p>La situación roza la ironía cuando el supuesto perfeccionamiento consiste en cambiar la palabra <strong>FOTO</strong> por <strong>PHOTO</strong>, a pesar de que la propia empresa estadounidense se llama «FOTO». La palabra española deja de parecer lo bastante sofisticada simplemente porque no lleva <em>ph</em>.</p>
+
+        <p><strong>¿En qué momento una traducción deja de ser una traducción y se convierte en una hipercorrección?</strong> En muchos de estos casos no se utiliza el inglés para comunicarse con un angloparlante, sino una representación del inglés para proyectar estatus ante otros españoles.</p>
+
+        <h2>Una cuestión de atención, precisión y contexto</h2>
+
+        <p>Este fenómeno forma parte de un cambio cultural más amplio. En una cultura dominada por la rapidez, los mensajes breves, las notificaciones y la gratificación inmediata, la atención sostenida compite constantemente con la necesidad de pasar al siguiente estímulo. El problema no es que las pantallas sean intrínsecamente perjudiciales: pueden ser herramientas extraordinariamente eficaces para aprender, investigar y comunicarse. La cuestión es <strong>cómo se utilizan y qué tipo de atención fomentan</strong>.</p>
+
+        <p>La investigación sobre lectura ofrece un ejemplo interesante. Un metaanálisis de estudios experimentales encontró una pequeña ventaja de la lectura en papel frente a la lectura en pantalla en determinadas medidas de comprensión, especialmente con textos expositivos. No significa que leer en una pantalla impida comprender un texto; significa que el medio puede influir, aunque modestamente, en la forma en que procesamos información compleja.</p>
+
+        <p>En matemáticas ocurre algo parecido. Los datos internacionales de PISA muestran que el uso moderado de dispositivos digitales con fines educativos no es necesariamente perjudicial y puede incluso asociarse con mejores resultados. Sin embargo, la distracción digital durante las clases de matemáticas sí presenta una relación clara con un peor rendimiento. En otras palabras, <strong>no es la tecnología en sí la que constituye el problema, sino su uso excesivo, inadecuado o distractor</strong>.</p>
+
+        <p>Y esto importa porque tanto la lectura profunda como las matemáticas requieren algo que la cultura de la inmediatez no siempre favorece: mantener información en la mente, seguir una secuencia, establecer relaciones entre ideas y resistir la tentación de saltar inmediatamente al siguiente estímulo.</p>
+
+        <p>Un problema matemático, por ejemplo, no consiste simplemente en reconocer unas cifras y efectuar una operación. Hay que comprender el enunciado, identificar qué información es relevante, conservarla en la memoria de trabajo, establecer las relaciones entre los datos y seguir una secuencia lógica. Del mismo modo, leer un texto con profundidad no consiste en localizar palabras clave y obtener rápidamente una respuesta: parte del significado sólo aparece cuando somos capaces de mantener una idea en la cabeza durante varios párrafos.</p>
+
+        <p>La precisión lingüística forma parte de ese mismo problema. Cuando sustituimos sistemáticamente la palabra precisa por la etiqueta de moda, la explicación por la jerga o la reflexión por la reacción inmediata, podemos terminar confundiendo <strong>velocidad de procesamiento con comprensión</strong>.</p>
+
+        <h2>Cuando el contexto existe solamente en la cabeza del hablante</h2>
+
+        <p>Los problemas de comunicación no aparecen únicamente al utilizar anglicismos innecesarios. También surgen cuando quien habla presupone que los demás poseen exactamente la misma información contextual que él.</p>
+
+        <p>En un foro o debate artístico se puede escribir, por ejemplo, un comentario tan escueto como: <em>«Esto no será del gusto de Salcedo»</em>. Al omitir el nombre de pila y el marco de referencia, el receptor se ve obligado a adivinar:</p>
+
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+            <li style="margin-bottom: 0.5rem;">¿Se están refiriendo por un despiste léxico al célebre fotoperiodista documental (confundiendo Salgado con Salcedo)?</li>
+            <li style="margin-bottom: 0.5rem;">¿Se refieren a la reconocida artista conceptual internacional Doris Salcedo?</li>
+            <li>¿O aluden simplemente al formador que impartió un taller local recientemente (David Salcedo)?</li>
+        </ul>
+
+        <p>El resultado es paradójico: el hablante posee el contexto completo en su mente y deja de percibir qué parte necesita transmitir. El receptor, intentando atar cabos con la información disponible, puede construir una interpretación perfectamente coherente... pero completamente ajena a la que el emisor tenía en cabeza.</p>
+
+        <!-- Imagen 3: Esquema SVG de Claridad centrado -->
+        <div class="featured-image-container" style="text-align: center; margin: 2.5rem 0;">
+            <img src="images/demasiados-anglicismos/claridad.svg" alt="Esquema gráfico sobre claridad antes que jerga y la solución aportando el contexto necesario | MarkOWiHu Fotógrafo • markowihu.es" loading="lazy" width="800" height="400" style="max-width: 100%; height: auto; border-radius: 4px;">
+        </div>
+
+        <p>La solución es tan sencilla como elegante: <strong>aportar el contexto necesario</strong>. Especificar el nombre completo o añadir una breve referencia («el fotógrafo David Salcedo, que nos dio formación el año pasado») elimina cualquier ambigüedad de un plumazo.</p>
+
+        <p>Esto no significa complicar el discurso ni hacer alarde de conocimientos. Tal vez parezca una cuestión insignificante; sin embargo, refleja una regla fundamental de la buena comunicación. El orador o escritor en un foro no debería obligar al lector a adivinar aquello que el propio hablante ya sabe.</p>
+
+        <p><strong>La verdadera competencia lingüística no consiste en conseguir que los demás admiren cuánto sabemos o qué palabras internacionales utilizamos. Consiste en lograr que entiendan con absoluta claridad lo que queremos decir.</strong></p>
+
+        <p>Al final, la forma en que cuidamos el lenguaje en nuestros espacios creativos dice mucho más de nuestro criterio que cualquier etiqueta importada. Y es que la autenticidad creativa no necesita jerga superficial ni pronunciaciones impostadas: le basta con la claridad de la mirada y la precisión de la palabra.</p>
 
         <div class="article-quote" style="text-align: center; margin: 3rem 0 2rem 0; font-weight: bold; font-size: 1.1rem; color: var(--accent-color, #111);">
             «Clara en la mirada, precisa en la palabra.»
