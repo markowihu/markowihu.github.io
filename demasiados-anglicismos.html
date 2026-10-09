@@ -1,10 +1,13 @@
 ---
-lang_en_url: demasiados-anglicismos.html
+title: "La buena comunicación • Demasiados anglicismos | MarkOWiHu Fotógrafo"
+description: "Reflexión sobre el uso de anglicismos, la precisión lingüística y la claridad expresiva en entornos creativos y fotográficos en España - ¿Demasiados anglicismos? ¿Esnobismo lingüístico?"
+lang_en_url: "https://youglish.com/pronounce/street/english/uk"
 ---
 <!DOCTYPE html>
 <html lang="es">
 <!-- Control de Versiones
  • 07/10/26 Restored missing text from shortened essay to full version. díaisabled EN toggle state for monolingual Spanish articles. Updated header-es.html to conditionally render a disabled .lang-disabled span with tooltip when page.lang_en_url is undefined, and added corresponding CSS styles for monolingual pages. Corregida sintaxis YAML para procesamiento Liquid. Alineado título a la izquierda e insertada tarjeta gráfica comunicación-clara.png. Eliminado layout: default de cabecera YAML para corregir duplicación de etiquetas e integración de viewport en dispositivos móviles y tabletas.
+ 
  -->
 
 <head>
@@ -34,9 +37,9 @@ lang_en_url: demasiados-anglicismos.html
 
         <p>Pero existe otra perspectiva menos evidente. Para los españoles naturalizados que llevan décadas viviendo en España, participan plenamente en su sociedad, hablan español a diario y, además, tienen el inglés como lengua materna, la experiencia puede resultar doblemente chocante. No porque el inglés sea un problema —todo lo contrario—, sino porque escuchar determinadas palabras inglesas deformadas dentro de una conversación en castellano <em>produce el efecto exactamente contrario al que se pretende</em>.</p>
 
-        <!-- Imagen 1: Infografía principal centrada -->
+<!-- Imagen 1: Infografía principal centrada -->
         <div class="featured-image-container" style="text-align: center; margin: 2.5rem 0;">
-            <img src="images/demasiados-anglicismos/la-paradoja-del-esnobismo-lingüístico-y-demasiados-anglicismos.webp" alt="Infografía sobre las paradojas de demasiados anglicismos y diccionario de hipercorrección | MarkOWiHu Fotógrafo • markowihu.es" loading="eager" width="1920" height="1280" style="max-width: 100%; height: auto; border-radius: 4px;">
+            <img src="images/demasiados-anglicismos/la-paradoja-del-esnobismo-linguistico-y-demasiados-anglicismos.webp" alt="Infografía sobre las paradojas de demasiados anglicismos y diccionario de hipercorrección | MarkOWiHu Fotógrafo • markowihu.es" loading="eager" width="1920" height="1280" style="max-width: 100%; height: auto; border-radius: 4px;">
         </div>
 
         <h2>La prueba del algodón oral: cuando el texto escrito choca con la realidad fonética</h2>
@@ -152,9 +155,9 @@ lang_en_url: demasiados-anglicismos.html
 
         <p>Al final, la forma en que cuidamos el lenguaje en nuestros espacios creativos dice mucho más de nuestro criterio que cualquier etiqueta importada. Y es que la autenticidad creativa no necesita jerga superficial ni pronunciaciones impostadas: le basta con la claridad de la mirada y la precisión de la palabra.</p>
 
-        <!-- Imagen 4: Tarjeta gráfica de Autenticidad Creativa / Comunicación Clara centrada -->
+<!-- Imagen 4: Tarjeta gráfica de Autenticidad Creativa / Comunicación Clara centrada -->
         <div class="featured-image-container" style="text-align: center; margin: 2.5rem 0;">
-            <img src="images/demasiados-anglicismos/comunicación-clara.png" alt="Tarjeta gráfica de Autenticidad Creativa: A la mirada le basta con la claridad. A la palabra, con la precisión | MarkOWiHu Fotógrafo • markowihu.es" loading="lazy" width="800" height="400" style="max-width: 100%; height: auto; border-radius: 4px;">
+            <img src="images/demasiados-anglicismos/comunicacion-clara.png" alt="Tarjeta gráfica de Autenticidad Creativa: A la mirada le basta con la claridad. A la palabra, con la precisión | MarkOWiHu Fotógrafo • markowihu.es" loading="lazy" width="800" height="400" style="max-width: 100%; height: auto; border-radius: 4px;">
         </div>
 
         <div class="article-quote" style="text-align: center; margin: 3rem 0 2rem 0; font-weight: bold; font-size: 1.1rem; color: var(--accent-color, #111);">
@@ -162,11 +165,24 @@ lang_en_url: demasiados-anglicismos.html
         </div>
     </article>
 
-    <div class="bottom-nav" style="display: flex; justify-content: space-between; border-top: 1px solid <div class="bottom-nav-jumps" style="display: flex; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 3rem;">
+<div class="bottom-nav-jumps" style="display: flex; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 3rem;">
         <a href="#demasiados-anglicismos" class="jump-content">&uarr; Inicio del artículo</a>
         <a href="#banner-header" class="jump-menu">Menú principal &uarr;</a>
     </div>
+
 </main>
+
+<script>
+    // Easter Egg: Hijack the EN language toggle to serve a pronunciation reality check
+    document.addEventListener("DOMContentLoaded", function() {
+        const enLink = document.querySelector('a[href="https://youglish.com/pronounce/street/english/uk"]');
+        if (enLink) {
+            enLink.setAttribute("target", "_blank");
+            enLink.setAttribute("rel", "noopener noreferrer");
+            enLink.setAttribute("title", "Escuchar la pronunciación real en YouGlish");
+        }
+    });
+</script>
 
 {% include footer-es.html %}
 
