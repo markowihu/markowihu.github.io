@@ -1,4 +1,4 @@
-<!-- DATE: 29 de septiembre de 2026 -->
+<!-- DATE: 17 de octubre de 2026 -->
 <p><strong>FOTOGRAFÍA EXPUESTA EN EL PALACIO DEL PORTALET</strong><br>
 <strong>Con gratitud: 1.º puesto en la Liga Social del CFA (Categoría Macro)</strong></p>
 
@@ -15,5 +15,15 @@
 <p><strong>Lugar:</strong> Planta 4.ª, <a href="https://www.alicante.es/es/equipamientos/palacio-del-portalet-lab15" target="_blank" rel="noopener">Palacio del Portalet</a>, Calle Labradores, 15, 03002 Alicante<br>
 <strong>Entrada:</strong> Gratuita y abierta al público<br>
 <strong>Nota:</strong> Conviene confirmar el horario de apertura antes de ir, ya que en alguna ocasión el recinto ha cerrado con poco aviso.</p>
+
+<!-- Incrustación de YouTube Short: Exposición CFA 2026 -->
+<div class="video-embed-container" style="text-align: center; margin: 2rem 0;">
+    <div style="position: relative; max-width: 315px; margin: 0 auto; aspect-ratio: 9/16; width: 100%;">
+        <iframe src="https://www.youtube.com/embed/638K8pFpXGA" title="Exposición CFA 2026 - El Palacio del Portalet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;"></iframe>
+    </div>
+    <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #666; font-style: italic;">
+        <a href="https://www.youtube.com/shorts/638K8pFpXGA" target="_blank" rel="noopener">Ver a pantalla completa o suscribirse en YouTube &rarr;</a>
+    </p>
+</div>
 
 <p>Si andas por el centro histórico de Alicante, sube en ascensor o por las escaleras a la cuarta planta del Palacio del Portalet para ver las fotografías en persona. ¡Que lo disfrutes!</p>

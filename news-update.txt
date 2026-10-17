@@ -1,4 +1,4 @@
-<!-- DATE: 29th September 2026 -->
+<!-- DATE: 17th October 2026 -->
 <h3>MACRO PHOTOGRAPH FEATURED AT EL PALACIO DEL PORTALET</h3>
 <p><strong>Grateful for 1st place in the CFA Social League Macro category</strong></p>
 
@@ -15,5 +15,15 @@
 <p><strong>Location:</strong> 4th Floor, <a href="https://www.alicante.es/es/equipamientos/palacio-del-portalet-lab15" target="_blank" rel="noopener">El Palacio del Portalet</a>, Calle Labradores, 15, 03002 Alicante<br>
 <strong>Admission:</strong> Free and open to the public<br>
 <strong>Tip:</strong> Check before you go, as the venue closed at short notice on a recent occasion.</p>
+
+<!-- YouTube Short Embed: Exposición CFA 2026 -->
+<div class="video-embed-container" style="text-align: center; margin: 2rem 0;">
+    <div style="position: relative; max-width: 315px; margin: 0 auto; aspect-ratio: 9/16; width: 100%;">
+        <iframe src="https://www.youtube.com/embed/638K8pFpXGA" title="Exposición CFA 2026 - El Palacio del Portalet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;"></iframe>
+    </div>
+    <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #666; font-style: italic;">
+        <a href="https://www.youtube.com/shorts/638K8pFpXGA" target="_blank" rel="noopener">Watch full screen or subscribe on YouTube &rarr;</a>
+    </p>
+</div>
 
 <p>If you are in Alicante's historic centre, take the elevator or stairs to the fourth floor of the Portalet Palace to see the exhibition prints in person. Enjoy!</p>
