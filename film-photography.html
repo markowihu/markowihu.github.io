@@ -1,16 +1,17 @@
 ---
 ---
-<!-- markowihu photographer EN Film Photography page ver 1.0
- CHANGE LOG: 25/10/2026 Ver 1.0 - Complete text, narrative bridge, and guest spot for EN Film Photography page. Added head metadata, styles.css link, container wrapper, and closing body tags.
- 
- -->
+<!-- MarkOWihu photographer Film Photography page EN • Analogue photography • Analog film photos
+CHANGE LOG:
+• 25/10/2026 Ver 1.0 Complete text, narrative bridge, and guest spot for EN Film Photography page. Added head metadata, styles.css link, container wrapper, and closing body tags.
+• 26/10/2026 Ver 1.1 Standardized top section markup, unified 95% page width, left-aligned title header, and added margin-top to section border.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film Photography | MarkOWiHu Photographer</title>
-    <meta name="description" content="Film photography retrospective from 1970s to 2002, RAF Belize memories, contemporary analogue revival, and guest spotlight on Lev K.">
+    <meta name="description" content="Analogue film photography 1970s to 2002, contemporary analogue revival 2026 & guest photographer spot – Lev K CFA Alicante">
     <link rel="canonical" href="https://markowihu.es/film-photography.html">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,45 +22,53 @@
 {% include header-en.html %}
 {% include nav-en.html %}
 
+<main role="main" id="main-content">
 
+    <!-- Section 1: Introduction & Historical Retrospective (1970s–2002) -->
+    <section id="then-and-now" class="film-section" style="margin-bottom: 3.5rem;">
+        <header class="section-header" style="margin-bottom: 1.5rem;">
+            <h1 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 0.25rem;">Film Photography</h1>
+            <h2 style="font-size: 1.3rem; color: #555; font-weight: normal; margin-top: 0;">Then and Now</h2>
+            <p class="section-lead" style="font-size: 1.05rem; line-height: 1.7; color: #333; margin-top: 1rem;">
+                When I was nine, my maternal grandfather gave me a black-and-white roll-film camera[cite: 2, 7]. Film stayed my medium for the next thirty years or so; it taught me to frame deliberately, to read the light, and to wait for the chemistry[cite: 2]. Digital came later; the habits stayed[cite: 2].
+            </p>
+        </header>
 
-<!-- Hero Composite Album Display -->
-<div class="film-hero-container" style="margin: 2.5rem 0; text-align: center;">
-    <h3 style="font-size: 1.25rem; font-weight: 600; color: #111; margin-bottom: 1.25rem; text-align: center; font-style: normal;">
-        Film Photography<br>
-		Three generations, one medium — from the albums (1970s to 2002)
-    </h3>
-    <img src="images/film-photography/album_1970s-2002_film-photography.webp" 
-         alt="Spiral-bound photo album spread featuring London Millennium Dome in 2001/2, family print in Wales, RAF Puma helicopter in Belize Central America, Cromer Norfolk England UK architecture, and 35mm film negatives | MarkOWiHu Photographer" 
-         loading="eager" 
-         width="1920" height="1080"
-         style="max-width: 95%; width: 95%; height: auto; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: inline-block;">
-</div>
+        <!-- Hero Composite Album Display -->
+        <div class="film-hero-container" style="margin: 2rem 0; text-align: center;">
+            <h3 style="font-size: 1.25rem; font-weight: 600; color: #111; margin-bottom: 1.25rem; text-align: left; font-style: normal;">
+                Three generations, one medium — from the albums (1970s to 2002)
+            </h3>
+            <img src="images/film-photography/album_1970s-2002_film-photography.webp" 
+                 alt="Spiral-bound photo album spread featuring London Millennium Dome in 2001/2, family print in Wales, RAF Puma helicopter in Belize Central America, Cromer Norfolk England UK architecture, and 35mm film negatives | MarkOWiHu Photographer" 
+                 loading="eager" 
+                 width="1920" height="1080"
+                 style="max-width: 100%; width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: inline-block;">
+        </div>
 
-<!-- Archival Narrative -->
-<div class="album-narrative" style="line-height: 1.7; color: #333;">
-    <p>
-        From the top left, a colour print, faded with age, shows my maternal grandfather, my father, and me in the centre, flanked by my brothers; Jeffrey, on the right, is sadly no longer with us. It was taken near the Llangollen (North Wales) branch of the Shropshire Union Canal, in the late 1970s. Below it is the unmistakable structure of the London Millennium Dome in 2000, years before it became The O2. Lower down, a house (three flats) with a sea view on the Norfolk coast: the first home of my own that I bought.
-    </p>
-    <p style="margin-top: 1rem;">
-        In the centre are snapshot-style photos from my Royal Air Force years in Belize, Central America: a row of young servicemen soaking up the sun one weekend – a mix of  RAF, Army, and Navy, as you’d expect from a Joint Services Adventurous Training Centre. I’m third from the left in the foreground. Beside it, flags flying on Caye Caulker in the Caribbean Sea, a boat ride from where I worked on St George’s Caye.
-    </p>
-    <p style="margin-top: 1rem;">
-        On the right page – and appropriately, on top – is an RAF Puma helicopter approaching to land. I flew in Pumas in Belize a few times and, in full scuba kit, led a group jump out of one and into the sea.
-    </p>
-    <p style="margin-top: 1rem;">
-        Below it, St George’s Caye from the air, seen from the Puma on a different day’s flight. The green building on the left was the staff residence; it is now a luxury hotel.
-    </p>
-    <p style="margin-top: 1rem;">
-        At the bottom, a Puma on a quick turnaround to collect us, a team, after a weekend of R&R. Here, first thing on a Monday morning, we were boarding at San Pedro, to the north and nearer Mexico’s Yucatán peninsula. After a rolling takeoff on the island's short airfield, we climbed away and later swooped low over the Caribbean Sea on the fifteen-minute flight southwards, back to work.
-		<br>
-    </p>
-</div>
-</section>
+        <!-- Archival Narrative -->
+        <div class="album-narrative" style="line-height: 1.7; color: #333;">
+            <p>
+                From the top left, a colour print, faded with age, shows my maternal grandfather, my father, and me in the centre, flanked by my brothers; Jeffrey, on the right, is sadly no longer with us[cite: 2, 6]. It was taken near the Llangollen branch of the Shropshire Union Canal in North Wales in the late 1970s[cite: 2, 6]. Below it is the unmistakable structure of the London Millennium Dome in 2000, years before it became The O2[cite: 2, 6]. Lower down, a house (three flats) with a sea view on the Norfolk coast: the first home of my own that I bought[cite: 2, 6].
+            </p>
+            <p style="margin-top: 1rem;">
+                In the centre are snapshot-style photos from my Royal Air Force years in Belize, Central America: a row of young servicemen soaking up the sun one weekend – a mix of RAF, Army, and Navy, as you’d expect from a Joint Services Adventurous Training Centre[cite: 2, 6]. I’m third from the left in the foreground[cite: 2, 6]. Beside it, flags flying on Caye Caulker in the Caribbean Sea, a boat ride from where I worked on St George’s Caye[cite: 2, 6].
+            </p>
+            <p style="margin-top: 1rem;">
+                On the right page – appropriately, on top – is an RAF Puma helicopter approaching to land[cite: 2, 6]. I flew in Pumas in Belize a few times and, in full scuba kit, led a group jump out of one and into the sea[cite: 2, 6].
+            </p>
+            <p style="margin-top: 1rem;">
+                Below it, St George’s Caye from the air, seen from the Puma on a different day’s flight[cite: 2, 6]. The green building on the left was the staff residence; it is now a luxury hotel[cite: 2, 6].
+            </p>
+            <p style="margin-top: 1rem;">
+                At the bottom, a Puma on a quick turnaround to collect us, a team, after a weekend of R&R[cite: 2, 6]. Here, first thing on a Monday morning, we were boarding at San Pedro, to the north and nearer Mexico's Yucatán peninsula[cite: 13]. After a rolling takeoff on the island's short airfield, we climbed away and later swooped low over the Caribbean Sea on the fifteen-minute flight southwards, back to work[cite: 13].
+            </p>
+        </div>
+    </section>
 
-<!-- Section 2: Transitional Bridge (Film Today - Passing the Torch) -->
-<section id="passing-the-torch" class="film-section" style="border-top: 1px solid #eee; padding-top: 2.5rem; margin-bottom: 3.5rem;">
-    <h2 style="font-size: 1.6rem; margin-bottom: 1rem;">Film today - Passing the Torch</h2>
+    <!-- Section 2: Transitional Bridge (Film Today - Passing the Torch) -->
+    <section id="passing-the-torch" class="film-section" style="border-top: 1px solid #eee; margin-top: 2.5rem; padding-top: 2.5rem; margin-bottom: 3.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem;">Film today - Passing the Torch</h2>
     <div class="transition-narrative" style="line-height: 1.7; color: #333;">
         <p>
             When digital photography became widespread in the early 2000s, I started with an Olympus camera and waterproof housing for SCUBA diving pictures. As I used the camera out of its housing on land too, for me film photography became history. To put it another way: photo albums like the above are from an era when film was simply how photographs and slides were made. All the time!
