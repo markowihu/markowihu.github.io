@@ -1,0 +1,121 @@
+---
+lang_es_url: noticias.html#noticias-es
+---
+<!-- MarkOWiHu Photographer News markowihu EN ver 1-0 03-09-2026 -->
+<!-- 
+  Changelog / Release Notes - news.html 
+  • 03-09-2026: Initial creation: Dynamic English news landing page reading news-update.txt.
+  • Auto Date Stamp: Dynamic Last-Modified HTTP header parsing for automated English date formatting.
+  • Header & Nav: Synchronized English header switch and menu anchors.
+  • Analytics: Integrated Cloudflare Web Analytics beacon script.
+  • InnerHTML text engine for UTF-8 and News nav menu integration. 
+  • 06/09/2026: Added YAML Front Matter to news.html and noticias.html.   Replaced hardcoded header, nav, and footer containers with Jekyll Liquid include partials while preserving the dynamic fetch engine, Last-Modified HTTP date stamp script, and WebP image tags.
+  • 28/09/2026: Configured lang_es_url and lang_en_url YAML front matter variables across contact.html, contacto.html, news.html, and noticias.html to enable smooth header language switching without defaulting to fallback targets.
+  &  Support for explicit date tag DATE: DD Mon with HTTP Last-Modified fallback 
+  
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Updates | MarkOWiHu Photographer</title>
+    <meta name="description" content="News, events, and photography updates from MarkOWiHu Photographer in the Alicante province.">
+    <link rel="canonical" href="https://markowihu.es/news.html">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+{% include header-en.html %}
+{% include nav-en.html %}
+
+    <!-- Main Content Block -->
+    <main role="main">
+        <section id="news-en" class="section-block">
+            <h2>News • Updates</h2>
+            <div id="news-date-container" class="news-date-stamp"></div>
+            
+            <!-- LOG DE CAMBIOS: 03/09/2026 - Updated featured graphic to WebP format -->
+            <div class="news-image-container" style="margin-bottom: 1.5rem;">
+                <img src="images/news-featured.webp" alt="Featured news | MarkOWiHu Photographer • markowihu.es" style="max-width: 100%; height: auto; border-radius: 4px;">
+            </div>
+
+            <div id="news-text-container" class="news-content-box">Loading updates...</div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation Return Links -->
+    <div class="bottom-nav-jumps">
+        <a href="#news-en" class="jump-content">Top of Content &uarr;</a>
+        <span class="divider">|</span>
+        <a href="#banner-header" class="jump-menu">Main Menu &uarr;</a>
+    </div>
+
+    <!-- Footer Block -->
+	{% include footer-en.html %}
+
+</div>
+
+<!-- Mobile Navigation Toggle Script -->
+<script>
+    document.querySelectorAll('nav ul li > a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const parent = this.parentElement;
+            if (parent.querySelector('ul')) {
+                e.preventDefault();
+                parent.classList.toggle('is-open');
+            }
+        });
+    });
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('nav')) {
+            document.querySelectorAll('nav ul li').forEach(li => li.classList.remove('is-open'));
+        }
+    });
+</script>
+
+<!-- Dynamic Text Engine & HTTP Last-Modified Date Stamping (English)
+ • LOG DE CAMBIOS:
+ • 03/09/2026 - Updated news load engine to innerHTML for UTF-8 HTML formatting
+ • 28/09/2026 - Support for explicit date tag DATE: DD Mon with HTTP Last-Modified fallback 
+-->
+<script>
+    async function loadNewsUpdate() {
+        try {
+            const response = await fetch('news-update.txt', { cache: 'no-cache' });
+            if (response.ok) {
+                const textData = await response.text();
+                document.getElementById('news-text-container').innerHTML = textData;
+
+                // 1. Check for explicit date tag in text data (e.g., <!-- DATE: 25 Sep -->)
+                const explicitDateMatch = textData.match(/<!--\s*DATE:\s*(.*?)\s*-->/i);
+
+                if (explicitDateMatch && explicitDateMatch[1]) {
+                    document.getElementById('news-date-container').textContent = `Last update: ${explicitDateMatch[1].trim()}`;
+                } else {
+                    // 2. Fallback to HTTP Last-Modified header
+                    const lastModHeader = response.headers.get('Last-Modified');
+                    if (lastModHeader) {
+                        const modDate = new Date(lastModHeader);
+                        const day = String(modDate.getDate()).padStart(2, '0');
+                        const month = modDate.toLocaleString('en-GB', { month: 'short' }).replace('.', '');
+                        document.getElementById('news-date-container').textContent = `Last update: ${day} ${month}`;
+                    }
+                }
+            }
+        } catch (error) {
+            console.error('Error loading news update:', error);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadNewsUpdate);
+</script>
+
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e26e7a5dca02475a919bab32ec3809d4"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
+</body>
+</html>

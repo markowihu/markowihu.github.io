@@ -1,0 +1,138 @@
+---
+lang_en_url: contact.html#contact-form-container
+---
+<!-- MarkOWiHu Fotógrafo Página de Contacto | 06-09-2026 
+ LOG DE CAMBIOS: 26/08/2026 Ver. 1.0 - Creación de versión íntegra en español (contacto.html) 
+• 01/09/26: Ver 2 – Monolingual Rationalization: Completed the clean separation of bilingual templates
+  into dedicated single-language English and Spanish pages across the site (about.html / quien-soy.html,
+  contact.html / contacto.html, minimalism.html / minimalismo.html). 
+  Navigation & Anchor Alignment: Standardised primary <nav> menu links across all HTML templates 
+  to route directly to specific section anchors (#about-en, #quien-soy, #contact-form-container, #main-gallery).
+  Viewport Scroll Offset: Added global smooth scrolling and section header padding (scroll-margin-top) in styles.css 
+  to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
+  Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
+  above the legal footer across content pages for seamless navigation on long viewports.
+• 02/09/26; Aligned contacto.html with site-wide monolingual standards.  Added header, lang-switch targeting, 
+  contact.html#contact-form-container, updated Minimalismo navigation link to minimalismo.html#main-gallery,
+  removed redundant utility-nav block, localized bottom jump links to Castilian, and updated privacy footer links.
+• 06/09/26: Added YAML Front Matter to lines 1-2 across about.html, quien-soy.html, contact.html, and contacto.html. 
+  Replaced static header, nav, and footer HTML containers with Jekyll Liquid include partials while preserving Web3Forms API handlers and section anchors.
+  • 28/09/2026: Configured lang_es_url and lang_en_url YAML front matter variables across contact.html, contacto.html, news.html, and noticias.html to enable smooth header language switching without defaulting to fallback targets.
+  
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto • MarkOWiHu Fotógrafo</title>
+    <meta name="description" content="Póngase en contacto con MarkOWiHu Fotógrafo en Alicante para consultas, licencias o colaboraciones.">
+    <link rel="canonical" href="https://markowihu.es/contacto.html">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    {% include header-es.html %}
+	{% include nav-es.html %}
+
+    <main role="main">
+        <section class="section-block">
+            <!-- LOG DE CAMBIOS: 29/08/2026 Ver 1.3a - Refinamiento de texto principal de contacto -->
+			<h2>Contacto</h2>
+			<p><strong>Consultas, licencias o colaboraciones</strong></p>
+			<p>Por favor, utilice el formulario a continuación o los datos de contacto directo.</p>
+            
+            <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                
+                <!-- Formulario de contacto Web3Forms -->
+                <div class="form-container" id="contact-form-container">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                        <input type="hidden" name="access_key" value="6e02a44e-589c-4792-8129-a1de82977026">
+                        <input type="hidden" name="subject" value="Nuevo mensaje de contacto - MarkOWiHu.es">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <div style="margin-bottom: 1rem;">
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Nombre:</label>
+                            <input type="text" name="name" id="name" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Correo electrónico:</label>
+                            <input type="email" name="email" id="email" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Mensaje:</label>
+                            <textarea name="message" id="message" rows="5" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                        </div>
+
+                        <button type="submit" style="background-color: #e60000; color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; font-weight: bold;">Enviar mensaje</button>
+                    </form>
+                </div>
+
+                <!-- Tarjeta de visita / Datos directos -->
+                <div class="card-container" id="business-card" style="text-align: center;">
+                    <img src="images/business-card.jpg" alt="Tarjeta de visita de MarkOWiHu Fotógrafo" style="max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </section>
+    </main>
+
+	<div class="bottom-nav-jumps">
+		<a href="#contact-form-container" class="jump-content">Inicio del contenido &uarr;</a>
+		<span class="divider">|</span>
+		<a href="#banner-header" class="jump-menu">Menú principal &uarr;</a>
+	</div>
+
+    {% include footer-es.html %}
+
+</div>
+
+<script>
+    // Navigation Menu Dropdown Toggle for Mobile
+    document.querySelectorAll('nav ul li > a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const parent = this.parentElement;
+            if (parent.querySelector('ul')) {
+                e.preventDefault();
+                parent.classList.toggle('is-open');
+            }
+        });
+    });
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('nav')) {
+            document.querySelectorAll('nav ul li').forEach(li => li.classList.remove('is-open'));
+        }
+    });
+
+    // Web3Forms Asynchronous Post-Submission Redirect
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(async (response) => {
+            if (response.status === 200) {
+                alert('¡Gracias! Su mensaje ha sido enviado correctamente.');
+                window.location.href = "index.html";
+            } else {
+                alert('Se ha producido un error. Inténtelo de nuevo.');
+            }
+        })
+        .catch(error => {
+            alert('Error de envío. Por favor, compruebe su conexión a internet.');
+        });
+    });
+</script>
+
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e26e7a5dca02475a919bab32ec3809d4"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!-- DATE: 28 de octubre de 2026 -->
+<!-- ================================================================= -->
+<!-- NOTICIA: EXPOSICIÓN CONCURSO FOTOGRAFÍA SOCIAL ALMANSA 2026        -->
+<!-- ================================================================= -->
+<article class="news-item" id="almansa-2026-es">
+    <h3 class="news-title">SELECCIONADO PARA LA EXPOSICIÓN DEL CONCURSO DE FOTOGRAFÍA SOCIAL DE ALMANSA</h3>
+
+    <p>Tres de mis fotografías han sido seleccionadas para el Concurso de Fotografía Social Almansa 2026, convocado por la Concejalía de Servicios Sociales del Ayuntamiento de Almansa dentro de los actos del 40.º aniversario de los Servicios Sociales Municipales. El concurso recibió 131 fotografías de 52 participantes de 25 lugares distintos, de España y del exterior, y el jurado admitió 124 obras.</p>
+
+    <p>La exposición colectiva reúne fotografías de 42 participantes y muestra realidades sociales que tantas veces pasan inadvertidas en la vida cotidiana. Se inauguró el 28 de octubre en la Casa de Cultura de Almansa y se puede visitar hasta el 27 de noviembre.</p>
+
+	<p>Los responsables del certamen en el Ayuntamiento de Almansa han elaborado además un vídeo con las imágenes seleccionadas. Mis tres fotografías aparecen entre 3m:06s y 3m:17s. ¡Disfruté mucho viendo la variedad de obras presentadas y felicito al ganador!</p>
+
+    <p><strong>Ver el vídeo:</strong></p>
+    <ul>
+        <li><a href="https://almansa.es/wp-content/uploads/2026/10/Exposicion_480.mp4#t=186" target="_blank" rel="noopener">Concurso de Fotografía Social Almansa 2026 (480p - ligero para datos móviles)</a></li>
+    </ul>
+	<br>
+    <p>Muchas gracias al equipo de Servicios Sociales de Almansa por la invitación y por una iniciativa tan sensata. </p>
+</article>

@@ -1,0 +1,574 @@
+/* 
+   Gemini - MarkOWiHu Photographer markowihu.es Photography hub page style sheet
+   Base Engineering Rules 
+   CHANGE LOG • LOG DE CAMBIOS:
+	• 25/08/2026 - Changes to remove top border and excess whitespace padding from first main section site-wide
+	• 29/08/2026 - Reduced utility nav margins to tighten top layout
+	• 30/08/2026 - Header Flex Alignment & Compact EN | ES Language Switcher 
+	• 01/09/26: ver 2: Monolingual Rationalization: Completed the clean separation of bilingual templates
+  into dedicated single-language English and Spanish pages across the site (about.html / quien-soy.html,
+  contact.html / contacto.html, minimalism.html / minimalismo.html). 
+  Navigation & Anchor Alignment: Standardised primary <nav> menu links across all HTML templates 
+  to route directly to specific section anchors (#about-en, #quien-soy, #contact-form-container, #main-gallery).
+  Viewport Scroll Offset: Added global smooth scrolling and section header padding (scroll-margin-top) in styles.css to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
+  Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
+  above the legal footer across content pages for seamless navigation on long viewports.
+   • 02/09/2026 - Conmutador de idioma superior EN | ES para dispositivos móviles.
+   • 04/09/2026 - Estilos para enlaces de títulos y reducción de espacio vertical 
+   • 05/09/26 - Update styles.css: enforce solid menu background opacity and boost dropdown contrast.
+     Added explicit solid background-color (#ffffff) to nav container and dropdown sub-menu items across desktop and mobile viewports. 	 Elevated box-shadow depth to preserve contrast against dark background imagery.
+   • 30/09/2026 Site-wide main paragraph (line) and heading spacing active at line 644. Confirmed addition of main p, main h3, and main h4 margin rules at lines 644–659 in styles.css. This global selector handles paragraph spacing site-wide (including news updates).
+   • 07/10/2026 - Deduplicación completa de cuadrículas de fotos y elementos de galería and extension of Automatic vertical paragraph and heading spacing (to include H2) for main content sections.
+      */
+```
+   
+*/
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --accent-color: #e60000;
+    --muted-color: #777777;
+    --nav-bg: #f9f9f9;
+    --border-color: #eeeeee;
+    --card-bg: #fafafa;
+    --max-width: 1400px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Base Hyperlinks */
+a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #b30000;
+}
+
+/* Grid Intro */
+.grid-intro {
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    color: #444;
+}
+
+.intro-translation {
+    margin-top: 6px;
+    color: #777;
+}
+
+/* LOG DE CAMBIOS: 02/09/2026 - Alineación flexible de cabecera y conmutador de idioma en móvil */
+.header-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border-color, #eeeeee);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.header-titles {
+    text-align: left;
+}
+
+.lang-switch {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-top: 0.2rem;
+}
+
+.lang-switch a {
+    color: var(--muted-color, #777777);
+    text-decoration: none;
+    padding: 2px 4px;
+    transition: color 0.2s ease;
+}
+
+.lang-switch a:hover {
+    color: var(--accent-color, #e60000);
+}
+
+.lang-switch .lang-active {
+    color: var(--accent-color, #e60000);
+    border-bottom: 2px solid var(--accent-color, #e60000);
+    padding: 2px 4px;
+}
+
+.lang-switch .divider {
+    color: #ccc;
+    margin: 0 2px;
+}
+
+/* Estado desactivado para conmutador de idioma en artículos monolingües */
+.lang-switch .lang-disabled {
+    color: var(--muted-color, #a0a0a0);
+    opacity: 0.4;
+    cursor: not-allowed;
+    padding: 2px 4px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
+}
+
+/* Pure CSS Dropdown Navigation - opaqueness adjusted 05/09/26 */
+nav {
+    background-color: var(--bg-color, #ffffff);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 3rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+/* Dropdown Sub-menu */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    min-width: 320px;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+nav ul li:hover > ul,
+nav ul li.is-open > ul {
+    display: flex;
+}
+
+nav ul li ul li a {
+    padding: 0.8rem 1.2rem;
+    text-align: left;
+    font-size: 0.80rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #fafafa;
+}
+
+nav ul li ul li:last-child a {
+    border-bottom: none;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    color: var(--accent-color);
+}
+
+main {
+    text-align: center;
+    min-height: 400px;
+    padding: 0 0 2rem 0;
+}
+
+/* CHANGE LOG: 25/08/2026 - Remove top border and excess padding from first main section site-wide */
+main > .section-block:first-of-type,
+main > section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+    color: #111;
+}
+
+.bio-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 850px;
+    color: #333;
+}
+
+.bio-translation {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px dashed #eaeaea;
+    color: #555;
+}
+
+.intro-headline {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111111;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+}
+
+.intro-lead-para {
+    font-size: 1.05rem;
+    color: #333333;
+    line-height: 1.7;
+}
+
+.intro-standard-para {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* Index Photo Grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.photo-container {
+    position: relative;
+    background-color: #fafafa;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.photo-container img:hover {
+    opacity: 0.9;
+}
+
+.photo-caption {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.gallery-item {
+    background-color: var(--card-bg);
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.02);
+}
+
+/* Sub-gallery Grid (Minimalism) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+@media (min-width: 600px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1200px) {
+    .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.utility-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 15px 0;
+    margin-bottom: 0;
+    border-bottom: none;
+    font-size: 0.85rem;
+}
+
+.utility-nav a {
+    color: var(--muted-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.utility-nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Gallery Extra Sections */
+.section-block {
+    margin: 80px 0 40px 0;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+.wry-note {
+    font-style: italic;
+    color: #555;
+    max-width: 850px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+
+.horizon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.horizon-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.tribute-container {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.tribute-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #111;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.tribute-container p {
+    margin-bottom: 18px;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.tribute-container a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.tribute-container a:hover {
+    color: #b30000;
+}
+
+/* Jay Mullineaux Triptych: 75% Width Centered */
+.triptych-display {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.triptych-display img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Mobile Layout Responsive Rules */
+@media (max-width: 768px) {
+    .triptych-display img {
+        max-width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+/* 05/09/26 Menu opacity adjustment */
+    nav ul li ul {
+        position: static;
+        transform: none;
+        width: 100%;
+        min-width: 0;
+        box-shadow: none;
+        border: none;
+        background-color: #ffffff;
+    }
+}
+
+/* Bottom Navigation Jump Links - Added in version 2 site-wide changes*/
+.bottom-nav-jumps {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    border-top: 1px dashed var(--border-color);
+}
+
+.bottom-nav-jumps a {
+    color: var(--muted-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.bottom-nav-jumps a:hover {
+    color: var(--accent-color);
+}
+
+.bottom-nav-jumps .divider {
+    margin: 0 0.75rem;
+    color: var(--border-color);
+}
+
+/* Protected Legal Footer Assembly */
+footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: var(--muted-color);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+.footer-legal-block p {
+    margin-bottom: 0.5rem;
+}
+/* LOG DE CAMBIOS: 04/09/2026 - Estilos para enlaces de títulos y reducción de espacio vertical */
+.section-title a {
+    color: var(--text-color, #111111);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.section-title a:hover {
+    color: var(--accent-color, #e60000);
+    text-decoration: underline;
+}
+
+/* Reducción de márgenes y relleno vertical en secciones y pie de página */
+section {
+    padding: 35px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.bio-translation {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px dashed #eaeaea;
+    color: #555;
+}
+
+.bottom-nav-jumps {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 0.75rem;
+    font-size: 0.85rem;
+    border-top: 1px dashed var(--border-color);
+}
+
+footer {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: var(--muted-color);
+}
+
+main p {
+    margin-bottom: 1.25rem;
+}
+
+main h2,
+main h3,
+main h4 {
+    margin-top: 2rem;
+    margin-bottom: 0.85rem;
+}
+
+/* Resets for trailing elements and photo grid captions */
+main p:last-child,
+.photo-caption {
+    margin-bottom: 0;
+}
