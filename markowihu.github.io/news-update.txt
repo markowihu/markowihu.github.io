@@ -1,0 +1,29 @@
+<!-- DATE: 17th October 2026 -->
+<h3>MACRO PHOTOGRAPH FEATURED AT EL PALACIO DEL PORTALET</h3>
+<p><strong>Grateful for 1st place in the CFA Social League Macro category</strong></p>
+
+<p>I am very pleased to share that my macro photograph <em>Carpobrotus acinaciformis: Geometría encendida</em> (Glowing Geometry), which shows the vivid, neon-like geometry of a flowering ice plant, was awarded first place in a monthly round of the Club Fotográfico Alicante (CFA) Social League, on the theme of macro photography. The fine-art print is currently on display as part of a group exhibition on the fourth floor of El Palacio del Portalet, on Calle Labradores in the heart of Alicante's historic old town.</p>
+
+<p>The exhibition features approximately 18 photographs selected from association members, drawn from both the monthly Social League rounds and the recent CFA photo rally. On the opening evening, Friday 25 September, seeing my work printed and hanging on the gallery wall was a true joy. I am deeply grateful for the opportunity to be included alongside so many talented local photographers. A vote of thanks to José Manuel, president of the CFA and everyone involved in organising the exhibition.</p>
+
+<p><strong>Behind the Lens: The Story of the Bloom</strong></p>
+
+<p>This photograph captures the radial symmetry and intense magenta tones of a <em>Carpobrotus acinaciformis</em> blossom. The plant is known in English as ice plant or hottentot fig, and in Spanish as <em>uña de gato</em> or <em>uña de león</em>. I took it during a walk along the coastal slopes of the province of Alicante, where these resilient succulents bloom brilliantly under the strong Mediterranean sun.</p>
+
+<p><strong>Exhibition Details</strong></p>
+
+<p><strong>Location:</strong> 4th Floor, <a href="https://www.alicante.es/es/equipamientos/palacio-del-portalet-lab15" target="_blank" rel="noopener">El Palacio del Portalet</a>, Calle Labradores, 15, 03002 Alicante<br>
+<strong>Admission:</strong> Free and open to the public<br>
+<strong>Tip:</strong> Check before you go, as the venue closed at short notice on a recent occasion.</p>
+
+<!-- YouTube Short Embed: Exposición CFA 2026 -->
+<div class="video-embed-container" style="text-align: center; margin: 2rem 0;">
+    <div style="position: relative; max-width: 315px; margin: 0 auto; aspect-ratio: 9/16; width: 100%;">
+        <iframe src="https://www.youtube.com/embed/638K8pFpXGA" title="Exposición CFA 2026 - El Palacio del Portalet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;"></iframe>
+    </div>
+    <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #666; font-style: italic;">
+        <a href="https://www.youtube.com/shorts/638K8pFpXGA" target="_blank" rel="noopener">Watch full screen or subscribe on YouTube &rarr;</a>
+    </p>
+</div>
+
+<p>If you are in Alicante's historic centre, take the elevator or stairs to the fourth floor of the Portalet Palace to see the exhibition prints in person. Enjoy!</p>

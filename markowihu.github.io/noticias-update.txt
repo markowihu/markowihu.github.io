@@ -1,0 +1,29 @@
+<!-- DATE: 17 de octubre de 2026 -->
+<p><strong>FOTOGRAFÍA EXPUESTA EN EL PALACIO DEL PORTALET</strong><br>
+<strong>Con gratitud: 1.º puesto en la Liga Social del CFA (Categoría Macro)</strong></p>
+
+<p>Me complace compartir que mi fotografía macro <em>Carpobrotus acinaciformis: Geometría encendida</em>, que muestra la geometría vívida y casi de neón de una flor de uña de gato, fue galardonada con el primer puesto en uno de los últimos seis temas de la Liga Social del Club Fotográfico Alicante (CFA), con el tema «Fotografía Macro». La obra impresa se exhibe actualmente en una exposición colectiva en la cuarta planta del Palacio del Portalet, en la Calle Labradores, en pleno casco antiguo de Alicante.</p>
+
+<p>La exposición reúne unas 18 fotografías seleccionadas entre las de los socios de la asociación, procedentes tanto de las jornadas mensuales de la Liga Social como del reciente rally fotográfico del CFA. Tuve la suerte de asistir a la inauguración, el viernes 25 de septiembre por la tarde, y ver mi obra impresa y colgada en la pared de la sala fue una verdadera alegría. Quiero expresar mi más sincero agradecimiento por la oportunidad de participar junto a tantos fotógrafos locales de talento, y doy las gracias al CFA - José Manuel, el presidente del Club, y a todas las personas que han hecho posible la exposición.</p>
+
+<p><strong>Detrás del objetivo: la historia de la flor</strong></p>
+
+<p>Esta fotografía capta la simetría radial y los intensos tonos magenta de una flor de <em>Carpobrotus acinaciformis</em>, conocida también como uña de gato o uña de león (en inglés, <em>ice plant</em> o <em>hottentot fig</em>). La tomé durante un paseo por las laderas costeras de la provincia de Alicante, donde estas resistentes suculentas florecen con todo su esplendor bajo el intenso sol mediterráneo.</p>
+
+<p><strong>Detalles de la exposición</strong></p>
+
+<p><strong>Lugar:</strong> Planta 4.ª, <a href="https://www.alicante.es/es/equipamientos/palacio-del-portalet-lab15" target="_blank" rel="noopener">Palacio del Portalet</a>, Calle Labradores, 15, 03002 Alicante<br>
+<strong>Entrada:</strong> Gratuita y abierta al público<br>
+<strong>Nota:</strong> Conviene confirmar el horario de apertura antes de ir, ya que en alguna ocasión el recinto ha cerrado con poco aviso.</p>
+
+<!-- Incrustación de YouTube Short: Exposición CFA 2026 -->
+<div class="video-embed-container" style="text-align: center; margin: 2rem 0;">
+    <div style="position: relative; max-width: 315px; margin: 0 auto; aspect-ratio: 9/16; width: 100%;">
+        <iframe src="https://www.youtube.com/embed/638K8pFpXGA" title="Exposición CFA 2026 - El Palacio del Portalet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;"></iframe>
+    </div>
+    <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #666; font-style: italic;">
+        <a href="https://www.youtube.com/shorts/638K8pFpXGA" target="_blank" rel="noopener">Ver a pantalla completa o suscribirse en YouTube &rarr;</a>
+    </p>
+</div>
+
+<p>Si andas por el centro histórico de Alicante, sube en ascensor o por las escaleras a la cuarta planta del Palacio del Portalet para ver las fotografías en persona. ¡Que lo disfrutes!</p>
