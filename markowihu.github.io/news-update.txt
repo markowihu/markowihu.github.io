@@ -17,5 +17,5 @@
         <li><a href="https://almansa.es/wp-content/uploads/2026/10/Exposicion_FHD.mp4#t=186" target="_blank" rel="noopener">Full HD version</a></li>
     </ul>
 
-    <p>Many thanks to the Almansa Social Services team for the invitation and for such a thoughtful initiative.</p>
+    <p>Many thanks to the Almansa Social Services team for the invitation and for such a thoughtful initiative. </p>
 </article>
