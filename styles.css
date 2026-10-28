@@ -19,10 +19,10 @@
      Added explicit solid background-color (#ffffff) to nav container and dropdown sub-menu items across desktop and mobile viewports. 	 Elevated box-shadow depth to preserve contrast against dark background imagery.
    • 30/09/2026 Site-wide main paragraph (line) and heading spacing active at line 644. Confirmed addition of main p, main h3, and main h4 margin rules at lines 644–659 in styles.css. This global selector handles paragraph spacing site-wide (including news updates).
    • 07/10/2026 - Deduplicación completa de cuadrículas de fotos y elementos de galería and extension of Automatic vertical paragraph and heading spacing (to include H2) for main content sections.
+   • 28/10/2026 - Overlay protection class to discourage right-clicks on select photo frames. Fixed stray comment syntax error and consolidated redundant vertical spacing overrides.
       */
-```
+
    
-*/
 :root {
     --bg-color: #ffffff;
     --text-color: #111111;
@@ -223,20 +223,10 @@ main > section:first-of-type {
 }
 
 section {
-    padding: 60px 20px;
+    padding: 35px 20px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: left;
-}
-
-.section-title {
-    font-size: 1.4rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #eaeaea;
-    padding-bottom: 10px;
-    color: #111;
 }
 
 .bio-text {
@@ -247,8 +237,8 @@ section {
 }
 
 .bio-translation {
-    margin-top: 25px;
-    padding-top: 25px;
+    margin-top: 18px;
+    padding-top: 18px;
     border-top: 1px dashed #eaeaea;
     color: #555;
 }
@@ -465,8 +455,8 @@ section {
 /* Bottom Navigation Jump Links - Added in version 2 site-wide changes*/
 .bottom-nav-jumps {
     text-align: center;
-    margin-top: 2.5rem;
-    padding-top: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 0.75rem;
     font-size: 0.85rem;
     border-top: 1px dashed var(--border-color);
 }
@@ -489,8 +479,8 @@ section {
 
 /* Protected Legal Footer Assembly */
 footer {
-    margin-top: 5rem;
-    padding-top: 2rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
     border-top: 1px solid var(--border-color);
     font-size: 0.85rem;
     color: var(--muted-color);
@@ -514,6 +504,7 @@ footer {
     margin-bottom: 0.5rem;
 }
 /* LOG DE CAMBIOS: 04/09/2026 - Estilos para enlaces de títulos y reducción de espacio vertical */
+/* LOG DE CAMBIOS: 04/09/2026 - Estilos para enlaces de títulos y reducción de espacio vertical */
 .section-title a {
     color: var(--text-color, #111111);
     text-decoration: none;
@@ -523,37 +514,6 @@ footer {
 .section-title a:hover {
     color: var(--accent-color, #e60000);
     text-decoration: underline;
-}
-
-/* Reducción de márgenes y relleno vertical en secciones y pie de página */
-section {
-    padding: 35px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.bio-translation {
-    margin-top: 18px;
-    padding-top: 18px;
-    border-top: 1px dashed #eaeaea;
-    color: #555;
-}
-
-.bottom-nav-jumps {
-    text-align: center;
-    margin-top: 1.5rem;
-    padding-top: 0.75rem;
-    font-size: 0.85rem;
-    border-top: 1px dashed var(--border-color);
-}
-
-footer {
-    margin-top: 2.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border-color);
-    font-size: 0.85rem;
-    color: var(--muted-color);
 }
 
 main p {
@@ -571,4 +531,31 @@ main h4 {
 main p:last-child,
 .photo-caption {
     margin-bottom: 0;
+}
+
+/* LOG DE CAMBIOS: 28/10/2026 - Overlay protection class to discourage right-clicks on select photo frames */
+.protected-frame {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.protected-frame::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 10;
+    pointer-events: auto; /* Intercepts right-clicks directly above the image */
+}
+
+.protected-frame img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    user-select: none;
+    -webkit-user-drag: none;
 }
