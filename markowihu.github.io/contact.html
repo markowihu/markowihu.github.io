@@ -1,0 +1,142 @@
+---
+lang_es_url: contacto.html#contact-form-container
+---
+<!-- MarkOWiHu Photographer main web contact page • Página de contacto • Contact / Contactar markowihu | @markowihu
+	CHANGE LOG:
+	• 08/2026 Ver. 1.1 Webforms included and alignment of link URLs etc
+	• 24/08/2026 Ver. 1.2 Style sheet introduction.
+	• 25/08/2026 Ver. 1.3 Added utility nav for ES page routing and #business-card anchor. 
+	• 29/08/2026 1.3a Minor wording refinements
+	• 01/09/2026: ver 2: Monolingual Rationalization: Completed the clean separation of bilingual templates
+  into dedicated single-language English and Spanish pages across the site (about.html / quien-soy.html,
+  contact.html / contacto.html, minimalism.html / minimalismo.html). 
+  Navigation & Anchor Alignment: Standardised primary <nav> menu links across all HTML templates 
+  to route directly to specific section anchors (#about-en, #quien-soy, #contact-form-container, #main-gallery).
+  Viewport Scroll Offset: Added global smooth scrolling and section header padding (scroll-margin-top) in styles.css 
+  to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
+  Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
+  above the legal footer across content pages for seamless navigation on long viewports.
+ • 02/09/2026: Verified final monolingual contact.html template.
+	Confirmed single-language page title, web form labels, submit button, JavaScript alert popups,
+	post-submission home redirect, header language toggle routing, and footer privacy links.
+ • 06/09/2026: Added YAML Front Matter to lines 1-2 across about.html, quien-soy.html, contact.html, and contacto.html. 
+  Replaced static header, nav, and footer HTML containers with Jekyll Liquid include partials while preserving Web3Forms API handlers and section anchors.
+  • 28/09/2026: Configured lang_es_url and lang_en_url YAML front matter variables across contact.html, contacto.html, news.html, and noticias.html to enable smooth header language switching without defaulting to fallback targets.
+  
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact MarkOWiHu Photographer</title>
+    <meta name="description" content="Web form to get in touch with MarkOWiHu Photographer Alicante province - enquiries, projects, events or collaborations.">
+    <link rel="canonical" href="https://markowihu.es/contact.html">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+	{% include header-en.html %}
+	{% include nav-en.html %}
+
+<!-- CHANGE LOG: 02/09/26 Language switching is now managed in the header via `.lang-switch`, and page anchor jumping is handled by the bottom return links -->
+        <main role="main">
+        <section class="section-block">
+		<!-- CHANGE LOG: 29/08/2026 1.3a Minor wording refinements -->
+            <h2>Contact</h2>
+            <p><strong>Enquiries, licensing or collaboration</strong></p>
+            <p>Please use the form below, or the contact details directly.</p>
+            
+            <!-- CHANGE LOG: 25/08/2026 Ver 1.3 - Added id="business-card" page anchor -->
+            <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                
+                <!-- Web3Forms Contact Form -->
+                <div class="form-container" id="contact-form-container">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                        <input type="hidden" name="access_key" value="6e02a44e-589c-4792-8129-a1de82977026">
+                        <input type="hidden" name="subject" value="New Contact Form Submission - MarkOWiHu.es">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <div style="margin-bottom: 1rem;">
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Name:</label>
+                            <input type="text" name="name" id="name" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email:</label>
+                            <input type="email" name="email" id="email" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Message:</label>
+                            <textarea name="message" id="message" rows="5" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                        </div>
+
+                        <button type="submit" style="background-color: #e60000; color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; font-weight: bold;">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Business Card / Direct Details -->
+                <div class="card-container" id="business-card" style="text-align: center;">
+                    <img src="images/business-card.jpg" alt="MarkOWiHu Photographer Business Card" style="max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </section>
+    </main>
+
+	<!-- Bottom Navigation Jump Links -->
+	<div class="bottom-nav-jumps">
+		<a href="#contact-form-container" class="jump-content">Top of Content &uarr;</a>
+		<span class="divider">|</span>
+		<a href="#banner-header" class="jump-menu">Main Menu &uarr;</a>
+	</div>
+    {% include footer-en.html %}
+</div>
+
+<script>
+    // Navigation Menu Dropdown Toggle for Mobile
+    document.querySelectorAll('nav ul li > a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const parent = this.parentElement;
+            if (parent.querySelector('ul')) {
+                e.preventDefault();
+                parent.classList.toggle('is-open');
+            }
+        });
+    });
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('nav')) {
+            document.querySelectorAll('nav ul li').forEach(li => li.classList.remove('is-open'));
+        }
+    });
+
+    // Web3Forms Asynchronous Post-Submission Redirect
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(async (response) => {
+            if (response.status === 200) {
+                alert('Thank you! Your message has been sent successfully.');
+                window.location.href = "index.html";
+            } else {
+                alert('Something went wrong. Please try again.');
+            }
+        })
+        .catch(error => {
+            alert('Submission error. Please check your network connection.');
+        });
+    });
+</script>
+
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e26e7a5dca02475a919bab32ec3809d4"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
+</body>
+</html>
