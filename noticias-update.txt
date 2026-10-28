@@ -5,11 +5,11 @@
 <article class="news-item" id="almansa-2026-es">
     <h3 class="news-title">SELECCIONADO PARA LA EXPOSICIÓN DEL CONCURSO DE FOTOGRAFÍA SOCIAL DE ALMANSA</h3>
 
-    <p>Tres de mis fotografías han sido seleccionadas para el Concurso de Fotografía Social Almansa 2026, convocado por la Concejalía de Servicios Sociales del Ayuntamiento de Almansa dentro de los actos del 40.º aniversario de los Servicios Sociales Municipales. El concurso recibió 131 fotografías de 52 participantes de 25 lugares distintos, de España y del exterior, y el jurado admitió 124 obras.</p>
+	<p>Tres de mis fotografías han sido seleccionadas para la exposición y el vídeo del Concurso de Fotografía Social Almansa 2026, organizado por la Concejalía de Servicios Sociales del Ayuntamiento de Almansa. La iniciativa forma parte de los actos conmemorativos del 40.º aniversario de los Servicios Sociales Municipales.</p>
 
-    <p>La exposición colectiva reúne fotografías de 42 participantes y muestra realidades sociales que tantas veces pasan inadvertidas en la vida cotidiana. Se inauguró el 28 de octubre en la Casa de Cultura de Almansa y se puede visitar hasta el 27 de noviembre.</p>
+	<p>El concurso reunió 131 fotografías de 52 participantes procedentes de 25 localidades de España y del extranjero, con 124 obras admitidas por el jurado. La exposición colectiva reúne obras de 42 participantes, entre las que se incluyen las mías. La muestra enseña realidades sociales que tantas veces pasan inadvertidas en la vida cotidiana, y se puede visitar del 28 de octubre al 27 de noviembre en la Casa de Cultura de Almansa.</p>
 
-	<p>Los responsables del certamen en el Ayuntamiento de Almansa han elaborado además un vídeo con las imágenes seleccionadas. Mis tres fotografías aparecen entre 3m:06s y 3m:17s. ¡Disfruté mucho viendo la variedad de obras presentadas y felicito al ganador!</p>
+	<p>Además, los responsables del certamen en el Ayuntamiento de Almansa han elaborado un vídeo con las imágenes seleccionadas; mis tres fotografías aparecen entre los minutos 3:06 y 3:17. ¡Disfruté mucho viendo la variedad de obras presentadas y felicito al ganador!</p>
 
     <p><strong>Ver el vídeo:</strong></p>
     <ul>
