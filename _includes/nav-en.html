@@ -6,6 +6,7 @@ CHANGE LOG:
 • 26/10/2026 - Convert News item into News & Views dropdown with Film Photography.
 • 29/10/2026 - Added menu-featured to film photography items in nav-en.html and nav-es.html.
 	N.B. To return film-photography menu dropdown to normal state, revert to: <li><a href="film-photography.html#main-content">Film Photography</a></li> 
+• Inclusion of projects-distinctions.html#projects-distinctions-en in the navigation hierarchy, preserving site-wide Jekyll modular include compilation.
 
 -->
 <nav role="navigation">
@@ -27,7 +28,14 @@ CHANGE LOG:
 				<li><a href="fotowalk-2026-en.html#fotowalk-2026-en">Foto Walk 2026</a></li>
             </ul>
         </li>
-        <li><a href="about.html#about-en">About</a></li>
+        <!-- LOG DE CAMBIOS: 29/10/2026 - Convert About item into About dropdown with Biography and Projects & Distinctions -->
+        <li>
+            <a href="#">About ▼</a>
+            <ul>
+                <li><a href="about.html#about-en">Biography</a></li>
+                <li><a href="projects-distinctions.html#projects-distinctions-en">Projects & Distinctions</a></li>
+            </ul>
+        </li>
 		<li>
             <a href="#">Links ▼</a>
             <ul>
