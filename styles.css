@@ -20,6 +20,7 @@
    • 30/09/2026 Site-wide main paragraph (line) and heading spacing active at line 644. Confirmed addition of main p, main h3, and main h4 margin rules at lines 644–659 in styles.css. This global selector handles paragraph spacing site-wide (including news updates).
    • 07/10/2026 - Deduplicación completa de cuadrículas de fotos y elementos de galería and extension of Automatic vertical paragraph and heading spacing (to include H2) for main content sections.
    • 28/10/2026 - Overlay protection class to discourage right-clicks on select photo frames. Fixed stray comment syntax error and consolidated redundant vertical spacing overrides.
+   • 29/10/2026 - Reusable featured dropdown item highlighting. 
       */
 
    
@@ -558,4 +559,13 @@ main p:last-child,
     height: auto;
     user-select: none;
     -webkit-user-drag: none;
+}
+
+/* CHANGE LOG: 29/10/2026 - Reusable featured dropdown item highlighting */
+nav ul li ul li a.menu-featured {
+    color: var(--accent-color, #e60000);
+    font-weight: 700;
+    border-left: 3px solid var(--accent-color, #e60000);
+    padding-left: 1rem;
+    background-color: #fcfcfc;
 }
