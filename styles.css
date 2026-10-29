@@ -504,7 +504,7 @@ footer {
 .footer-legal-block p {
     margin-bottom: 0.5rem;
 }
-/* LOG DE CAMBIOS: 04/09/2026 - Estilos para enlaces de títulos y reducción de espacio vertical */
+
 /* LOG DE CAMBIOS: 04/09/2026 - Estilos para enlaces de títulos y reducción de espacio vertical */
 .section-title a {
     color: var(--text-color, #111111);
@@ -534,7 +534,6 @@ main p:last-child,
     margin-bottom: 0;
 }
 
-/* LOG DE CAMBIOS: 28/10/2026 - Overlay protection class to discourage right-clicks on select photo frames */
 .protected-frame {
     position: relative;
     display: inline-block;
@@ -568,4 +567,17 @@ nav ul li ul li a.menu-featured {
     border-left: 3px solid var(--accent-color, #e60000);
     padding-left: 1rem;
     background-color: #fcfcfc;
+}
+/* LOG DE CAMBIOS: 29/10/2026 - Scaled publication featured images to 75% width */
+.publications-list .protected-frame {
+    max-width: 75%;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .publications-list .protected-frame {
+        max-width: 100%; /* Keeps full width on mobile screens for legibility */
+    }
 }
