@@ -581,3 +581,12 @@ nav ul li ul li a.menu-featured {
         max-width: 100%; /* Keeps full width on mobile screens for legibility */
     }
 }
+
+/* LOG DE CAMBIOS: 30/10/2026 - Automatic vertical list spacing for award and project sections */
+.awards-list ul {
+    margin-bottom: 1.25rem;
+}
+
+.awards-list > li {
+    margin-bottom: 1rem;
+}
