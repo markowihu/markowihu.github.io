@@ -11,6 +11,7 @@ lang_en_url: news.html#news-en
   • 06/09/26: Added YAML Front Matter to news.html and noticias.html. Replaced hardcoded header, nav, and footer containers with Jekyll Liquid include partials while preserving the dynamic fetch engine, Last-Modified HTTP date stamp script, and WebP image tags.
   • 28/09/2026: Configured lang_es_url and lang_en_url YAML front matter variables across contact.html, contacto.html, news.html, and noticias.html to enable smooth header language switching without defaulting to fallback targets.
   y 28/09/2026 - Soporte para etiqueta de fecha explícita DATE: DD Mon con respaldo HTTP 
+  • 03/11/2026 - Integración del script MailerLite Universal (cuenta 2765262) y botón de suscripción para Noticias y Opiniones.
 
 -->
 <!DOCTYPE html>
@@ -22,9 +23,19 @@ lang_en_url: news.html#news-en
     <meta name="description" content="Noticias, eventos y novedades fotográficas de MarkOWiHu Fotógrafo en la provincia de Alicante.">
     <link rel="canonical" href="https://markowihu.es/noticias.html">
     <link rel="stylesheet" href="styles.css">
+	
+	<!-- MailerLite Universal -->
+	<script>
+		(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+		.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+		n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+		(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+		ml('account', '2765262');
+	</script>
+	<!-- End MailerLite Universal -->
 </head>
-<body>
 
+<body>
 <div class="container">
 
     {% include header-es.html %}
@@ -42,6 +53,13 @@ lang_en_url: news.html#news-en
             </div>
             
 			<div id="news-text-container" class="news-content-box">Cargando novedades...</div>
+			<!-- LOG DE CAMBIOS: Suscripción MailerLite (ES) -->
+			<div class="subscribe-callout" style="margin-top: 2.5rem; padding: 1.5rem; background-color: #f9f9f9; border: 1px dashed var(--border-color, #eeeeee); text-align: center; border-radius: 4px;">
+				<p style="margin-bottom: 0.75rem; font-weight: 600;">¿Le gustaría recibir avisos de nuevas publicaciones?</p>
+				<button class="ml-onclick-form" onclick="ml('show', '2765262', true)" style="background-color: var(--text-color, #111111); color: #ffffff; border: none; padding: 0.65rem 1.25rem; border-radius: 4px; font-weight: 600; cursor: pointer;">
+					✉ Suscribirse a Noticias y Opinión
+				</button>
+			</div>
         </section>
     </main>
 
@@ -75,8 +93,6 @@ lang_en_url: news.html#news-en
 </script>
 
 <!-- Dynamic Text Engine & HTTP Last-Modified Date Stamping -->
-<!-- LOG DE CAMBIOS: 03/09/2026 - Carga de noticias con soporte innerHTML para formato UTF-8 y enlaces -->
-<!-- LOG DE CAMBIOS: 28/09/2026 - Soporte para etiqueta de fecha explícita <!-- DATE: DD Mon con respaldo HTTP Last-Modified -->
 <script>
     async function loadNoticiasUpdate() {
         try {

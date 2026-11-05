@@ -9,9 +9,9 @@ lang_es_url: noticias.html#noticias-es
   • Header & Nav: Synchronized English header switch and menu anchors.
   • Analytics: Integrated Cloudflare Web Analytics beacon script.
   • InnerHTML text engine for UTF-8 and News nav menu integration. 
-  • 06/09/2026: Added YAML Front Matter to news.html and noticias.html.   Replaced hardcoded header, nav, and footer containers with Jekyll Liquid include partials while preserving the dynamic fetch engine, Last-Modified HTTP date stamp script, and WebP image tags.
-  • 28/09/2026: Configured lang_es_url and lang_en_url YAML front matter variables across contact.html, contacto.html, news.html, and noticias.html to enable smooth header language switching without defaulting to fallback targets.
-  &  Support for explicit date tag DATE: DD Mon with HTTP Last-Modified fallback 
+  • 06/09/2026: Added YAML Front Matter to news.html and noticias.html. Replaced hardcoded header, nav, and footer containers with Jekyll Liquid include partials while preserving the dynamic fetch engine, Last-Modified HTTP date stamp script, and WebP image tags.
+  • 28/09/2026: Configured lang_es_url and lang_en_url YAML front matter variables across contact.html, contacto.html, news.html, and noticias.html to enable smooth header language switching without defaulting to fallback targets. Support for explicit date tag DATE: DD Mon with HTTP Last-Modified fallback.
+  • 03/11/2026: Integrated MailerLite Universal script and News & Views subscription call-out box.
   
 -->
 <!DOCTYPE html>
@@ -23,6 +23,16 @@ lang_es_url: noticias.html#noticias-es
     <meta name="description" content="News, events, and photography updates from MarkOWiHu Photographer in the Alicante province.">
     <link rel="canonical" href="https://markowihu.es/news.html">
     <link rel="stylesheet" href="styles.css">
+	
+	<!-- MailerLite Universal -->
+	<script>
+		(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+		.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+		n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+		(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+		ml('account', '2765262');
+	</script>
+	<!-- End MailerLite Universal -->
 </head>
 <body>
 
@@ -43,6 +53,13 @@ lang_es_url: noticias.html#noticias-es
             </div>
 
             <div id="news-text-container" class="news-content-box">Loading updates...</div>
+			<!-- LOG DE CAMBIOS: MailerLite Subscription (EN) -->
+			<div class="subscribe-callout" style="margin-top: 2.5rem; padding: 1.5rem; background-color: #f9f9f9; border: 1px dashed var(--border-color, #eeeeee); text-align: center; border-radius: 4px;">
+				<p style="margin-bottom: 0.75rem; font-weight: 600;">Would you like to receive occasional news updates?</p>
+				<button class="ml-onclick-form" onclick="ml('show', '2765262', true)" style="background-color: var(--text-color, #111111); color: #ffffff; border: none; padding: 0.65rem 1.25rem; border-radius: 4px; font-weight: 600; cursor: pointer;">
+					✉ Subscribe to News & Views
+				</button>
+			</div>
         </section>
     </main>
 
