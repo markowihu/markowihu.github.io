@@ -21,7 +21,8 @@
    • 07/10/2026 - Deduplicación completa de cuadrículas de fotos y elementos de galería and extension of Automatic vertical paragraph and heading spacing (to include H2) for main content sections.
    • 28/10/2026 - Overlay protection class to discourage right-clicks on select photo frames. Fixed stray comment syntax error and consolidated redundant vertical spacing overrides.
    • 29/10/2026 - Reusable featured dropdown item highlighting. 
-      */
+      • 18/11/2026 - Added 2x2 uncropped portrait grid rules (.bio-portrait-grid) for biography pages.
+         */
 
    
 :root {
@@ -590,3 +591,42 @@ nav ul li ul li a.menu-featured {
 .awards-list > li {
     margin-bottom: 1rem;
 }
+
+/* LOG DE CAMBIOS: 18/11/2026 - Biography 2x2 Portrait Grid (Preserves Full Uncropped Aspect Ratios) */
+.bio-portrait-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.bio-portrait-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--card-bg, #fafafa);
+    border: 1px solid var(--border-color, #eeeeee);
+    border-radius: 4px;
+    padding: 0.75rem;
+}
+
+.bio-portrait-card img {
+    width: auto;
+    max-width: 100%;
+    max-height: 380px;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+}
+
+@media (max-width: 640px) {
+    .bio-portrait-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bio-portrait-card img {
+        width: 100%;
+        max-height: none;
+    }
+}
+
