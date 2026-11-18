@@ -12,8 +12,10 @@ lang_en_url: about.html#about-en
   to prevent content headings from clipping against the top browser edge on mobile and tablet screens.  
   Bottom Navigation Jumps: Integrated dual return links ("Top of Content ↑" / "Main Menu ↑") 
   above the legal footer across content pages for seamless navigation on long viewports.
-• 06/09/26: Added YAML Front Matter to lines 1-2 across about.html, quien-soy.html, contact.html, and contacto.html.  Replaced static header, nav, and footer HTML containers with Jekyll Liquid include partialswhile preserving Web3Forms API handlers and section anchors.
+ • 06/09/26: Added YAML Front Matter to lines 1-2 across about.html, quien-soy.html, contact.html, and contacto.html.  Replaced static header, nav, and footer HTML containers with Jekyll Liquid include partialswhile preserving Web3Forms API handlers and section anchors.
  • 07/11/2026: Update bio narrative: reflect 12 years on Alicante coast and move to mountainous interior. 
+ • 18/11/2026: Add 2x2 chronological portrait gallery grid (images/about-me-quien-soy/) preserving full uncropped aspect ratios with localized Spanish alt text.
+ 
   -->
 <!DOCTYPE html>
 <html lang="es">
@@ -43,6 +45,22 @@ lang_en_url: about.html#about-en
             <p>Como me apasiona el intercambio creativo, no dudes en compartir tus ideas y comentarios constructivos. Cuando no estoy detrás de la cámara, lo más probable es que me encuentres nadando largos, entrenando en el gimnasio, experimentando en la cocina o inmerso en proyectos lingüísticos ocasionales.</p>
             <br>
             <p><strong>Si te gusta lo que ves en la galería o en los portafolios enlazados, ¡te invito a que me <a href="https://buymeacoffee.com/markowihu" target="_blank" rel="noopener" class="coffee-link">invites a un café</a>! Tu apoyo es un gran gesto que me ayuda a continuar con este archivo visual y a renovar el modesto equipo técnico cuando es necesario.</strong></p>
+			
+			<!-- Galería cronológica de retratos (Cuadrícula 2x2 sin recorte) -->
+            <div class="bio-portrait-grid">
+                <div class="bio-portrait-card">
+                    <img src="images/about-me-quien-soy/markowihu-photographer_webp_1920p_85pc_daytona.webp" alt="Fotografía analógica de archivo de Mark sentado en un sedán blanco en Daytona Beach con el muelle histórico de madera al fondo | Biografía | Daytona Beach | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1440">
+                </div>
+                <div class="bio-portrait-card">
+                    <img src="images/about-me-quien-soy/markowihu-photographer_webp_1920p_85pc_2000s.webp" alt="Retrato de estudio de Mark sobre un fondo verde vibrante | Biografía | Archivo | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1280" height="1920">
+                </div>
+                <div class="bio-portrait-card">
+                    <img src="images/about-me-quien-soy/markowihu-photographer_webp_1920p_85pc_2020s.webp" alt="Retrato al aire libre de Mark con gafas de sol deportivas en las montañas de Alicante | Biografía | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1280" height="1920">
+                </div>
+                <div class="bio-portrait-card">
+                    <img src="images/about-me-quien-soy/markowihu-photographer_webp_1920p_85pc_ilustracion.webp" alt="Retrato de Mark sosteniendo una cámara Nikon Z 50 II con vistas a un pueblo de montaña del interior y su campanario | Biografía | Provincia de Alicante | MarkOWiHu Photographer Fotógrafo • markowihu.es" loading="lazy" width="1920" height="1920">
+                </div>
+            </div>			
         </section>
     </main>
 
