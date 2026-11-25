@@ -1,21 +1,25 @@
-<!-- DATE: 28th October 2026 -->
+<!-- DATE: 25th November 2026 -->
 <!-- ================================================================= -->
-<!-- NEWS ARTICLE: ALMANSA SOCIAL PHOTOGRAPHY EXHIBITION 2026           -->
+<!-- NEWS ARTICLE: XIX OTOÑO FOTOGRÁFICO IN ALICANTE'S OLD QUARTER     -->
 <!-- ================================================================= -->
-<article class="news-item" id="almansa-2026-en">
-    <h3 class="news-title">PHOTOS INCLUDED IN ALMANSA SOCIAL PHOTOGRAPHY EXHIBITION</h3>
+<article class="news-item" id="otono-fotografico-alicante-2026-en">
+    <h3 class="news-title">LIGHT, CONTRAST AND MEMORY IN ALICANTE’S OLD QUARTER</h3>
 
-	<p>Three of my photographs have been selected for the Concurso de Fotografía Social Almansa 2026 exhibition video, organised by the Social Services Department of Almansa Town Council. The initiative forms part of the 40th anniversary of its Municipal Social Services.</p>
+    <p>Alicante’s <em>Casco Antiguo</em> (Old Quarter) possesses a distinct photogenic character that comes alive when low sunlight cuts diagonally across limestone walls, stone archways and historic façades. It is a compact urban fabric where centuries-old architecture sits just steps away from contemporary interventions, offering an ideal setting for both architectural geometry and candid street photography.</p>
 
-	<p>The competition drew 131 entries from 52 participants from 25 locations in Spain and abroad, with 124 works admitted by the jury. The collective exhibition brings together photographs by 42 participants, including mine. The gallery shows social realities that so often go unnoticed in everyday life, and is open until 27th November at the Casa de Cultura in Almansa.</p>
+    <p>That visual dialogue was the driving theme behind <strong>Foto Walk 2026</strong> in central Alicante, the international photo walk initiative by <em>Fotoapp.co</em> that I had the pleasure of co-organising and hosting on 26 September alongside my photography colleague Lev. Working around the theme of <em>Contrast</em>—light against shadow, old against new—we led an enthusiastic group of photographers through the streets and squares of the historic centre in a lively, collaborative morning session.</p>
 
-	<p>In addition, the local council organisers have made a video of the selected images; mine appear between 3m:06s and 3m:17s. I also enjoyed watching the variety of entries – and wouldn't want to miss offering congratulations to the winner!</p>
+    <div class="featured-image-container" style="text-align: center; margin: 2.5rem 0;">
+        <img src="images/news-featured.webp" alt="Official entry confirmation for Participant 51 in the XIX Otoño Fotográfico en el Casco Antiguo de Alicante | MarkOWiHu Photographer" loading="lazy" style="max-width: 100%; height: auto; border-radius: 4px;">
+        <p style="margin-top: 8px; font-size: 0.9em; color: #555;">Official entry confirmation (Participant #51) for the XIX Otoño Fotográfico en el Casco Antiguo de Alicante, ahead of the jury announcement on 17 December 2026.</p>
+    </div>
 
-    <p><strong>Watch the video here:</strong></p>
+    <p>Drawing on photographs from that walk as well as wider city work—more of which can be seen in my <a href="https://www.flickr.com/photos/markowihu/albums/72177720316895471/" target="_blank" rel="noopener">Alicante city gallery on Flickr</a>—I have selected two monochrome images for the <strong>XIX Otoño Fotográfico en el Casco Antiguo de Alicante</strong>, organised by the University of Alicante’s photography association (<em>Escritores de Luces</em>, E.L.U.A.) in collaboration with Alicante City Council and the Municipal Housing Board:</p>
+
     <ul>
-        <li><a href="https://almansa.es/wp-content/uploads/2026/10/Exposicion_480.mp4#t=186" target="_blank" rel="noopener">Concurso de Fotografía Social Almansa 2026 exhibition video (480p - mobile friendly)</a></li>
-        </ul>
-		<br>
-    <p>Many thanks to the Almansa Social Services team for the invitation and for such a thoughtful initiative. </p>
-</article>
+        <li><strong>1. <em>Más allá del MACA</em> (Plaza de Santa María):</strong> A candid street scene outside Alicante’s Contemporary Art Museum contrasting the bold circular panels of the museum’s façade with the gestures of passers-by and visitors in the square.</li>
+        <li><strong>2. <em>Fornix Urbis</em> (Plaza del Ayuntamiento, Alicante):</strong> An architectural chiaroscuro study in which a shadowed stone archway frames the bright open square and everyday movement beneath historic wrought-iron balconies.</li>
+    </ul>
 
+    <p>Registered as participant #51, both entries now await the jury’s decision. The winners and selected works will be announced on 17 December 2026, coinciding with the opening of the exhibition at Edificio Municipal El Claustro—after which I will share both photographs in the gallery.</p>
+</article>

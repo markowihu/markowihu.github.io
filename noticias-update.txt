@@ -1,22 +1,25 @@
-<!-- DATE: 28 de octubre de 2026 -->
+<!-- DATE: 25 de noviembre de 2026 -->
 <!-- ================================================================= -->
-<!-- NOTICIA: EXPOSICIÓN CONCURSO FOTOGRAFÍA SOCIAL ALMANSA 2026        -->
+<!-- NOTICIA: XIX OTOÑO FOTOGRÁFICO EN EL CASCO ANTIGUO DE ALICANTE    -->
 <!-- ================================================================= -->
-<article class="news-item" id="almansa-2026-es">
-    <h3 class="news-title">SELECCIONADO PARA LA EXPOSICIÓN DEL CONCURSO DE FOTOGRAFÍA SOCIAL DE ALMANSA</h3>
+<article class="news-item" id="otono-fotografico-alicante-2026-es">
+    <h3 class="news-title">LUZ, CONTRASTE Y MEMORIA EN EL CASCO ANTIGUO DE ALICANTE</h3>
 
-	<p>Tres de mis fotografías fueron seleccionadas para la exposición y el vídeo del Concurso de Fotografía Social Almansa 2026, organizado por la Concejalía de Servicios Sociales del Ayuntamiento de Almansa. La iniciativa forma parte de los actos conmemorativos del 40.º aniversario de los Servicios Sociales Municipales.</p>
+    <p>El Casco Antiguo de Alicante posee una fotogenia particular que cobra vida cuando la luz baja del sol corta en diagonal sobre los muros de piedra caliza, los arcos y las fachadas históricas. Es un entramado urbano compacto donde la arquitectura centenaria convive a pocos pasos con intervenciones contemporáneas, ofreciendo un escenario privilegiado tanto para la geometría arquitectónica como para la fotografía de calle espontánea.</p>
 
-	<p>El concurso reunió 131 imágenes de 52 participantes procedentes de 25 localidades de España y del extranjero, con 124 obras admitidas por el jurado. La exposición colectiva reúne obras de 42 participantes, entre las que se incluyen las mías. La muestra enseña realidades sociales que tantas veces pasan inadvertidas en la vida cotidiana, y se puede visitar del 28 de octubre al 27 de noviembre en la Casa de Cultura de Almansa.</p>
+    <p>Ese diálogo visual fue precisamente el eje temático del <a href="https://markowihu.es/fotowalk-2026-es.html#fotowalk-2026-es">Foto Walk 2026</a> en el centro de Alicante, la iniciativa internacional de caminatas fotográficas impulsada por <em>Fotoapp.co</em> que tuve el placer de coorganizar y coordinar el pasado 26 de septiembre junto a mi compañero fotográfico Lev. Trabajando en torno al lema del <em>Contraste</em> —luz frente a sombra, lo antiguo frente a lo nuevo—, recorrimos junto a un entusiasta grupo de fotógrafos las calles y plazas del centro histórico en una mañana muy participativa y colaborativa.</p>
 
-	<p>Además, los responsables del certamen en el Ayuntamiento de Almansa han elaborado un vídeo con las imágenes seleccionadas; las mias aparecen entre los minutos 3:06 y 3:17.
-	<br>
-	¡Disfruté mucho viendo la variedad de obras presentadas y felicito al ganador!</p>
+<div class="featured-image-container" style="text-align: center; margin: 2.5rem 0;">
+    <img src="images/news-featured.webp" alt="Confirmación oficial de inscripción (participante n.º 51) en el XIX Otoño Fotográfico en el Casco Antiguo de Alicante | MarkOWiHu Fotógrafo" loading="lazy" style="max-width: 100%; height: auto; border-radius: 4px;">
+    <p style="margin-top: 8px; font-size: 0.9em; color: #555;">Confirmación oficial de inscripción (participante n.º 51) en el XIX Otoño Fotográfico en el Casco Antiguo de Alicante, a la espera del fallo del jurado el 17 de diciembre de 2026.</p>
+</div>
 
-    <p><strong>Ver el vídeo:</strong></p>
+    <p>A partir de las fotografías tomadas durante aquel recorrido, así como de otros trabajos en la ciudad —de los cuales puede verse una muestra más amplia en mi <a href="https://www.flickr.com/photos/markowihu/albums/72177720316895471/" target="_blank" rel="noopener">galería de Alicante en Flickr</a>—, he seleccionado dos imágenes en blanco y negro para participar en el <strong>XIX Otoño Fotográfico en el Casco Antiguo de Alicante</strong>, convocado por la asociación fotográfica de la Universidad de Alicante (<em>Escritores de Luces</em>, E.L.U.A.) en colaboración con el Ayuntamiento de Alicante y el Patronato Municipal de la Vivienda:</p>
+
     <ul>
-        <li><a href="https://almansa.es/wp-content/uploads/2026/10/Exposicion_480.mp4#t=186" target="_blank" rel="noopener">Concurso de Fotografía Social Almansa 2026 (480p - ligero para datos móviles)</a></li>
+        <li><strong>1. <em>Más allá del MACA</em> (Plaza de Santa María):</strong> Una escena espontánea de calle frente al Museo de Arte Contemporáneo de Alicante que contrapone los rotundos paneles circulares de su fachada con los gestos de los viandantes y visitantes en la plaza.</li>
+        <li><strong>2. <em>Fornix Urbis</em> (Plaza del Ayuntamiento, Alicante):</strong> Un estudio de claroscuro arquitectónico en el que un arco de piedra en sombra enmarca la luz abierta de la plaza y el tránsito cotidiano bajo los balcones históricos de hierro forjado.</li>
     </ul>
-	<br>
-    <p>Muchas gracias al equipo de Servicios Sociales de Almansa por la invitación y por una iniciativa tan sensata. </p>
+
+    <p>Inscritas con el número de participante 51, ambas obras quedan ahora a la espera del fallo del jurado. Los premios y las obras seleccionadas se darán a conocer el próximo 17 de diciembre de 2026, coincidiendo con la inauguración de la exposición en el Edificio Municipal El Claustro —momento a partir del cual compartiré ambas fotografías en la galería—.</p>
 </article>
